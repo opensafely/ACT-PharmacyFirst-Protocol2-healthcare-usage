@@ -24,3 +24,5 @@ dataset.sex = patients.sex
 dataset.age = patients.age_on(index_date)
 dataset.define_population(
     registration_start.exists_for_patient() | registration_end.exists_for_patient()) 
+
+ 
