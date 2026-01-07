@@ -4,7 +4,7 @@ import codelist
 dataset = create_dataset()
 
 start_date = "2024-01-31"
-
+        #change to end of month
 index_date = "2025-11-30"
 registration_start = practice_registrations.for_patient_on(start_date)
 registration_end = practice_registrations.for_patient_on(index_date)
