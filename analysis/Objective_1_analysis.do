@@ -23,22 +23,25 @@ di "$logdir"
 
 *Open a log file
 cap log close
-log using "outputs/PF_WP2_P2_obj1_totals.log" replace
+log using "output/PF_WP2_P2_obj1_totals.log", replace
+
+
 
 cd "$projectdir"
 import delimited "output/dataset_patients_combined.csv", clear
 save "output/PF WP2 P2 dummy patient raw data updates Aug26.dta", replace
 
-
-
 tab pf_cons_general 
 *Consultations are counted by identifying events with these codes and calculating the number of distinct consultation IDs. Multiple condition-specific PF codes recorded within the same consultation are counted as a single consultation.
 
 
-generate index_date_stata = date(index_date, "DMY")
+generate index_date_stata = date(index_date, "YMD")
 format index_date_stata %td
 *create variable for all PF conditions added together (consultation level)
 gen num_pf_cons_all=num_pf_cons_uti +num_pf_cons_sinusitis +num_pf_cons_ibite +num_pf_cons_otitismedia +num_pf_cons_sorethroat +num_pf_cons_shingles +num_pf_cons_impetigo
+
+gen index_date2 = index_date_stata
+format index_date2 %tdmon_yy
 
 gen age_group=""
 replace age_group= "0 to 19" if age>=0 & age<=19 
@@ -80,237 +83,243 @@ destring inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_b
 set more off
 
 
-log using "outputs/PF_WP2_P2_obj1_totals.log", text replace
+*log using "output/PF_WP2_P2_obj1_totals.log", text replace
 
-**One way comparisons number of PF consultations by...
+**********************************************************
+***One-way comparison: total PF consultations by...
+**********************************************************
+
+preserve
+
+* Exclude the overall total variable from reshape
+rename num_pf_cons_all total_pf_cons
+gen long row_id = _n
+
 *condition (row)
-table, statistic(sum num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo) 
+* Convert condition-specific variables from wide to long
+reshape long num_pf_cons_, i(row_id) j(condition) string
+rename num_pf_cons_ num_pf_cons
 
-*date (row)
-table (index_date), command(total num_pf_cons_all)
+tabstat num_pf_cons, by(condition) statistics(sum)
 
-*region
-table (region), command(total num_pf_cons_all)
+restore
 
-*stp
-*table (stp), command(total num_pf_cons_all)
+* Total PF consultations by date
+tabstat num_pf_cons_all, by(index_date_stata) statistics(sum)
 
-*age_group
-table (age_group), command(total num_pf_cons_all)
+* Total PF consultations by region
+tabstat num_pf_cons_all, by(region) statistics(sum)
 
-*sex
-table (sex), command(total num_pf_cons_all)
+* Total PF consultations by STP
+* tabstat num_pf_cons_all, by(stp) statistics(sum)
 
-*ethnicity
-table (ethnicity), command(total num_pf_cons_all)
+* Total PF consultations by age group
+tabstat num_pf_cons_all, by(age_group) statistics(sum)
 
-*imd
-table (imd), command(total num_pf_cons_all)
+* Total PF consultations by sex
+tabstat num_pf_cons_all, by(sex) statistics(sum)
 
+* Total PF consultations by ethnicity
+tabstat num_pf_cons_all, by(ethnicity) statistics(sum)
 
+* Total PF consultations by IMD
+tabstat num_pf_cons_all, by(imd) statistics(sum)
+**********************************************************
 ***Two way comparisons of number of PF consultations by condition and by...
+**********************************************************
 *date-table of number of consultations by PF condition (column) by date (row)
-table (index_date), command(total num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all) 
+preserve
 
+gen long row_id = _n
 
-table (index_date), command(total inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible)
-/*
-*region
-*table (var) (region), stat(total num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo)
-table (region), command(total num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all)
+* Includes num_pf_cons_all as condition = "all"
+reshape long num_pf_cons_, i(row_id) j(condition) string
+rename num_pf_cons_ num_pf_cons
 
-table (region), command(total inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible)
+* Date × condition
+table index_date_stata condition, contents(sum num_pf_cons)
 
-*stp
-*table (stp), command(total num_pf_cons_all)
+* Region × condition
+table region condition, contents(sum num_pf_cons)
 
-*age_group
-table (age_group), command(total num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all)
+* STP × condition
+* table stp condition, contents(sum num_pf_cons)
 
-table (age_group), command(total inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible)
+* Age group × condition
+table age_group condition, contents(sum num_pf_cons)
 
-*sex
-table (sex), command(total num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all)
+* Sex × condition
+table sex condition, contents(sum num_pf_cons)
 
-table (sex), command(total inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible)
+* Ethnicity × condition
+table ethnicity condition, contents(sum num_pf_cons)
 
-*ethnicity
-table(ethnicity), command(total num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all)
+* IMD × condition
+table imd condition, contents(sum num_pf_cons)
 
-table(ethnicity), command(total inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible)
+restore
 
-*imd
-table (imd), command(total num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all)			
-		
-table (imd), command (total inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible)		
-		*/				
-/*						
-***Three way comparisons
-*table of number of consultations by PF condition (row) by region (subgrouped) and date (columns)
-table (region) (index_date), command (total num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all)
+**********************************************************
+*** Three-way comparisons
+**********************************************************
+**************************************************
+* Consultation counts by condition, date and subgroup
+**************************************************
+preserve
 
-table  (region)(index_date), command (total inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible)
+gen long row_id = _n
 
-*table of number of consultations by PF condition (row) by stp (subgrouped) and date (columns)
-table (stp) (index_date), command (total num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all)
+* Convert condition-specific consultation counts to long format
+* num_pf_cons_all will appear as condition = "all"
+reshape long num_pf_cons_, i(row_id) j(condition) string
+rename num_pf_cons_ num_pf_cons
 
-table  (stp)(index_date), command (total inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible)
+* Condition × date, subgrouped by region
+table condition index_date2 region, ///
+    contents(sum num_pf_cons)
 
-*table of number of consultations by PF condition (row) by age_group (subgrouped) and date (columns)
-table (age_group) (index_date), command (total num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all)
+* Condition × date, subgrouped by STP
+table condition index_date_stata stp, ///
+    contents(sum num_pf_cons)
 
-table  (age_group)(index_date), command (total inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible)
+* Condition × date, subgrouped by age group
+table condition index_date_stata age_group, ///
+    contents(sum num_pf_cons)
 
-*table of number of consultations by PF condition (row) by sex (subgrouped) and date (columns)
-table (sex) (index_date), command (total num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all)
+* Condition × date, subgrouped by sex
+table condition index_date_stata sex, ///
+    contents(sum num_pf_cons)
 
-table  (sex)(index_date), command (total inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible)
+* Condition × date, subgrouped by ethnicity
+table condition index_date_stata ethnicity, ///
+    contents(sum num_pf_cons)
 
-*table of number of consultations by PF condition (row) by ethnicity (subgrouped) and date (columns)
-table (ethnicity) (index_date), command (total num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all)
+* Condition × date, subgrouped by IMD
+table condition index_date_stata imd, ///
+    contents(sum num_pf_cons)
 
-table  (ethnicity)(index_date), command (total inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible)
-
-*table of number of consultations by PF condition (row) by imd (subgrouped) and date (columns)
-table (imd) (index_date), command (total num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all)
-
-table (imd)(index_date), command (total inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible)
+restore
 log close
+
+
+**************************************************
+* Eligible population by condition, date and subgroup
+**************************************************
+preserve
+
+gen long row_id = _n
+
+* Convert condition-specific eligibility indicators to long format
+reshape long inc_pt_, i(row_id) j(condition) string
+rename inc_pt_ eligible_patients
+
+* Condition × date, subgrouped by region
+table condition index_date_stata region, ///
+    contents(sum eligible_patients)
+
+* Condition × date, subgrouped by STP
+table condition index_date_stata stp, ///
+    contents(sum eligible_patients)
+
+* Condition × date, subgrouped by age group
+table condition index_date_stata age_group, ///
+    contents(sum eligible_patients)
+
+* Condition × date, subgrouped by sex
+table condition index_date_stata sex, ///
+    contents(sum eligible_patients)
+
+* Condition × date, subgrouped by ethnicity
+table condition index_date_stata ethnicity, ///
+    contents(sum eligible_patients)
+
+* Condition × date, subgrouped by IMD
+table condition index_date_stata imd, ///
+    contents(sum eligible_patients)
+
+restore
+
+**************************************************
+* Close totals log and open rates log
+**************************************************
+capture log close
+log using "output/PF_WP2_P2_obj1_rates.log", replace
 
 
 ****************************************
 ****************************************
 ****************************************
 *Calculating rates by practice and patient characteristics
-log using "PF_WP2_P2_obj1_rates.log", text replace
 
-preserve
-**tab rate of consultations by practice level variables
-
-collapse (count) num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all  inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible , by (index_date practice region stp)
-
-gen rate_pf_cons_uti =num_pf_cons_uti/ inc_pt_uuti *100
-gen rate_pf_cons_sorethroat =num_pf_cons_sorethroat/inc_pt_sore_throat *100
-gen rate_pf_cons_sinusitis =num_pf_cons_sinusitis/ inc_pt_sinusitis  *100
-gen rate_pf_cons_shingles =num_pf_cons_shingles/ inc_pt_shingles *100
-gen rate_pf_cons_otitismedia =num_pf_cons_otitismedia/ inc_pt_otitis_media *100
-gen rate_pf_cons_impetigo =num_pf_cons_impetigo/ inc_pt_impetigo *100
-gen rate_pf_cons_ibite_all =num_pf_cons_ibite/inc_pt_insect_bites*100
-
-
-///recode region_East region_East_Midlands region_London region_Missing region_North_East region_South_East region_South_West region_West_Midlands region_York_and_Humber (missing = 0) , prefix(new_)
-
-*table of number of consultations by PF condition (row) by region (subgrouped) and date (columns)
-table (region) (index_date), command (mean rate_pf_cons_uti rate_pf_cons_sorethroat rate_pf_cons_sinusitis rate_pf_cons_shingles rate_pf_cons_otitismedia rate_pf_cons_impetigo rate_pf_cons_ibite_all)
-
-restore
-***************************
-**age
-preserve
-
-**tab rate of consultations by patient level variables
-collapse (count) num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible , by (index_date practice age_group)
-
-gen rate_pf_cons_uti =num_pf_cons_uti/ inc_pt_uuti *100
-gen rate_pf_cons_sorethroat =num_pf_cons_sorethroat/inc_pt_sore_throat *100
-gen rate_pf_cons_sinusitis =num_pf_cons_sinusitis/ inc_pt_sinusitis  *100
-gen rate_pf_cons_shingles =num_pf_cons_shingles/ inc_pt_shingles *100
-gen rate_pf_cons_otitismedia =num_pf_cons_otitismedia/ inc_pt_otitis_media *100
-gen rate_pf_cons_impetigo =num_pf_cons_impetigo/ inc_pt_impetigo *100
-gen rate_pf_cons_ibite_all =num_pf_cons_ibite/inc_pt_insect_bites*100
-
-table (age_group) (index_date), command (mean rate_pf_cons_uti rate_pf_cons_sorethroat rate_pf_cons_sinusitis rate_pf_cons_shingles rate_pf_cons_otitismedia rate_pf_cons_impetigo rate_pf_cons_ibite_all)
-
-restore
-
-**sex
-preserve
-**tab rate of consultations by patient level variables
-collapse (count) num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible , by (index_date practice sex)
-
-gen rate_pf_cons_uti =num_pf_cons_uti/ inc_pt_uuti *100
-gen rate_pf_cons_sorethroat =num_pf_cons_sorethroat/inc_pt_sore_throat *100
-gen rate_pf_cons_sinusitis =num_pf_cons_sinusitis/ inc_pt_sinusitis  *100
-gen rate_pf_cons_shingles =num_pf_cons_shingles/ inc_pt_shingles *100
-gen rate_pf_cons_otitismedia =num_pf_cons_otitismedia/ inc_pt_otitis_media *100
-gen rate_pf_cons_impetigo =num_pf_cons_impetigo/ inc_pt_impetigo *100
-gen rate_pf_cons_ibite_all =num_pf_cons_ibite/inc_pt_insect_bites*100
-
-table (sex) (index_date), command (mean rate_pf_cons_uti rate_pf_cons_sorethroat rate_pf_cons_sinusitis rate_pf_cons_shingles rate_pf_cons_otitismedia rate_pf_cons_impetigo rate_pf_cons_ibite_all)
-
-restore
-
-**ethnicity
-preserve
-collapse (count) num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible , by (index_date practice ethnicity)
-
-gen rate_pf_cons_uti =num_pf_cons_uti/ inc_pt_uuti *100
-gen rate_pf_cons_sorethroat =num_pf_cons_sorethroat/inc_pt_sore_throat *100
-gen rate_pf_cons_sinusitis =num_pf_cons_sinusitis/ inc_pt_sinusitis  *100
-gen rate_pf_cons_shingles =num_pf_cons_shingles/ inc_pt_shingles *100
-gen rate_pf_cons_otitismedia =num_pf_cons_otitismedia/ inc_pt_otitis_media *100
-gen rate_pf_cons_impetigo =num_pf_cons_impetigo/ inc_pt_impetigo *100
-gen rate_pf_cons_ibite_all =num_pf_cons_ibite/inc_pt_insect_bites*100
-
-*table of number of consultations by PF condition (row) by ethnicity (subgrouped) and date (columns)
-table (ethnicity) (index_date), command (mean rate_pf_cons_uti rate_pf_cons_sorethroat rate_pf_cons_sinusitis rate_pf_cons_shingles rate_pf_cons_otitismedia rate_pf_cons_impetigo rate_pf_cons_ibite_all)
-
-restore
-
-**imd
-preserve
-collapse (count) num_pf_cons_uti num_pf_cons_sinusitis num_pf_cons_ibite num_pf_cons_otitismedia num_pf_cons_sorethroat num_pf_cons_shingles num_pf_cons_impetigo num_pf_cons_all inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible , by (index_date practice imd)
-
-gen rate_pf_cons_uti =num_pf_cons_uti/ inc_pt_uuti *100
-gen rate_pf_cons_sorethroat =num_pf_cons_sorethroat/inc_pt_sore_throat *100
-gen rate_pf_cons_sinusitis =num_pf_cons_sinusitis/ inc_pt_sinusitis  *100
-gen rate_pf_cons_shingles =num_pf_cons_shingles/ inc_pt_shingles *100
-gen rate_pf_cons_otitismedia =num_pf_cons_otitismedia/ inc_pt_otitis_media *100
-gen rate_pf_cons_impetigo =num_pf_cons_impetigo/ inc_pt_impetigo *100
-gen rate_pf_cons_ibite_all =num_pf_cons_ibite/inc_pt_insect_bites*100
+* Variables that need to be summed before calculating rates
+local collapse_vars ///
+    num_pf_cons_uti ///
+    num_pf_cons_sinusitis ///
+    num_pf_cons_ibite ///
+    num_pf_cons_otitismedia ///
+    num_pf_cons_sorethroat ///
+    num_pf_cons_shingles ///
+    num_pf_cons_impetigo ///
+    inc_pt_otitis_media ///
+    inc_pt_sinusitis ///
+    inc_pt_sore_throat ///
+    inc_pt_insect_bites ///
+    inc_pt_shingles ///
+    inc_pt_impetigo ///
+    inc_pt_uuti
 
 
-*table of number of consultations by PF condition (row) by imd (subgrouped) and date (columns)
-table (imd) (index_date), command (mean rate_pf_cons_uti rate_pf_cons_sorethroat rate_pf_cons_sinusitis rate_pf_cons_shingles rate_pf_cons_otitismedia rate_pf_cons_impetigo rate_pf_cons_ibite_all)
+* Run the same analysis for each subgroup
+foreach subgroup in region stp age_group sex ethnicity imd {
 
-restore
-*/
+    preserve
+
+    * Obtain totals for each practice, month and subgroup
+    collapse (sum) `collapse_vars', ///
+        by(index_date_stata practice `subgroup')
+
+    * Rates per 100 eligible patients
+    gen rate_pf_cons_uti = ///
+        100 * num_pf_cons_uti / inc_pt_uuti ///
+        if inc_pt_uuti > 0
+
+    gen rate_pf_cons_sinusitis = ///
+        100 * num_pf_cons_sinusitis / inc_pt_sinusitis ///
+        if inc_pt_sinusitis > 0
+
+    gen rate_pf_cons_ibite = ///
+        100 * num_pf_cons_ibite / inc_pt_insect_bites ///
+        if inc_pt_insect_bites > 0
+
+    gen rate_pf_cons_otitismedia = ///
+        100 * num_pf_cons_otitismedia / inc_pt_otitis_media ///
+        if inc_pt_otitis_media > 0
+
+    gen rate_pf_cons_sorethroat = ///
+        100 * num_pf_cons_sorethroat / inc_pt_sore_throat ///
+        if inc_pt_sore_throat > 0
+
+    gen rate_pf_cons_shingles = ///
+        100 * num_pf_cons_shingles / inc_pt_shingles ///
+        if inc_pt_shingles > 0
+
+    gen rate_pf_cons_impetigo = ///
+        100 * num_pf_cons_impetigo / inc_pt_impetigo ///
+        if inc_pt_impetigo > 0
+
+    * Convert condition-specific rates to long format
+    gen long rate_row_id = _n
+
+    reshape long rate_pf_cons_, ///
+        i(rate_row_id) j(condition) string
+
+    rename rate_pf_cons_ rate_pf_cons
+
+    * Mean practice-level rate by condition, date and subgroup
+    table condition index_date_stata `subgroup', ///
+        contents(mean rate_pf_cons)
+
+    restore
+}
+
 log close 
-
-
-
-
-
-
-// read arrow output from ehrql
-// stata itself does not directly support .arrow. However, OpenSAFELY's Stata Docker
-// image contains the arrowload library that can load .arrow files in Stata.
-
-//. arrowload /path/to/arrow/file
-
-// read compressed CSV output from ehrql
-// stata cannot handle compressed CSV files directly, so unzip first to a plain CSV file
-// the unzipped file will be discarded when the action finishes.
-!gunzip output/dataset.csv.gz
-
-// now import the uncompressed CSV using delimited
-import delimited using output/dataset.csv
-
-// save in compressed dta.gz format
-gzsave output/model.dta.gz
-
-// load a compressed .dta.gz file
-gzload output/dataset.dta.gz
-
-INPUT_FILE = "./output/dataset_patients_combined.csv.gz"
-
-// Load the input dataset generated by OpenSAFELY
-*created using dummy data
-import delimited "output/dataset_patients_combined.csv.gz", clear
-
-// Perform statistical analysis
-summarize age
-*logistic outcome i.gender age
-
-// Save output results back to the OpenSAFELY output folder
-*outreg2 using "output/results .xls", replace
