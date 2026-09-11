@@ -835,6 +835,6 @@ actions:
     outputs:
       moderately_sensitive:
         log1: "output/PF_WP2_P2_obj1_totals.log"
-        log2: "outputs/PF_WP2_P2_obj1_rates.log"
+        log2: "output/PF_WP2_P2_obj1_rates.log"
         #data_stata: "output/data/PF WP2 P2 dummy patient raw data updates Aug26.dta"
 
