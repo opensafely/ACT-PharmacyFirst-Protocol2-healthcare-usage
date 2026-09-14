@@ -836,11 +836,8 @@ actions:
         dataset: output/dataset_patients_combined_obj1.csv
 
   run_objective_1_analysis:
-    run: stata-mp:latest analysis/Objective_1_analysis_test.do --output output/PF_WP2_P2_obj1_totals.log
-  
-  run_objective_1_analysis:
     run: stata-mp:latest analysis/Objective_1_analysis.do --output output/PF_WP2_P2_obj1_totals.log
-    needs: [decompress_combined_patient_dataset]
+    needs: [preprocess_objective_1_data]
     outputs:
       moderately_sensitive:
         log1: "output/PF_WP2_P2_obj1_totals.log"

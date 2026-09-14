@@ -28,7 +28,7 @@ log using "output/PF_WP2_P2_obj1_totals.log", replace
 
 
 cd "$projectdir"
-import delimited "output/dataset_patients_combined.csv", clear
+import delimited "output/dataset_patients_combined_obj1.csv", clear
 save "output/PF WP2 P2 dummy patient raw data updates Aug26.dta", replace
 
 tab pf_cons_general 
