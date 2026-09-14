@@ -292,4 +292,32 @@ def ae_non_primary_diagnosis_matches(ae_events, codelist):
         ae_events.diagnosis_24.is_in(codelist)
     )
     return ae_events.where(match).exists_for_patient()
-   
+
+def select_events_within_days_of_dates(events, anchor_dates, window_days):
+    """
+    Select events whose dates fall within +/- window_days of any anchor date.
+
+    Parameters
+    ----------
+    events:
+        Event frame to search within.
+    anchor_dates:
+        Date series used as anchors.
+    window_days:
+        Number of days before and after each anchor date to include.
+
+    Returns
+    -------
+    Event frame containing events whose date matches any anchor date +/- window_days.
+    """
+
+    within_window = events.date.is_in(anchor_dates)
+
+    for day in range(1, window_days + 1):
+        within_window = (
+            within_window
+            | events.date.is_in(anchor_dates - days(day))
+            | events.date.is_in(anchor_dates + days(day))
+        )
+
+    return events.where(within_window)
