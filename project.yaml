@@ -312,7 +312,28 @@ actions:
         snomed_count_summary_sorethroat: output/snomed_count_summary_sorethroat.csv
         snomed_count_summary_shingles: output/snomed_count_summary_shingles.csv
         snomed_count_summary_impetigo: output/snomed_count_summary_impetigo.csv
+#################################################################
+  # Dataset definition and measures for checking PF service codes
+  # local testing with dummy tables
+  generate_pf_code_validation_measures:
+    run: ehrql:v1 generate-measures analysis/validation_pf_code/measures_pf_code_validation.py --output output/patient_measures_pf_service_codes.csv
+    outputs:
+      moderately_sensitive:
+        measure_tables: output/patient_measures_pf_service_codes.csv
 
+  process_pf_code_validation_measures:
+    run: python:v2 analysis/validation_pf_code/process.py
+    needs: [generate_pf_code_validation_measures]
+    outputs:
+      moderately_sensitive:
+        monthly_service_code_consultations_csv: output/pf_code_validation/monthly_service_code_consultations.csv
+        monthly_service_code_consultations_png: output/pf_code_validation/monthly_service_code_consultations.png
+        monthly_service_code_events_csv: output/pf_code_validation/monthly_service_code_events.csv
+        monthly_service_code_events_png: output/pf_code_validation/monthly_service_code_events.png
+        monthly_code_overlap_csv: output/pf_code_validation/monthly_code_overlap.csv
+        monthly_code_overlap_png: output/pf_code_validation/monthly_code_overlap.png
+        condition_consultations_by_service_code_csv: output/pf_code_validation/condition_consultations_by_service_code_monthly.csv
+        condition_consultations_by_service_code_png: output/pf_code_validation/condition_consultations_by_service_code_by_month.png
 
   #################################################################
 # Actions defined for getting practice-level data and measures
