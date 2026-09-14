@@ -837,9 +837,13 @@ actions:
 
   run_objective_1_analysis:
     run: stata-mp:latest analysis/Objective_1_analysis_test.do --output output/PF_WP2_P2_obj1_totals.log
+  
+  run_objective_1_analysis:
+    run: stata-mp:latest analysis/Objective_1_analysis.do --output output/PF_WP2_P2_obj1_totals.log
     needs: [decompress_combined_patient_dataset]
     outputs:
       moderately_sensitive:
         log1: "output/PF_WP2_P2_obj1_totals.log"
-       
+        log2: "output/PF_WP2_P2_obj1_rates.log"
+        #data_stata: "output/data/PF WP2 P2 dummy patient raw data updates Aug26.dta"
 
