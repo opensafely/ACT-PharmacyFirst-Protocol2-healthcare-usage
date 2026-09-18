@@ -21,14 +21,14 @@ COLUMNS_TO_KEEP = [
     "num_pf_cons_sorethroat",
     "num_pf_cons_shingles",
     "num_pf_cons_impetigo",
-    # "inc_pt_otitis_media",
-    # "inc_pt_sinusitis",
-    # "inc_pt_sore_throat",
-    # "inc_pt_insect_bites",
-    # "inc_pt_shingles",
-    # "inc_pt_impetigo",
-    # "inc_pt_uuti",
-    # "inc_pt_all_eligible",
+    "inc_pt_otitis_media",
+    "inc_pt_sinusitis",
+    "inc_pt_sore_throat",
+    "inc_pt_insect_bites",
+    "inc_pt_shingles",
+    "inc_pt_impetigo",
+    "inc_pt_uuti",
+    "inc_pt_all_eligible",
 ]
 
 CHUNK_SIZE = 200_000
