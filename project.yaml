@@ -855,6 +855,13 @@ actions:
     outputs:
       highly_sensitive:
         dataset: output/dataset_patients_combined_obj1.csv
+  
+  check_objective_1_data:
+    run: python:v2 python analysis/objective_1_file_checks.py
+    needs: [preprocess_objective_1_data]
+    outputs:
+      moderately_sensitive:
+        checks: output/objective_1_file_checks.txt
 
   run_objective_1_analysis:
     run: stata-mp:latest analysis/Objective_1_analysis.do --output output/PF_WP2_P2_obj1_totals.log
