@@ -21,18 +21,17 @@ COLUMNS_TO_KEEP = [
     "num_pf_cons_sorethroat",
     "num_pf_cons_shingles",
     "num_pf_cons_impetigo",
-    "inc_pt_otitis_media",
-    "inc_pt_sinusitis",
-    "inc_pt_sore_throat",
-    "inc_pt_insect_bites",
-    "inc_pt_shingles",
-    "inc_pt_impetigo",
-    "inc_pt_uuti",
-    "inc_pt_all_eligible",
+    # "inc_pt_otitis_media",
+    # "inc_pt_sinusitis",
+    # "inc_pt_sore_throat",
+    # "inc_pt_insect_bites",
+    # "inc_pt_shingles",
+    # "inc_pt_impetigo",
+    # "inc_pt_uuti",
+    # "inc_pt_all_eligible",
 ]
 
 CHUNK_SIZE = 200_000
-
 
 with open(OUTPUT_FILE, "w", newline="") as output_file:
     write_header = True
@@ -43,6 +42,9 @@ with open(OUTPUT_FILE, "w", newline="") as output_file:
         chunksize=CHUNK_SIZE,
     ):
         chunk = chunk[COLUMNS_TO_KEEP]
+
+        # Retain only rows with at least one PF consultation
+        chunk = chunk.loc[chunk["pf_cons_general"].fillna(0).gt(0)]
 
         chunk.to_csv(
             output_file,
