@@ -243,6 +243,8 @@ restore
 * Close totals log and open rates log
 **************************************************
 capture log close
+
+/*
 log using "output/PF_WP2_P2_obj1_rates.log", replace
 
 
@@ -323,3 +325,4 @@ foreach subgroup in region stp age_group sex ethnicity imd {
 }
 
 log close 
+*/
