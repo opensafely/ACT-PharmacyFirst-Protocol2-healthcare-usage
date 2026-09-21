@@ -359,7 +359,8 @@ actions:
     needs: [generate_patient_measures_for_practices]
     outputs:
       highly_sensitive:
-        practice_level_data: output/dataset_practices.csv.gz
+        practice_level_data1: output/dataset_practices.csv.gz
+        practice_level_data2: output/dataset_practices.csv
   
   # practice-level data step 3: extract info from practice-level data
   process_practice_dataset_stp:

@@ -68,3 +68,4 @@ for col in [
     df_wide[col] = df_wide[col].fillna(0)
 
 df_wide.to_csv("output/dataset_practices.csv.gz", index=False)
+df_wide.to_csv("output/dataset_practices.csv", index=False)
