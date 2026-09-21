@@ -35,7 +35,7 @@ tab pf_cons_general
 *Consultations are counted by identifying events with these codes and calculating the number of distinct consultation IDs. Multiple condition-specific PF codes recorded within the same consultation are counted as a single consultation.
 
 
-generate index_date_stata = date(index_date, "YMD")
+generate index_date_stata = date(index_date, "DMY")
 format index_date_stata %td
 *create variable for all PF conditions added together (consultation level)
 gen num_pf_cons_all=num_pf_cons_uti +num_pf_cons_sinusitis +num_pf_cons_ibite +num_pf_cons_otitismedia +num_pf_cons_sorethroat +num_pf_cons_shingles +num_pf_cons_impetigo
@@ -52,7 +52,7 @@ replace age_group= "80 and over" if age>=80
 
 set linesize 255
 
-
+/*
 replace inc_pt_otitis_media="1" if inc_pt_otitis_media=="T"
 replace inc_pt_otitis_media="0" if inc_pt_otitis_media=="F"
 
@@ -78,7 +78,7 @@ replace inc_pt_all_eligible="1" if inc_pt_all_eligible =="T"
 replace inc_pt_all_eligible="0" if inc_pt_all_eligible =="F"
 
 destring inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible, replace    
-
+*/
 
 set more off
 
@@ -201,7 +201,7 @@ table condition index_date_stata imd, ///
 restore
 log close
 
-
+/*
 **************************************************
 * Eligible population by condition, date and subgroup
 **************************************************
@@ -244,7 +244,7 @@ restore
 **************************************************
 capture log close
 
-/*
+
 log using "output/PF_WP2_P2_obj1_rates.log", replace
 
 
