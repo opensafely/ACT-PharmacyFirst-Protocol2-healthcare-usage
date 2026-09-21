@@ -35,7 +35,7 @@ tab pf_cons_general
 *Consultations are counted by identifying events with these codes and calculating the number of distinct consultation IDs. Multiple condition-specific PF codes recorded within the same consultation are counted as a single consultation.
 
 
-generate index_date_stata = date(index_date, "DMY")
+generate index_date_stata = date(index_date, "YMD")
 format index_date_stata %td
 *create variable for all PF conditions added together (consultation level)
 gen num_pf_cons_all=num_pf_cons_uti +num_pf_cons_sinusitis +num_pf_cons_ibite +num_pf_cons_otitismedia +num_pf_cons_sorethroat +num_pf_cons_shingles +num_pf_cons_impetigo
