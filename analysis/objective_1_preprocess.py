@@ -5,6 +5,7 @@ INPUT_FILE = "output/dataset_patients_combined.csv"
 OUTPUT_FILE = "output/dataset_patients_combined_obj1.csv"
 
 COLUMNS_TO_KEEP = [
+    "start_date",
     "index_date",
     "practice",
     "region",
