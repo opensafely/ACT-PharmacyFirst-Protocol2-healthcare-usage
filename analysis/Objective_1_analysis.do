@@ -31,11 +31,20 @@ cd "$projectdir"
 import delimited "output/dataset_patients_combined_obj1.csv", clear
 save "output/PF WP2 P2 dummy patient raw data updates Aug26.dta", replace
 
-tab pf_cons_general 
+
+preserve
+
+contract pf_cons_general, freq(count) percent(percentage) nomiss
+export delimited using "pf_cons_general", replace
+
+restore
+
+
 *Consultations are counted by identifying events with these codes and calculating the number of distinct consultation IDs. Multiple condition-specific PF codes recorded within the same consultation are counted as a single consultation.
 
 
-generate index_date_stata = date(index_date, "YMD")
+
+generate index_date_stata = date(index_date, "DMY")
 format index_date_stata %td
 *create variable for all PF conditions added together (consultation level)
 gen num_pf_cons_all=num_pf_cons_uti +num_pf_cons_sinusitis +num_pf_cons_ibite +num_pf_cons_otitismedia +num_pf_cons_sorethroat +num_pf_cons_shingles +num_pf_cons_impetigo
@@ -52,7 +61,7 @@ replace age_group= "80 and over" if age>=80
 
 set linesize 255
 
-/*
+
 replace inc_pt_otitis_media="1" if inc_pt_otitis_media=="T"
 replace inc_pt_otitis_media="0" if inc_pt_otitis_media=="F"
 
@@ -78,7 +87,7 @@ replace inc_pt_all_eligible="1" if inc_pt_all_eligible =="T"
 replace inc_pt_all_eligible="0" if inc_pt_all_eligible =="F"
 
 destring inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible, replace    
-*/
+
 
 set more off
 
@@ -88,11 +97,13 @@ set more off
 **********************************************************
 ***One-way comparison: total PF consultations by...
 **********************************************************
-
+*------------------------------------------------------------
+* PF consultations by condition
+*------------------------------------------------------------
 preserve
 
 * Exclude the overall total variable from reshape
-rename num_pf_cons_all total_pf_cons
+rename pf_cons_general total_pf_cons
 gen long row_id = _n
 
 *condition (row)
@@ -100,34 +111,101 @@ gen long row_id = _n
 reshape long num_pf_cons_, i(row_id) j(condition) string
 rename num_pf_cons_ num_pf_cons
 
-tabstat num_pf_cons, by(condition) statistics(sum)
+statsby sum=r(sum), by(condition) clear: summarize num_pf_cons
+
+export delimited using "oneway_date_condition.csv",replace
 
 restore
 
+
+*------------------------------------------------------------
 * Total PF consultations by date
-tabstat num_pf_cons_all, by(index_date_stata) statistics(sum)
+*------------------------------------------------------------
+preserve
 
+statsby sum=r(sum), by(index_date_stata) clear: summarize num_pf_cons_all
+
+format index_date_stata %tdDD/NN/CCYY
+export delimited using "oneway_date.csv", replace
+
+restore
+
+
+*------------------------------------------------------------
 * Total PF consultations by region
-tabstat num_pf_cons_all, by(region) statistics(sum)
+*------------------------------------------------------------
+preserve
 
+statsby sum=r(sum), by(region) clear: summarize num_pf_cons_all
+
+export delimited using "oneway_region.csv", replace
+
+restore
+
+
+*------------------------------------------------------------
 * Total PF consultations by STP
-* tabstat num_pf_cons_all, by(stp) statistics(sum)
+*------------------------------------------------------------
+preserve
 
+statsby sum=r(sum), by(stp) clear: summarize num_pf_cons_all
+
+export delimited using "oneway_stp.csv", replace
+
+restore
+
+
+*------------------------------------------------------------
 * Total PF consultations by age group
-tabstat num_pf_cons_all, by(age_group) statistics(sum)
+*------------------------------------------------------------
+preserve
 
+statsby sum=r(sum), by(age_group) clear: summarize num_pf_cons_all
+
+export delimited using "oneway_age_group.csv", replace
+
+restore
+
+
+*------------------------------------------------------------
 * Total PF consultations by sex
-tabstat num_pf_cons_all, by(sex) statistics(sum)
+*------------------------------------------------------------
+preserve
 
+statsby sum=r(sum), by(sex) clear: summarize num_pf_cons_all
+
+export delimited using "oneway_sex.csv", replace
+
+restore
+
+
+*------------------------------------------------------------
 * Total PF consultations by ethnicity
-tabstat num_pf_cons_all, by(ethnicity) statistics(sum)
+*------------------------------------------------------------
+preserve
 
+statsby sum=r(sum), by(ethnicity) clear: summarize num_pf_cons_all
+
+export delimited using "oneway_ethnicity.csv", replace
+
+restore
+
+
+*------------------------------------------------------------
 * Total PF consultations by IMD
-tabstat num_pf_cons_all, by(imd) statistics(sum)
+*------------------------------------------------------------
+preserve
+
+statsby sum=r(sum), by(imd) clear: summarize num_pf_cons_all
+
+export delimited using "oneway_imd.csv", replace
+
+restore
+
+
 **********************************************************
-***Two way comparisons of number of PF consultations by condition and by...
+***Two way comparisons : number of PF consultations by condition and by...
 **********************************************************
-*date-table of number of consultations by PF condition (column) by date (row)
 preserve
 
 gen long row_id = _n
@@ -136,109 +214,175 @@ gen long row_id = _n
 reshape long num_pf_cons_, i(row_id) j(condition) string
 rename num_pf_cons_ num_pf_cons
 
+* Save reshaped data temporarily
+tempfile reshaped
+save `reshaped'
+
+restore
+
+
+*------------------------------------------------------------
 * Date × condition
-table index_date_stata condition, contents(sum num_pf_cons)
+*------------------------------------------------------------
+use `reshaped', clear
+statsby sum=r(sum), by(index_date_stata condition) clear: summarize num_pf_cons
+reshape wide sum, i(index_date_stata) j(condition) string
+format index_date_stata %tdCCYY-NN-DD
+export delimited using "twoway_date_condition.csv", replace
 
+
+
+
+
+*------------------------------------------------------------
 * Region × condition
-table region condition, contents(sum num_pf_cons)
+*------------------------------------------------------------
+use `reshaped', clear
+statsby sum=r(sum), by(region condition) clear: summarize num_pf_cons
+reshape wide sum, i(region) j(condition) string
+export delimited using "twoway_region_condition.csv", replace
 
+
+*------------------------------------------------------------
 * STP × condition
-* table stp condition, contents(sum num_pf_cons)
+*------------------------------------------------------------
+use `reshaped', clear
+statsby sum=r(sum), by(stp condition) clear: summarize num_pf_cons
+reshape wide sum, i(stp) j(condition) string
+export delimited using "twoway_stp_condition.csv", replace
 
+
+*------------------------------------------------------------
 * Age group × condition
-table age_group condition, contents(sum num_pf_cons)
+*------------------------------------------------------------
+use `reshaped', clear
+statsby sum=r(sum), by(age_group condition) clear: summarize num_pf_cons
+reshape wide sum, i(age_group) j(condition) string
+export delimited using "twoway_age_group_condition.csv", replace
 
+
+*------------------------------------------------------------
 * Sex × condition
-table sex condition, contents(sum num_pf_cons)
+*------------------------------------------------------------
+use `reshaped', clear
+statsby sum=r(sum), by(sex condition) clear: summarize num_pf_cons
+reshape wide sum, i(sex) j(condition) string
 
+export delimited using "twoway_sex_condition.csv", replace
+
+
+*------------------------------------------------------------
 * Ethnicity × condition
-table ethnicity condition, contents(sum num_pf_cons)
+*------------------------------------------------------------
+use `reshaped', clear
+statsby sum=r(sum), by(ethnicity condition) clear: summarize num_pf_cons
+reshape wide sum, i(ethnicity) j(condition) string
 
+export delimited using "twoway_ethnicity_condition.csv", replace
+
+
+*------------------------------------------------------------
 * IMD × condition
-table imd condition, contents(sum num_pf_cons)
+*------------------------------------------------------------
+use `reshaped', clear
+statsby sum=r(sum), by(imd condition) clear: summarize num_pf_cons
+reshape wide sum, i(imd) j(condition) string
 
-restore
+export delimited using "twoway_imd_condition.csv", replace
+
 
 **********************************************************
-*** Three-way comparisons
+*** Three-way comparisons:Consultation counts by condition, date and subgroup
 **********************************************************
-**************************************************
-* Consultation counts by condition, date and subgroup
-**************************************************
-preserve
 
-gen long row_id = _n
+*------------------------------------------------------------
+* Condition × date × region
+*------------------------------------------------------------
+use `reshaped', clear
 
-* Convert condition-specific consultation counts to long format
-* num_pf_cons_all will appear as condition = "all"
-reshape long num_pf_cons_, i(row_id) j(condition) string
-rename num_pf_cons_ num_pf_cons
+statsby sum=r(sum), ///
+    by(condition index_date_stata region) clear: ///
+    summarize num_pf_cons
 
-* Condition × date, subgrouped by region
-table condition index_date2 region, ///
-    contents(sum num_pf_cons)
+format index_date_stata %tdCCYY-NN-DD
+reshape wide sum, i(condition index_date_stata) j(region) string
+export delimited using "threeway_condition_date_region.csv", replace
 
-* Condition × date, subgrouped by STP
-table condition index_date_stata stp, ///
-    contents(sum num_pf_cons)
 
-* Condition × date, subgrouped by age group
-table condition index_date_stata age_group, ///
-    contents(sum num_pf_cons)
+*------------------------------------------------------------
+* Condition × date × STP
+*------------------------------------------------------------
+use `reshaped', clear
 
-* Condition × date, subgrouped by sex
-table condition index_date_stata sex, ///
-    contents(sum num_pf_cons)
+statsby sum=r(sum), ///
+    by(condition index_date_stata stp) clear: ///
+    summarize num_pf_cons
 
-* Condition × date, subgrouped by ethnicity
-table condition index_date_stata ethnicity, ///
-    contents(sum num_pf_cons)
+format index_date_stata %tdCCYY-NN-DD
+reshape wide sum, i(stp index_date_stata) j(condition) string
+export delimited using "threeway_condition_date_stp.csv", replace
 
-* Condition × date, subgrouped by IMD
-table condition index_date_stata imd, ///
-    contents(sum num_pf_cons)
 
-restore
+*------------------------------------------------------------
+* Condition × date × age group
+*------------------------------------------------------------
+use `reshaped', clear
+
+statsby sum=r(sum), ///
+    by(condition index_date_stata age_group) clear: ///
+    summarize num_pf_cons
+
+format index_date_stata %tdCCYY-NN-DD
+reshape wide sum, i(condition index_date_stata) j(age_group) string
+export delimited using "threeway_condition_date_age_group.csv", replace
+
+
+*------------------------------------------------------------
+* Condition × date × sex
+*------------------------------------------------------------
+use `reshaped', clear
+
+statsby sum=r(sum), ///
+    by(condition index_date_stata sex) clear: ///
+    summarize num_pf_cons
+
+format index_date_stata %tdCCYY-NN-DD
+reshape wide sum, i(condition index_date_stata) j(sex) string
+export delimited using "threeway_condition_date_sex.csv", replace
+
+
+*------------------------------------------------------------
+* Condition × date × ethnicity
+*------------------------------------------------------------
+use `reshaped', clear
+
+statsby sum=r(sum), ///
+    by(condition index_date_stata ethnicity) clear: ///
+    summarize num_pf_cons
+
+format index_date_stata %tdCCYY-NN-DD
+reshape wide sum, i(condition index_date_stata) j(ethnicity) string
+export delimited using "threeway_condition_date_ethnicity.csv", replace
+
+
+*------------------------------------------------------------
+* Condition × date × IMD
+*------------------------------------------------------------
+use `reshaped', clear
+
+statsby sum=r(sum), ///
+    by(condition index_date_stata imd) clear: ///
+    summarize num_pf_cons
+
+format index_date_stata %tdCCYY-NN-DD
+reshape wide sum, i(condition index_date_stata) j(imd) string
+export delimited using "threeway_condition_date_imd.csv", replace
+
+
 log close
 
+
 /*
-**************************************************
-* Eligible population by condition, date and subgroup
-**************************************************
-preserve
-
-gen long row_id = _n
-
-* Convert condition-specific eligibility indicators to long format
-reshape long inc_pt_, i(row_id) j(condition) string
-rename inc_pt_ eligible_patients
-
-* Condition × date, subgrouped by region
-table condition index_date_stata region, ///
-    contents(sum eligible_patients)
-
-* Condition × date, subgrouped by STP
-table condition index_date_stata stp, ///
-    contents(sum eligible_patients)
-
-* Condition × date, subgrouped by age group
-table condition index_date_stata age_group, ///
-    contents(sum eligible_patients)
-
-* Condition × date, subgrouped by sex
-table condition index_date_stata sex, ///
-    contents(sum eligible_patients)
-
-* Condition × date, subgrouped by ethnicity
-table condition index_date_stata ethnicity, ///
-    contents(sum eligible_patients)
-
-* Condition × date, subgrouped by IMD
-table condition index_date_stata imd, ///
-    contents(sum eligible_patients)
-
-restore
-
 **************************************************
 * Close totals log and open rates log
 **************************************************
