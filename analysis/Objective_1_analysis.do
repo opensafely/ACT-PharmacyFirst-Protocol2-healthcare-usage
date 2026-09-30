@@ -32,6 +32,7 @@ import delimited "output/dataset_patients_combined_obj1.csv", clear
 save "output/PF WP2 P2 dummy patient raw data updates Aug26.dta", replace
 
 
+
 preserve
 
 contract pf_cons_general, freq(count) percent(percentage) nomiss
@@ -53,11 +54,11 @@ gen index_date2 = index_date_stata
 format index_date2 %tdmon_yy
 
 gen age_group=""
-replace age_group= "0 to 19" if age>=0 & age<=19 
-replace age_group= "20 to 39" if age>=20 & age<=39 
-replace age_group= "40 to 59" if age>=40 & age<=59 
-replace age_group= "60 to 79" if age>=60 & age<=79 
-replace age_group= "80 and over" if age>=80
+replace age_group= "0_to_19" if age>=0 & age<=19 
+replace age_group= "20_to_39" if age>=20 & age<=39 
+replace age_group= "40_to_59" if age>=40 & age<=59 
+replace age_group= "60_to_79" if age>=60 & age<=79 
+replace age_group= "80_and_over" if age>=80
 
 set linesize 255
 
@@ -305,7 +306,19 @@ statsby sum=r(sum), ///
     summarize num_pf_cons
 
 format index_date_stata %tdCCYY-NN-DD
-reshape wide sum, i(condition index_date_stata) j(region) string
+
+replace region="North_East" if region=="North East"
+replace region="North_West" if region=="North West"
+replace region="South _East" if region=="South East"
+replace region="South _West" if region=="South West"
+replace region="West_Midlands" if region=="West Midlands"
+replace region="Yorkshire_and_The_Humber" if region=="Yorkshire and The Humber"
+encode region, generate(region_num)
+drop region
+reshape wide sum, i(condition index_date_stata) j(region_num)
+
+
+
 export delimited using "threeway_condition_date_region.csv", replace
 
 
@@ -333,9 +346,12 @@ statsby sum=r(sum), ///
     summarize num_pf_cons
 
 format index_date_stata %tdCCYY-NN-DD
+*encode age_group, generate(age_group_num)
+*drop age_group
 reshape wide sum, i(condition index_date_stata) j(age_group) string
-export delimited using "threeway_condition_date_age_group.csv", replace
 
+
+export delimited using "threeway_condition_date_age_group.csv", replace
 
 *------------------------------------------------------------
 * Condition × date × sex
@@ -361,6 +377,7 @@ statsby sum=r(sum), ///
     summarize num_pf_cons
 
 format index_date_stata %tdCCYY-NN-DD
+replace ethnicity = subinstr(ethnicity, " ", "_", .)
 reshape wide sum, i(condition index_date_stata) j(ethnicity) string
 export delimited using "threeway_condition_date_ethnicity.csv", replace
 
@@ -375,6 +392,7 @@ statsby sum=r(sum), ///
     summarize num_pf_cons
 
 format index_date_stata %tdCCYY-NN-DD
+replace imd="5" if imd== "5 (Least Deprived)"
 reshape wide sum, i(condition index_date_stata) j(imd) string
 export delimited using "threeway_condition_date_imd.csv", replace
 
