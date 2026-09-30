@@ -124,9 +124,10 @@ restore
 *------------------------------------------------------------
 preserve
 
-statsby sum=r(sum), by(index_date_stata) clear: summarize num_pf_cons_all
-
+*statsby sum=r(sum), by(index_date_stata) clear: summarize num_pf_cons_all
+collapse (sum) sum=num_pf_cons_all, by(index_date_stata)
 format index_date_stata %tdDD/NN/CCYY
+
 export delimited using "oneway_date.csv", replace
 
 restore
@@ -137,8 +138,8 @@ restore
 *------------------------------------------------------------
 preserve
 
-statsby sum=r(sum), by(region) clear: summarize num_pf_cons_all
-
+*statsby sum=r(sum), by(region) clear: summarize num_pf_cons_all
+collapse (sum) sum=num_pf_cons_all, by(region)
 export delimited using "oneway_region.csv", replace
 
 restore
@@ -149,8 +150,8 @@ restore
 *------------------------------------------------------------
 preserve
 
-statsby sum=r(sum), by(stp) clear: summarize num_pf_cons_all
-
+*statsby sum=r(sum), by(stp) clear: summarize num_pf_cons_all
+collapse (sum) sum=num_pf_cons_all, by(stp)
 export delimited using "oneway_stp.csv", replace
 
 restore
@@ -161,8 +162,8 @@ restore
 *------------------------------------------------------------
 preserve
 
-statsby sum=r(sum), by(age_group) clear: summarize num_pf_cons_all
-
+*statsby sum=r(sum), by(age_group) clear: summarize num_pf_cons_all
+collapse (sum) sum=num_pf_cons_all, by(age_group)
 export delimited using "oneway_age_group.csv", replace
 
 restore
@@ -173,8 +174,8 @@ restore
 *------------------------------------------------------------
 preserve
 
-statsby sum=r(sum), by(sex) clear: summarize num_pf_cons_all
-
+*statsby sum=r(sum), by(sex) clear: summarize num_pf_cons_all
+collapse (sum) sum=num_pf_cons_all, by(sex)
 export delimited using "oneway_sex.csv", replace
 
 restore
@@ -185,8 +186,8 @@ restore
 *------------------------------------------------------------
 preserve
 
-statsby sum=r(sum), by(ethnicity) clear: summarize num_pf_cons_all
-
+*statsby sum=r(sum), by(ethnicity) clear: summarize num_pf_cons_all
+collapse (sum) sum=num_pf_cons_all, by(ethnicity)
 export delimited using "oneway_ethnicity.csv", replace
 
 restore
@@ -197,8 +198,8 @@ restore
 *------------------------------------------------------------
 preserve
 
-statsby sum=r(sum), by(imd) clear: summarize num_pf_cons_all
-
+*statsby sum=r(sum), by(imd) clear: summarize num_pf_cons_all
+collapse (sum) sum=num_pf_cons_all, by(imd)
 export delimited using "oneway_imd.csv", replace
 
 restore
