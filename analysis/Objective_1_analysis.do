@@ -113,7 +113,7 @@ reshape long num_pf_cons_, i(row_id) j(condition) string
 rename num_pf_cons_ num_pf_cons
 
 statsby sum=r(sum), by(condition) clear: summarize num_pf_cons
-
+*collapse (sum) sum=num_pf_cons_all, by(condition)
 export delimited using "oneway_date_condition.csv",replace
 
 restore
@@ -205,6 +205,7 @@ export delimited using "oneway_imd.csv", replace
 restore
 
 
+
 **********************************************************
 ***Two way comparisons : number of PF consultations by condition and by...
 **********************************************************
@@ -227,20 +228,19 @@ restore
 * Date × condition
 *------------------------------------------------------------
 use `reshaped', clear
-statsby sum=r(sum), by(index_date_stata condition) clear: summarize num_pf_cons
+collapse (sum) sum=num_pf_cons, by(index_date_stata condition)
+*statsby sum=r(sum), by(index_date_stata condition) clear: summarize num_pf_cons
 reshape wide sum, i(index_date_stata) j(condition) string
 format index_date_stata %tdCCYY-NN-DD
 export delimited using "twoway_date_condition.csv", replace
-
-
-
 
 
 *------------------------------------------------------------
 * Region × condition
 *------------------------------------------------------------
 use `reshaped', clear
-statsby sum=r(sum), by(region condition) clear: summarize num_pf_cons
+collapse (sum) sum=num_pf_cons, by(region condition)
+*statsby sum=r(sum), by(region condition) clear: summarize num_pf_cons
 reshape wide sum, i(region) j(condition) string
 export delimited using "twoway_region_condition.csv", replace
 
@@ -249,7 +249,8 @@ export delimited using "twoway_region_condition.csv", replace
 * STP × condition
 *------------------------------------------------------------
 use `reshaped', clear
-statsby sum=r(sum), by(stp condition) clear: summarize num_pf_cons
+collapse (sum) sum=num_pf_cons, by(stp condition)
+*statsby sum=r(sum), by(stp condition) clear: summarize num_pf_cons
 reshape wide sum, i(stp) j(condition) string
 export delimited using "twoway_stp_condition.csv", replace
 
@@ -258,7 +259,8 @@ export delimited using "twoway_stp_condition.csv", replace
 * Age group × condition
 *------------------------------------------------------------
 use `reshaped', clear
-statsby sum=r(sum), by(age_group condition) clear: summarize num_pf_cons
+collapse (sum) sum=num_pf_cons, by(age_group condition)
+*statsby sum=r(sum), by(age_group condition) clear: summarize num_pf_cons
 reshape wide sum, i(age_group) j(condition) string
 export delimited using "twoway_age_group_condition.csv", replace
 
@@ -267,7 +269,8 @@ export delimited using "twoway_age_group_condition.csv", replace
 * Sex × condition
 *------------------------------------------------------------
 use `reshaped', clear
-statsby sum=r(sum), by(sex condition) clear: summarize num_pf_cons
+collapse (sum) sum=num_pf_cons, by(sex condition)
+*statsby sum=r(sum), by(sex condition) clear: summarize num_pf_cons
 reshape wide sum, i(sex) j(condition) string
 
 export delimited using "twoway_sex_condition.csv", replace
@@ -277,7 +280,8 @@ export delimited using "twoway_sex_condition.csv", replace
 * Ethnicity × condition
 *------------------------------------------------------------
 use `reshaped', clear
-statsby sum=r(sum), by(ethnicity condition) clear: summarize num_pf_cons
+collapse (sum) sum=num_pf_cons, by(ethnicity condition)
+*statsby sum=r(sum), by(ethnicity condition) clear: summarize num_pf_cons
 reshape wide sum, i(ethnicity) j(condition) string
 
 export delimited using "twoway_ethnicity_condition.csv", replace
@@ -287,7 +291,8 @@ export delimited using "twoway_ethnicity_condition.csv", replace
 * IMD × condition
 *------------------------------------------------------------
 use `reshaped', clear
-statsby sum=r(sum), by(imd condition) clear: summarize num_pf_cons
+collapse (sum) sum=num_pf_cons, by(imd condition)
+*statsby sum=r(sum), by(imd condition) clear: summarize num_pf_cons
 reshape wide sum, i(imd) j(condition) string
 
 export delimited using "twoway_imd_condition.csv", replace
@@ -302,10 +307,8 @@ export delimited using "twoway_imd_condition.csv", replace
 *------------------------------------------------------------
 use `reshaped', clear
 
-statsby sum=r(sum), ///
-    by(condition index_date_stata region) clear: ///
-    summarize num_pf_cons
-
+*statsby sum=r(sum), by(condition index_date_stata region) clear: summarize num_pf_cons
+collapse (sum) sum=num_pf_cons, by(condition index_date_stata region)
 format index_date_stata %tdCCYY-NN-DD
 
 replace region="North_East" if region=="North East"
@@ -316,7 +319,7 @@ replace region="West_Midlands" if region=="West Midlands"
 replace region="Yorkshire_and_The_Humber" if region=="Yorkshire and The Humber"
 encode region, generate(region_num)
 drop region
-reshape wide sum, i(condition index_date_stata) j(region_num)
+reshape wide sum, i(index_date_stata region_num) j(condition) string
 
 
 
@@ -328,10 +331,8 @@ export delimited using "threeway_condition_date_region.csv", replace
 *------------------------------------------------------------
 use `reshaped', clear
 
-statsby sum=r(sum), ///
-    by(condition index_date_stata stp) clear: ///
-    summarize num_pf_cons
-
+*statsby sum=r(sum), by(condition index_date_stata stp) clear: summarize num_pf_cons
+collapse (sum) sum=num_pf_cons, by(condition index_date_stata stp)
 format index_date_stata %tdCCYY-NN-DD
 reshape wide sum, i(stp index_date_stata) j(condition) string
 export delimited using "threeway_condition_date_stp.csv", replace
@@ -342,14 +343,12 @@ export delimited using "threeway_condition_date_stp.csv", replace
 *------------------------------------------------------------
 use `reshaped', clear
 
-statsby sum=r(sum), ///
-    by(condition index_date_stata age_group) clear: ///
-    summarize num_pf_cons
-
+*statsby sum=r(sum), by(condition index_date_stata age_group) clear: summarize num_pf_cons
+collapse (sum) sum=num_pf_cons, by(condition index_date_stata age_group)
 format index_date_stata %tdCCYY-NN-DD
 *encode age_group, generate(age_group_num)
 *drop age_group
-reshape wide sum, i(condition index_date_stata) j(age_group) string
+reshape wide sum, i(age_group index_date_stata) j(condition) string
 
 
 export delimited using "threeway_condition_date_age_group.csv", replace
@@ -359,12 +358,10 @@ export delimited using "threeway_condition_date_age_group.csv", replace
 *------------------------------------------------------------
 use `reshaped', clear
 
-statsby sum=r(sum), ///
-    by(condition index_date_stata sex) clear: ///
-    summarize num_pf_cons
-
+*statsby sum=r(sum), by(condition index_date_stata sex) clear: summarize num_pf_cons
+collapse (sum) sum=num_pf_cons, by(condition index_date_stata sex)
 format index_date_stata %tdCCYY-NN-DD
-reshape wide sum, i(condition index_date_stata) j(sex) string
+reshape wide sum, i(sex index_date_stata) j(condition) string
 export delimited using "threeway_condition_date_sex.csv", replace
 
 
@@ -373,13 +370,11 @@ export delimited using "threeway_condition_date_sex.csv", replace
 *------------------------------------------------------------
 use `reshaped', clear
 
-statsby sum=r(sum), ///
-    by(condition index_date_stata ethnicity) clear: ///
-    summarize num_pf_cons
-
+*statsby sum=r(sum), by(condition index_date_stata ethnicity) clear: summarize num_pf_cons
+collapse (sum) sum=num_pf_cons, by(condition index_date_stata ethnicity)
 format index_date_stata %tdCCYY-NN-DD
 replace ethnicity = subinstr(ethnicity, " ", "_", .)
-reshape wide sum, i(condition index_date_stata) j(ethnicity) string
+reshape wide sum, i(ethnicity index_date_stata) j(condition) string
 export delimited using "threeway_condition_date_ethnicity.csv", replace
 
 
@@ -388,17 +383,16 @@ export delimited using "threeway_condition_date_ethnicity.csv", replace
 *------------------------------------------------------------
 use `reshaped', clear
 
-statsby sum=r(sum), ///
-    by(condition index_date_stata imd) clear: ///
-    summarize num_pf_cons
-
+*statsby sum=r(sum), by(condition index_date_stata imd) clear: summarize num_pf_cons
+collapse (sum) sum=num_pf_cons, by(condition index_date_stata imd)
 format index_date_stata %tdCCYY-NN-DD
 replace imd="5" if imd== "5 (Least Deprived)"
-reshape wide sum, i(condition index_date_stata) j(imd) string
+reshape wide sum, i(imd index_date_stata) j(condition) string
 export delimited using "threeway_condition_date_imd.csv", replace
 
 
 log close
+
 
 
 /*
