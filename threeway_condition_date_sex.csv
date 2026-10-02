@@ -1,0 +1,5 @@
+sex,index_date_stata,sumall,sumibite,sumimpetigo,sumotitismedia,sumshingles,sumsinusitis,sumsorethroat,sumuti
+female,,1,0,0,0,0,1,0,0
+intersex,,0,0,0,0,0,0,0,0
+male,,1,0,0,0,0,0,0,1
+unknown,,0,0,0,0,0,0,0,0
