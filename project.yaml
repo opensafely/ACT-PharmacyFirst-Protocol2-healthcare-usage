@@ -871,5 +871,26 @@ actions:
        moderately_sensitive:
          log1: "output/PF_WP2_P2_obj1_totals.log"
           #data_stata: "output/data/PF WP2 P2 dummy patient raw data updates Aug26.dta"
+          dataset: output/obj1/oneway_date_condition.csv
+          dataset: output/obj1/oneway_date.csv
+          dataset: output/obj1/oneway_region.csv
+          dataset: output/obj1/oneway_stp.csv
+          dataset: output/obj1/oneway_age_group.csv
+          dataset: output/obj1/oneway_sex.csv
+          dataset: output/obj1/oneway_ethnicity.csv
+          dataset: output/obj1/oneway_imd.csv
+          dataset: output/obj1/twoway_date_condition.csv
+          dataset: output/obj1/twoway_region_condition.csv
+          dataset: output/obj1/twoway_stp_condition.csv
+          dataset: output/obj1/twoway_age_group_condition.csv
+          dataset: output/obj1/twoway_sex_condition.csv
+          dataset: output/obj1/twoway_ethnicity_condition.csv
+          dataset: output/obj1/twoway_imd_condition.csv
+          dataset: output/obj1/threeway_condition_date_region.csv
+          dataset: output/obj1/threeway_condition_date_stp.csv
+          dataset: output/obj1/threeway_condition_date_age_group.csv
+          dataset: output/obj1/threeway_condition_date_sex.csv
+          dataset: output/obj1/threeway_condition_date_ethnicity.csv
+          dataset: output/obj1/threeway_condition_date_imd.csv
 
 #       log2: "output/PF_WP2_P2_obj1_rates.log"
