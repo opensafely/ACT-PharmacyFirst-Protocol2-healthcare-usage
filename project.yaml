@@ -865,31 +865,31 @@ actions:
         checks: output/objective_1_file_checks.txt
 
   run_objective_1_analysis:
-     run: stata-mp:latest analysis/Objective_1_analysis.do --output output/PF_WP2_P2_obj1_totals.log
-     needs: [preprocess_objective_1_data]
-     outputs:
-       moderately_sensitive:
-         log1: output/PF_WP2_P2_obj1.log
-         table1: oneway_date_condition.csv
-         table2: oneway_date.csv
-         table3: oneway_region.csv
-         table4: oneway_stp.csv
-         table5: oneway_age_group.csv
-         table6: oneway_sex.csv
-         table7: oneway_ethnicity.csv
-         table8: oneway_imd.csv
-         table9: twoway_date_condition.csv
-         table10: twoway_region_condition.csv
-         table11: twoway_stp_condition.csv
-         table12: twoway_age_group_condition.csv
-         table13: twoway_sex_condition.csv
-         table14: twoway_ethnicity_condition.csv
-         table15: twoway_imd_condition.csv
-         table16: threeway_condition_date_region.csv
-         table17: threeway_condition_date_stp.csv
-         table18: threeway_condition_date_age_group.csv
-         table19: threeway_condition_date_sex.csv
-         table20: threeway_condition_date_ethnicity.csv
-         table21: threeway_condition_date_imd.csv
+    run: stata-mp:latest analysis/Objective_1_analysis.do --output output/PF_WP2_P2_obj1_totals.log
+    needs: [preprocess_objective_1_data]
+    outputs:
+      moderately_sensitive:
+        log1: output/PF_WP2_P2_obj1_totals.log
+        table1: output/oneway_date_condition.csv
+        table2: output/oneway_date.csv
+        table3: output/oneway_region.csv
+        table4: output/oneway_stp.csv
+        table5: output/oneway_age_group.csv
+        table6: output/oneway_sex.csv
+        table7: output/oneway_ethnicity.csv
+        table8: output/oneway_imd.csv
+        table9: output/twoway_date_condition.csv
+        table10: output/twoway_region_condition.csv
+        table11: output/twoway_stp_condition.csv
+        table12: output/twoway_age_group_condition.csv
+        table13: output/twoway_sex_condition.csv
+        table14: output/twoway_ethnicity_condition.csv
+        table15: output/twoway_imd_condition.csv
+        table16: output/threeway_condition_date_region.csv
+        table17: output/threeway_condition_date_stp.csv
+        table18: output/threeway_condition_date_age_group.csv
+        table19: output/threeway_condition_date_sex.csv
+        table20: output/threeway_condition_date_ethnicity.csv
+        table21: output/threeway_condition_date_imd.csv
 
 #       log2: "output/PF_WP2_P2_obj1_rates.log"
