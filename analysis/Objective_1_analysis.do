@@ -127,8 +127,9 @@ preserve
 *statsby sum=r(sum), by(index_date_stata) clear: summarize num_pf_cons_all
 collapse (sum) sum=num_pf_cons_all, by(index_date_stata)
 format index_date_stata %tdDD/NN/CCYY
-
-export delimited using "output/oneway_date.csv", replace
+gen date = string(index_date_stata, "%tdCCYY-NN-DD")
+order date
+export delimited using "oneway_date.csv", replace
 
 restore
 
@@ -232,6 +233,8 @@ collapse (sum) sum=num_pf_cons, by(index_date_stata condition)
 *statsby sum=r(sum), by(index_date_stata condition) clear: summarize num_pf_cons
 reshape wide sum, i(index_date_stata) j(condition) string
 format index_date_stata %tdCCYY-NN-DD
+gen date = string(index_date_stata, "%tdCCYY-NN-DD")
+order date
 export delimited using "output/twoway_date_condition.csv", replace
 
 
@@ -320,9 +323,8 @@ replace region="Yorkshire_and_The_Humber" if region=="Yorkshire and The Humber"
 encode region, generate(region_num)
 drop region
 reshape wide sum, i(index_date_stata region_num) j(condition) string
-
-
-
+gen date = string(index_date_stata, "%tdCCYY-NN-DD")
+order date
 export delimited using "output/threeway_condition_date_region.csv", replace
 
 
@@ -335,6 +337,8 @@ use `reshaped', clear
 collapse (sum) sum=num_pf_cons, by(condition index_date_stata stp)
 format index_date_stata %tdCCYY-NN-DD
 reshape wide sum, i(stp index_date_stata) j(condition) string
+gen date = string(index_date_stata, "%tdCCYY-NN-DD")
+order date
 export delimited using "output/threeway_condition_date_stp.csv", replace
 
 
@@ -349,8 +353,8 @@ format index_date_stata %tdCCYY-NN-DD
 *encode age_group, generate(age_group_num)
 *drop age_group
 reshape wide sum, i(age_group index_date_stata) j(condition) string
-
-
+gen date = string(index_date_stata, "%tdCCYY-NN-DD")
+order date
 export delimited using "output/threeway_condition_date_age_group.csv", replace
 
 *------------------------------------------------------------
@@ -362,6 +366,8 @@ use `reshaped', clear
 collapse (sum) sum=num_pf_cons, by(condition index_date_stata sex)
 format index_date_stata %tdCCYY-NN-DD
 reshape wide sum, i(sex index_date_stata) j(condition) string
+gen date = string(index_date_stata, "%tdCCYY-NN-DD")
+order date
 export delimited using "output/threeway_condition_date_sex.csv", replace
 
 
@@ -375,6 +381,8 @@ collapse (sum) sum=num_pf_cons, by(condition index_date_stata ethnicity)
 format index_date_stata %tdCCYY-NN-DD
 replace ethnicity = subinstr(ethnicity, " ", "_", .)
 reshape wide sum, i(ethnicity index_date_stata) j(condition) string
+gen date = string(index_date_stata, "%tdCCYY-NN-DD")
+order date
 export delimited using "output/threeway_condition_date_ethnicity.csv", replace
 
 
@@ -388,6 +396,8 @@ collapse (sum) sum=num_pf_cons, by(condition index_date_stata imd)
 format index_date_stata %tdCCYY-NN-DD
 replace imd="5" if imd== "5 (Least Deprived)"
 reshape wide sum, i(imd index_date_stata) j(condition) string
+gen date = string(index_date_stata, "%tdCCYY-NN-DD")
+order date
 export delimited using "output/threeway_condition_date_imd.csv", replace
 
 
