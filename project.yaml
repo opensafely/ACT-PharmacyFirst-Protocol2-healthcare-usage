@@ -100,7 +100,12 @@ actions:
   #   outputs:
   #     moderately_sensitive:
   #       measure_tables: output/patient_measures_population_structure.csv
-  
+  generage_measure_baseline:
+    run: ehrql:v1 generate-measures analysis/validation/measures_population_validation.py --output output/patient_measures_baseline.csv
+    outputs:
+      moderately_sensitive:
+        measure_tables: output/patient_measures_baseline.csv
+
   generate_patient_measures_population_structure:
     run: ehrql:v1 generate-measures analysis/validation/measures_patient_population_structure.py --output output/patient_measures_population_structure.csv
     outputs:
