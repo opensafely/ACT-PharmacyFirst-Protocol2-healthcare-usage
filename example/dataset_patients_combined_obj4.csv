@@ -1,0 +1,892 @@
+pt_id,start_date,index_date,practice,region,stp,age,sex,ethnicity,imd,inc_pt_otitis_media,inc_pt_sinusitis,inc_pt_sore_throat,inc_pt_insect_bites,inc_pt_shingles,inc_pt_impetigo,inc_pt_uuti,inc_pt_all_eligible,ae_attendance_count,ae_uti_primary_count,ae_sinusitis_primary_count,ae_ibite_primary_count,ae_otitismedia_primary_count,ae_sorethroat_primary_count,ae_shingles_primary_count,ae_impetigo_primary_count,ae_ibite_strict_primary_count,ae_ibite_all_primary_count,ae_cellulitis_only_primary_count,ae_ibite_strict_or_all_primary_count,ae_lbp_primary_count,has_ae_uti_non_primary,has_ae_sinusitis_non_primary,has_ae_ibite_non_primary,has_ae_otitismedia_non_primary,has_ae_sorethroat_non_primary,has_ae_shingles_non_primary,has_ae_impetigo_non_primary,has_ae_ibite_strict_non_primary,has_ae_ibite_all_non_primary,has_ae_cellulitis_only_non_primary,has_ae_ibite_strict_or_all_non_primary,has_ae_lbp_non_primary
+3,2022-02-01,2022-02-28,196,South West,E54000040,60,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+7,2022-02-01,2022-02-28,546,West Midlands,E54000037,42,female,White and Caribbean,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+11,2022-02-01,2022-02-28,573,West Midlands,E54000076,48,female,Other Black,Missing,F,T,T,T,T,T,T,T,2,0,0,1,1,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+23,2022-02-01,2022-02-28,400,East Midlands,E54000082,55,male,Other Black,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,F,F,T,F,F
+31,2022-02-01,2022-02-28,640,Missing,E54000025,57,male,Caribbean,4,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+46,2022-02-01,2022-02-28,476,Missing,E54000041,24,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,F,F,T,F,F
+143,2022-02-01,2022-02-28,207,Missing,E54000033,96,male,Bangladeshi,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+156,2022-02-01,2022-02-28,466,Missing,E54000066,103,male,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+166,2022-02-01,2022-02-28,38,Yorkshire and The Humber,E54000028,114,intersex,African,3,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+181,2022-02-01,2022-02-28,708,West Midlands,E54000064,0,male,Other White,Missing,F,F,F,F,F,F,F,F,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+221,2022-02-01,2022-02-28,908,London,E54000066,33,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+229,2022-02-01,2022-02-28,777,South West,E54000027,63,unknown,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+273,2022-02-01,2022-02-28,877,East,E54000026,1,female,Other South Asian,1 (Most Deprived),T,F,F,T,F,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,F,T,F,T,T,T,T,F
+329,2022-02-01,2022-02-28,438,North West,E54000014,14,male,All other ethnic groups,1 (Most Deprived),T,T,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+338,2022-02-01,2022-02-28,445,South East,E54000013,26,male,Missing,5 (Least Deprived),F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+360,2022-02-01,2022-02-28,922,East,E54000065,0,female,Pakistani,Missing,F,F,F,F,F,F,F,F,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+429,2022-02-01,2022-02-28,434,South West,E54000045,24,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+462,2022-02-01,2022-02-28,543,West Midlands,E54000077,68,female,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+476,2022-02-01,2022-02-28,402,South West,E54000084,48,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+11,2022-03-01,2022-03-31,573,West Midlands,E54000076,48,female,Other Black,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,F,F,T,F,F
+45,2022-03-01,2022-03-31,432,Yorkshire and The Humber,E54000057,117,male,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+49,2022-03-01,2022-03-31,230,South West,E54000044,22,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+79,2022-03-01,2022-03-31,588,South West,E54000033,0,female,Other Black,Missing,F,F,F,F,F,F,F,F,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,F,T,T,T,T,T,F
+91,2022-03-01,2022-03-31,518,Yorkshire and The Humber,E54000057,98,male,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+101,2022-03-01,2022-03-31,365,North West,E54000087,39,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+125,2022-03-01,2022-03-31,539,South East,E54000015,11,female,Other Black,4,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+140,2022-03-01,2022-03-31,247,South West,E54000087,115,unknown,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+164,2022-03-01,2022-03-31,748,North West,E54000000,105,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+190,2022-03-01,2022-03-31,535,Missing,E54000082,101,female,Missing,4,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,F,T,T,T,T,T,F
+197,2022-03-01,2022-03-31,227,Yorkshire and The Humber,E54000056,83,male,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,T,F,T,T,T,T,F
+211,2022-03-01,2022-03-31,82,South East,E54000095,80,intersex,Other Mixed,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+240,2022-03-01,2022-03-31,893,Missing,E54000072,59,unknown,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+316,2022-03-01,2022-03-31,940,Yorkshire and The Humber,E54000067,100,intersex,All other ethnic groups,3,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,F,F,T,F,F
+339,2022-03-01,2022-03-31,899,North East,E54000089,10,intersex,Pakistani,4,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+360,2022-03-01,2022-03-31,922,East,E54000065,0,female,Pakistani,Missing,F,F,F,F,F,F,F,F,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+414,2022-03-01,2022-03-31,57,Missing,E54000089,48,intersex,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+439,2022-03-01,2022-03-31,402,West Midlands,E54000054,8,male,Other White,4,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,F,F,T,F,F
+469,2022-03-01,2022-03-31,745,West Midlands,E54000067,27,female,All other ethnic groups,3,F,T,T,T,T,T,T,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,F,T,T,T,T,T,F
+494,2022-03-01,2022-03-31,967,Missing,E54000059,22,male,Missing,4,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+124,2022-04-01,2022-04-30,858,South West,E54000026,85,male,Other Black,4,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+205,2022-04-01,2022-04-30,804,West Midlands,E54000043,67,unknown,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+305,2022-04-01,2022-04-30,86,Missing,E54000014,22,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+326,2022-04-01,2022-04-30,96,London,E54000094,87,intersex,Indian,4,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+328,2022-04-01,2022-04-30,417,West Midlands,E54000088,86,female,Other Black,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+364,2022-04-01,2022-04-30,460,Yorkshire and The Humber,E54000072,117,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+385,2022-04-01,2022-04-30,344,London,E54000084,4,intersex,White Irish,Missing,T,F,F,T,F,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+395,2022-04-01,2022-04-30,887,Missing,E54000000,65,female,Pakistani,2,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+436,2022-04-01,2022-04-30,378,Missing,E54000055,11,male,All other ethnic groups,Missing,T,F,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+439,2022-04-01,2022-04-30,402,West Midlands,E54000054,8,male,Other White,4,T,F,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+458,2022-04-01,2022-04-30,212,South West,E54000092,105,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+10,2022-05-01,2022-05-31,895,East,E54000064,59,female,White British,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+93,2022-05-01,2022-05-31,316,London,E54000002,80,intersex,Other Mixed,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+115,2022-05-01,2022-05-31,831,Missing,E54000010,117,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+156,2022-05-01,2022-05-31,466,Missing,E54000066,103,male,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+191,2022-05-01,2022-05-31,498,Yorkshire and The Humber,E54000077,63,intersex,Missing,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+196,2022-05-01,2022-05-31,174,South West,E54000025,37,female,All other ethnic groups,5 (Least Deprived),F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,F,T,T,T,T,F,T,T,T,T,F
+200,2022-05-01,2022-05-31,353,Missing,E54000066,55,unknown,Chinese,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+234,2022-05-01,2022-05-31,877,South West,E54000084,48,unknown,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+251,2022-05-01,2022-05-31,203,Missing,E54000039,103,female,Pakistani,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+261,2022-05-01,2022-05-31,83,South East,E54000079,34,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+266,2022-05-01,2022-05-31,557,East Midlands,E54000096,67,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+302,2022-05-01,2022-05-31,174,North West,E54000034,111,male,African,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,F,T,T,T,T,F
+320,2022-05-01,2022-05-31,947,East,E54000052,22,male,White British,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+338,2022-05-01,2022-05-31,445,South East,E54000013,26,male,Missing,5 (Least Deprived),F,T,T,T,T,T,F,T,2,0,0,0,1,0,1,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+364,2022-05-01,2022-05-31,460,Yorkshire and The Humber,E54000072,117,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+401,2022-05-01,2022-05-31,445,South West,E54000036,48,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+426,2022-05-01,2022-05-31,78,West Midlands,E54000039,109,male,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+450,2022-05-01,2022-05-31,156,Yorkshire and The Humber,E54000030,6,intersex,Pakistani,2,T,F,T,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+467,2022-05-01,2022-05-31,993,Missing,E54000008,97,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,F,T,F,T,T,T,T,F
+481,2022-05-01,2022-05-31,679,South West,E54000033,116,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+500,2022-05-01,2022-05-31,509,West Midlands,E54000098,93,female,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+22,2022-06-01,2022-06-30,441,North West,E54000082,100,intersex,Other Black,Missing,F,T,T,T,T,T,F,T,2,1,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+51,2022-06-01,2022-06-30,904,South West,E54000037,28,female,Other White,Missing,F,T,T,T,T,T,T,T,2,0,0,1,0,0,0,1,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+78,2022-06-01,2022-06-30,740,East,E54000077,4,female,African,Missing,T,F,F,T,F,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,F,T,T,F,T,T,T,T,T,T,F
+79,2022-06-01,2022-06-30,588,South West,E54000033,0,female,Other Black,Missing,F,F,F,F,F,F,F,F,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+91,2022-06-01,2022-06-30,518,Yorkshire and The Humber,E54000057,98,male,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+138,2022-06-01,2022-06-30,335,Yorkshire and The Humber,E54000096,86,female,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,F,T,F,T,T,T,T,F
+151,2022-06-01,2022-06-30,742,Missing,E54000074,11,unknown,Other White,3,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,F,T,T,T,T,F,T,T,T,T,F
+210,2022-06-01,2022-06-30,558,Missing,E54000049,67,female,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+221,2022-06-01,2022-06-30,908,London,E54000066,33,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+237,2022-06-01,2022-06-30,182,South East,E54000063,54,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+309,2022-06-01,2022-06-30,543,South West,E54000015,81,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+311,2022-06-01,2022-06-30,459,Missing,E54000051,95,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+316,2022-06-01,2022-06-30,940,Yorkshire and The Humber,E54000067,100,intersex,Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+326,2022-06-01,2022-06-30,96,London,E54000094,87,intersex,Indian,4,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+330,2022-06-01,2022-06-30,465,North East,E54000006,65,male,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+427,2022-06-01,2022-06-30,256,East,E54000089,32,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+433,2022-06-01,2022-06-30,550,North East,E54000031,98,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+476,2022-06-01,2022-06-30,402,South West,E54000084,48,male,Missing,Missing,F,T,T,T,T,T,F,T,2,0,0,1,1,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+4,2022-07-01,2022-07-31,701,North West,E54000054,26,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+43,2022-07-01,2022-07-31,88,Yorkshire and The Humber,E54000072,21,intersex,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+46,2022-07-01,2022-07-31,476,Missing,E54000041,24,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+50,2022-07-01,2022-07-31,895,South East,E54000074,23,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,F,F,T,T,T,T,F
+98,2022-07-01,2022-07-31,535,North West,E54000082,14,intersex,Missing,2,T,T,T,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,F,T,T,T,T,T,T,T,T,T,T,F
+104,2022-07-01,2022-07-31,807,Yorkshire and The Humber,E54000001,64,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+143,2022-07-01,2022-07-31,207,Missing,E54000033,96,male,Bangladeshi,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+152,2022-07-01,2022-07-31,241,East,E54000023,21,female,Other Black,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,F,T,T,T,T,F,T,T,T,T,F
+162,2022-07-01,2022-07-31,354,North West,E54000016,78,unknown,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+164,2022-07-01,2022-07-31,748,North West,E54000000,106,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+165,2022-07-01,2022-07-31,362,South East,E54000033,18,intersex,Other White,4,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+166,2022-07-01,2022-07-31,38,Yorkshire and The Humber,E54000028,115,intersex,African,3,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,T,T,T,T,T,T,F
+213,2022-07-01,2022-07-31,896,Yorkshire and The Humber,E54000079,5,female,Other White,2,T,F,T,T,F,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+256,2022-07-01,2022-07-31,106,West Midlands,E54000067,80,female,Other White,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+262,2022-07-01,2022-07-31,910,South West,E54000061,82,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,F,T,T,T,T,T,F
+288,2022-07-01,2022-07-31,55,Yorkshire and The Humber,E54000096,90,male,Other White,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+295,2022-07-01,2022-07-31,446,West Midlands,E54000006,6,unknown,African,2,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+319,2022-07-01,2022-07-31,946,South West,E54000000,51,female,Other White,Missing,F,T,T,T,T,T,T,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+346,2022-07-01,2022-07-31,405,North West,E54000083,3,female,Missing,Missing,T,F,F,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+358,2022-07-01,2022-07-31,804,Missing,E54000094,34,intersex,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+393,2022-07-01,2022-07-31,939,London,E54000073,78,female,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+462,2022-07-01,2022-07-31,543,West Midlands,E54000077,69,female,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+465,2022-07-01,2022-07-31,664,Missing,E54000015,89,unknown,Bangladeshi,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+471,2022-07-01,2022-07-31,803,Missing,E54000056,60,female,Other Mixed,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+476,2022-07-01,2022-07-31,402,South West,E54000084,48,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+501,2022-07-01,2022-07-31,563,East Midlands,E54000042,87,intersex,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+511,2022-07-01,2022-07-31,424,Missing,E54000055,77,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,F,T,T,T,T,F
+27,2022-08-01,2022-08-31,153,East Midlands,E54000072,109,intersex,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,F,T,T,T,T,T,T,T,T,T,T,F
+91,2022-08-01,2022-08-31,518,Yorkshire and The Humber,E54000057,98,male,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,F,T,T,T,T,T,F,T,T,T,T,F
+93,2022-08-01,2022-08-31,316,London,E54000002,80,intersex,Other Mixed,1 (Most Deprived),F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+101,2022-08-01,2022-08-31,365,North West,E54000087,40,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+138,2022-08-01,2022-08-31,335,Yorkshire and The Humber,E54000096,86,female,Indian,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+143,2022-08-01,2022-08-31,207,Missing,E54000033,96,male,Bangladeshi,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,F,F,T,F,F
+190,2022-08-01,2022-08-31,535,Missing,E54000082,102,female,Missing,4,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+279,2022-08-01,2022-08-31,46,Missing,E54000008,118,female,Other White,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+298,2022-08-01,2022-08-31,276,North East,E54000033,80,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+306,2022-08-01,2022-08-31,303,West Midlands,E54000032,0,male,Missing,4,F,F,F,F,F,F,F,F,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+330,2022-08-01,2022-08-31,465,North East,E54000006,65,male,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+350,2022-08-01,2022-08-31,265,London,E54000008,88,female,Missing,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+395,2022-08-01,2022-08-31,887,Missing,E54000000,65,female,Pakistani,2,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+414,2022-08-01,2022-08-31,57,Missing,E54000089,49,intersex,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+467,2022-08-01,2022-08-31,993,Missing,E54000008,97,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+67,2022-09-01,2022-09-30,348,North East,E54000033,8,female,Other White,3,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+93,2022-09-01,2022-09-30,316,London,E54000002,80,intersex,Other Mixed,1 (Most Deprived),F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+104,2022-09-01,2022-09-30,807,Yorkshire and The Humber,E54000001,64,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,F,T,T,T,T,T,F
+113,2022-09-01,2022-09-30,150,Yorkshire and The Humber,E54000014,86,unknown,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+122,2022-09-01,2022-09-30,203,Yorkshire and The Humber,E54000001,89,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+150,2022-09-01,2022-09-30,217,North West,E54000076,94,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,F,T,F,T,T,T,T,F
+188,2022-09-01,2022-09-30,160,East,E54000039,9,male,Caribbean,Missing,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+205,2022-09-01,2022-09-30,804,West Midlands,E54000043,67,unknown,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+225,2022-09-01,2022-09-30,920,North East,E54000064,79,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+239,2022-09-01,2022-09-30,264,South West,E54000042,23,female,White and Caribbean,3,F,T,T,T,T,T,T,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+273,2022-09-01,2022-09-30,877,East,E54000026,1,female,White British,1 (Most Deprived),T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+277,2022-09-01,2022-09-30,294,London,E54000097,41,male,Chinese,3,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+298,2022-09-01,2022-09-30,276,North East,E54000033,80,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+317,2022-09-01,2022-09-30,609,Yorkshire and The Humber,E54000035,22,intersex,Indian,3,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,F,F,T,T,T,T,T,F
+382,2022-09-01,2022-09-30,103,Missing,E54000069,94,female,Indian,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+386,2022-09-01,2022-09-30,137,East Midlands,E54000036,43,male,Other White,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+446,2022-09-01,2022-09-30,155,North East,E54000009,39,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,F,T,T,T,F,T,F,T,T,T,T,F
+476,2022-09-01,2022-09-30,402,South West,E54000084,48,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+508,2022-09-01,2022-09-30,227,South West,E54000033,78,female,African,5 (Least Deprived),F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+21,2022-10-01,2022-10-31,648,East,E54000098,34,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+24,2022-10-01,2022-10-31,762,East,E54000018,77,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+37,2022-10-01,2022-10-31,566,Missing,E54000097,109,female,Pakistani,3,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+45,2022-10-01,2022-10-31,432,Yorkshire and The Humber,E54000057,118,male,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,F,T,T,T,T,F
+79,2022-10-01,2022-10-31,588,South West,E54000033,1,female,Other Black,Missing,T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+91,2022-10-01,2022-10-31,518,Yorkshire and The Humber,E54000057,98,male,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+175,2022-10-01,2022-10-31,9,Missing,E54000015,56,unknown,Other South Asian,3,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+190,2022-10-01,2022-10-31,535,Missing,E54000082,102,female,Missing,4,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,F,F,T,F,F
+295,2022-10-01,2022-10-31,446,West Midlands,E54000006,6,unknown,African,2,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+305,2022-10-01,2022-10-31,86,Missing,E54000014,23,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,F,F,T,F,F
+340,2022-10-01,2022-10-31,906,East,E54000091,62,unknown,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+348,2022-10-01,2022-10-31,673,North West,E54000001,7,unknown,White British,4,T,F,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+360,2022-10-01,2022-10-31,922,East,E54000065,1,female,Pakistani,Missing,T,F,F,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+435,2022-10-01,2022-10-31,396,Yorkshire and The Humber,E54000030,14,unknown,Other South Asian,Missing,T,T,T,T,F,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+439,2022-10-01,2022-10-31,402,West Midlands,E54000054,8,male,Other White,4,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,F,F,T,T,T,T,F
+476,2022-10-01,2022-10-31,402,South West,E54000084,49,male,Missing,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+4,2022-11-01,2022-11-30,701,North West,E54000054,27,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+11,2022-11-01,2022-11-30,573,West Midlands,E54000076,48,female,Other Black,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,F,F,T,F,F
+25,2022-11-01,2022-11-30,753,Missing,E54000097,13,unknown,Other South Asian,Missing,T,T,T,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+31,2022-11-01,2022-11-30,640,Missing,E54000025,58,male,Caribbean,4,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,F,T,T,T,T,F
+46,2022-11-01,2022-11-30,476,Missing,E54000041,25,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+115,2022-11-01,2022-11-30,831,Missing,E54000010,118,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+124,2022-11-01,2022-11-30,858,South West,E54000026,86,male,Other South Asian,4,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+126,2022-11-01,2022-11-30,611,East,E54000022,83,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+157,2022-11-01,2022-11-30,71,Missing,E54000080,42,intersex,Other White,2,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+204,2022-11-01,2022-11-30,192,East,E54000087,73,male,Other Mixed,3,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+221,2022-11-01,2022-11-30,908,London,E54000066,34,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+243,2022-11-01,2022-11-30,451,South West,E54000089,49,male,White British,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+277,2022-11-01,2022-11-30,294,London,E54000097,41,male,Chinese,3,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+304,2022-11-01,2022-11-30,108,East,E54000026,99,male,White and African,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+307,2022-11-01,2022-11-30,926,West Midlands,E54000006,10,unknown,Pakistani,4,T,F,T,T,F,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+338,2022-11-01,2022-11-30,445,South East,E54000013,26,male,Missing,5 (Least Deprived),F,T,T,T,T,T,F,T,2,0,0,2,0,0,0,0,2,2,0,2,0,T,T,T,T,T,T,T,T,T,T,T,F
+347,2022-11-01,2022-11-30,662,North East,E54000040,101,unknown,African,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+364,2022-11-01,2022-11-30,460,Yorkshire and The Humber,E54000072,117,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+375,2022-11-01,2022-11-30,323,Missing,E54000023,93,female,All other ethnic groups,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+402,2022-11-01,2022-11-30,148,London,E54000023,52,female,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,T,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+420,2022-11-01,2022-11-30,6,South East,E54000055,7,unknown,African,4,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+447,2022-11-01,2022-11-30,614,South East,E54000078,109,male,Missing,3,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+467,2022-11-01,2022-11-30,993,Missing,E54000008,97,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+500,2022-11-01,2022-11-30,509,West Midlands,E54000098,94,female,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,F,T,T,T,T,F
+501,2022-11-01,2022-11-30,563,East Midlands,E54000042,88,intersex,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,F,T,T,T,T,F,F,T,T,T,T,F
+20,2022-12-01,2022-12-31,218,Missing,E54000019,118,intersex,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+49,2022-12-01,2022-12-31,230,South West,E54000044,23,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+62,2022-12-01,2022-12-31,385,Yorkshire and The Humber,E54000047,34,male,Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+74,2022-12-01,2022-12-31,616,Missing,E54000038,35,unknown,Missing,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+79,2022-12-01,2022-12-31,588,South West,E54000033,1,female,Other Black,Missing,T,F,F,T,F,T,F,T,2,0,1,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+318,2022-12-01,2022-12-31,815,South East,E54000029,55,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+334,2022-12-01,2022-12-31,823,South East,E54000077,88,male,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+336,2022-12-01,2022-12-31,265,Yorkshire and The Humber,E54000024,111,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,F,T,T,T,T,T,F,T,T,T,T,F
+360,2022-12-01,2022-12-31,922,East,E54000065,1,female,Pakistani,Missing,T,F,F,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+364,2022-12-01,2022-12-31,460,Yorkshire and The Humber,E54000072,117,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+397,2022-12-01,2022-12-31,937,Missing,E54000051,1,female,Other White,2,T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,F,T,F,T,T,T,T,F
+411,2022-12-01,2022-12-31,619,Missing,E54000074,118,male,Missing,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,F,F,T,F,F
+414,2022-12-01,2022-12-31,57,Missing,E54000089,49,intersex,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+476,2022-12-01,2022-12-31,402,South West,E54000084,49,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+46,2023-01-01,2023-01-31,476,Missing,E54000041,25,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+62,2023-01-01,2023-01-31,385,Yorkshire and The Humber,E54000047,34,male,Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+67,2023-01-01,2023-01-31,348,North East,E54000033,8,female,Other White,3,T,F,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+79,2023-01-01,2023-01-31,588,South West,E54000033,1,female,Other Black,Missing,T,F,F,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+91,2023-01-01,2023-01-31,518,Yorkshire and The Humber,E54000057,99,male,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,F,T,2,0,0,2,0,0,0,0,1,1,1,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+105,2023-01-01,2023-01-31,597,Missing,E54000020,76,female,Bangladeshi,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+125,2023-01-01,2023-01-31,539,South East,E54000015,11,female,Other Mixed,4,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+156,2023-01-01,2023-01-31,466,Missing,E54000066,104,male,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+185,2023-01-01,2023-01-31,561,Missing,E54000059,78,female,African,4,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+187,2023-01-01,2023-01-31,998,South West,E54000078,38,intersex,White Irish,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+191,2023-01-01,2023-01-31,498,Yorkshire and The Humber,E54000077,64,intersex,Missing,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+214,2023-01-01,2023-01-31,657,North West,E54000072,68,intersex,Other South Asian,2,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+262,2023-01-01,2023-01-31,910,South West,E54000061,82,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+282,2023-01-01,2023-01-31,863,London,E54000089,113,unknown,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,F,T,F,F,T,T,T,F
+321,2023-01-01,2023-01-31,978,North East,E54000001,9,female,All other ethnic groups,3,T,F,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+326,2023-01-01,2023-01-31,96,London,E54000094,87,intersex,Indian,4,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+335,2023-01-01,2023-01-31,707,Yorkshire and The Humber,E54000068,113,unknown,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+340,2023-01-01,2023-01-31,906,East,E54000091,63,unknown,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+364,2023-01-01,2023-01-31,460,Yorkshire and The Humber,E54000072,118,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+429,2023-01-01,2023-01-31,434,South West,E54000045,25,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+442,2023-01-01,2023-01-31,883,South East,E54000014,23,intersex,White British,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+459,2023-01-01,2023-01-31,701,East,E54000068,24,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+510,2023-01-01,2023-01-31,483,North West,E54000078,37,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+6,2023-02-01,2023-02-28,299,South East,E54000063,88,male,Missing,3,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+26,2023-02-01,2023-02-28,112,East,E54000070,70,unknown,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+35,2023-02-01,2023-02-28,185,East,E54000096,29,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,F,F,F,T,T,T,T,F
+123,2023-02-01,2023-02-28,293,South West,E54000030,32,unknown,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+127,2023-02-01,2023-02-28,11,East,E54000042,24,female,Missing,5 (Least Deprived),F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,T,F,T,T,T,T,F
+138,2023-02-01,2023-02-28,335,Yorkshire and The Humber,E54000096,86,female,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,F,F,T,F,F
+143,2023-02-01,2023-02-28,207,Missing,E54000033,97,male,Bangladeshi,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+149,2023-02-01,2023-02-28,578,North West,E54000077,42,female,Bangladeshi,Missing,F,T,T,T,T,T,T,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+237,2023-02-01,2023-02-28,182,South East,E54000063,54,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+269,2023-02-01,2023-02-28,542,North West,E54000078,15,unknown,All other ethnic groups,2,T,T,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+277,2023-02-01,2023-02-28,294,London,E54000097,41,male,Chinese,3,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+279,2023-02-01,2023-02-28,46,Missing,E54000008,118,female,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+299,2023-02-01,2023-02-28,703,West Midlands,E54000040,98,male,Other White,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+360,2023-02-01,2023-02-28,922,East,E54000065,1,female,Pakistani,Missing,T,F,F,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+387,2023-02-01,2023-02-28,489,Missing,E54000046,56,male,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+395,2023-02-01,2023-02-28,887,Missing,E54000000,65,female,Pakistani,2,F,T,T,T,T,T,F,T,2,0,0,1,1,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+433,2023-02-01,2023-02-28,550,North East,E54000031,98,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+476,2023-02-01,2023-02-28,402,South West,E54000084,49,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+506,2023-02-01,2023-02-28,261,South West,E54000060,93,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+11,2023-03-01,2023-03-31,573,West Midlands,E54000076,49,female,Other Black,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+34,2023-03-01,2023-03-31,580,Missing,E54000001,70,male,Missing,3,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+36,2023-03-01,2023-03-31,647,North West,E54000073,2,male,All other ethnic groups,3,T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+73,2023-03-01,2023-03-31,291,North East,E54000067,45,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+185,2023-03-01,2023-03-31,561,Missing,E54000059,78,female,African,4,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+191,2023-03-01,2023-03-31,498,Yorkshire and The Humber,E54000077,64,intersex,Missing,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+196,2023-03-01,2023-03-31,174,South West,E54000025,37,female,All other ethnic groups,5 (Least Deprived),F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+305,2023-03-01,2023-03-31,86,Missing,E54000014,23,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,F,T,T,T,T,F
+316,2023-03-01,2023-03-31,940,Yorkshire and The Humber,E54000067,101,intersex,Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+330,2023-03-01,2023-03-31,465,North East,E54000006,66,male,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+396,2023-03-01,2023-03-31,899,Yorkshire and The Humber,E54000087,101,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+432,2023-03-01,2023-03-31,31,Missing,E54000038,95,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+464,2023-03-01,2023-03-31,792,South West,E54000089,71,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+476,2023-03-01,2023-03-31,402,South West,E54000084,49,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+10,2023-04-01,2023-04-30,895,East,E54000064,60,female,White British,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+46,2023-04-01,2023-04-30,476,Missing,E54000041,25,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+60,2023-04-01,2023-04-30,14,Missing,E54000054,102,unknown,White Irish,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,F,T,T,T,T,F
+69,2023-04-01,2023-04-30,832,North West,E54000010,26,female,Other Black,1 (Most Deprived),F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+79,2023-04-01,2023-04-30,588,South West,E54000033,1,female,Other Black,Missing,T,F,F,T,F,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,F,T,T,T,F,T,T,T,T,T,F
+89,2023-04-01,2023-04-30,506,North East,E54000075,41,male,Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+96,2023-04-01,2023-04-30,724,East,E54000096,21,unknown,African,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+101,2023-04-01,2023-04-30,365,North West,E54000087,40,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+113,2023-04-01,2023-04-30,150,Yorkshire and The Humber,E54000014,86,unknown,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,F,F,T,F,F
+125,2023-04-01,2023-04-30,539,South East,E54000015,12,female,Other Mixed,4,T,T,T,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,F,F,T,F,F
+142,2023-04-01,2023-04-30,523,East,E54000002,21,male,Other South Asian,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+143,2023-04-01,2023-04-30,207,Missing,E54000033,97,male,Bangladeshi,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+162,2023-04-01,2023-04-30,354,North West,E54000016,79,unknown,Indian,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+205,2023-04-01,2023-04-30,804,West Midlands,E54000043,68,unknown,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+274,2023-04-01,2023-04-30,790,West Midlands,E54000056,82,female,All other ethnic groups,4,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+295,2023-04-01,2023-04-30,446,West Midlands,E54000006,7,unknown,All other ethnic groups,2,T,F,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+302,2023-04-01,2023-04-30,174,North West,E54000034,112,male,African,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+329,2023-04-01,2023-04-30,438,North West,E54000014,15,male,All other ethnic groups,4,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,F,T,T,T,T,F
+350,2023-04-01,2023-04-30,265,London,E54000008,88,female,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+478,2023-04-01,2023-04-30,120,London,E54000056,15,intersex,All other ethnic groups,5 (Least Deprived),T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+511,2023-04-01,2023-04-30,424,Missing,E54000055,78,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+48,2023-05-01,2023-05-31,383,Missing,E54000033,9,male,African,Missing,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+60,2023-05-01,2023-05-31,14,Missing,E54000054,102,unknown,White Irish,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+61,2023-05-01,2023-05-31,23,East,E54000019,8,unknown,African,4,T,F,T,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+88,2023-05-01,2023-05-31,961,Yorkshire and The Humber,E54000065,72,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+160,2023-05-01,2023-05-31,464,South East,E54000086,48,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+176,2023-05-01,2023-05-31,298,Yorkshire and The Humber,E54000098,53,male,Chinese,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,F,T,T,F,T,F,T,T,T,T,F
+213,2023-05-01,2023-05-31,896,Yorkshire and The Humber,E54000079,6,female,Other White,2,T,F,T,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+264,2023-05-01,2023-05-31,288,Missing,E54000038,6,female,White Irish,Missing,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,F,T,T,T,T,T,T,T,T,T,T,F
+294,2023-05-01,2023-05-31,561,Missing,E54000027,61,unknown,Other Black,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+298,2023-05-01,2023-05-31,276,North East,E54000033,81,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+335,2023-05-01,2023-05-31,707,Yorkshire and The Humber,E54000068,114,unknown,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+360,2023-05-01,2023-05-31,922,East,E54000065,1,female,Pakistani,Missing,T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+390,2023-05-01,2023-05-31,588,London,E54000013,40,female,White Irish,3,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,T,F,T,T,T,T,F
+434,2023-05-01,2023-05-31,703,Missing,E54000053,23,intersex,White and Caribbean,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+447,2023-05-01,2023-05-31,614,South East,E54000078,110,male,Missing,3,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+461,2023-05-01,2023-05-31,802,Missing,E54000079,77,intersex,Other Black,4,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,F,T,T,T,T,T,T,T,T,T,F
+476,2023-05-01,2023-05-31,402,South West,E54000084,49,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+498,2023-05-01,2023-05-31,961,London,E54000035,74,intersex,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+113,2023-06-01,2023-06-30,150,Yorkshire and The Humber,E54000014,86,unknown,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+143,2023-06-01,2023-06-30,207,Missing,E54000033,97,male,Bangladeshi,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+151,2023-06-01,2023-06-30,742,Missing,E54000074,12,unknown,Other White,3,T,T,T,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+190,2023-06-01,2023-06-30,535,Missing,E54000082,103,female,Missing,4,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+205,2023-06-01,2023-06-30,804,West Midlands,E54000043,68,unknown,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+221,2023-06-01,2023-06-30,908,London,E54000066,34,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+231,2023-06-01,2023-06-30,415,South East,E54000043,90,male,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+336,2023-06-01,2023-06-30,265,Yorkshire and The Humber,E54000024,111,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+346,2023-06-01,2023-06-30,405,North West,E54000083,4,female,Missing,Missing,T,F,F,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+404,2023-06-01,2023-06-30,163,Missing,E54000068,18,unknown,White British,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+433,2023-06-01,2023-06-30,550,North East,E54000031,99,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+475,2023-06-01,2023-06-30,639,Yorkshire and The Humber,E54000067,113,unknown,White British,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+476,2023-06-01,2023-06-30,402,South West,E54000084,49,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,F,T,T,T,T,T,T,T,T,T,T,F
+500,2023-06-01,2023-06-30,509,West Midlands,E54000098,94,female,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+509,2023-06-01,2023-06-30,783,London,E54000071,63,female,White and African,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+510,2023-06-01,2023-06-30,483,North West,E54000078,38,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+56,2023-07-01,2023-07-31,328,East,E54000043,65,intersex,White and Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+91,2023-07-01,2023-07-31,518,Yorkshire and The Humber,E54000057,99,male,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,F,F,F,T,T,T,T,F
+105,2023-07-01,2023-07-31,597,Missing,E54000020,77,female,Bangladeshi,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+124,2023-07-01,2023-07-31,858,South West,E54000026,87,male,Other White,4,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+129,2023-07-01,2023-07-31,230,West Midlands,E54000098,0,unknown,Missing,Missing,F,F,F,F,F,F,F,F,2,0,0,1,0,0,1,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+141,2023-07-01,2023-07-31,968,North West,E54000017,27,intersex,Other Black,2,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,F,T,F,T,T,T,T,F
+160,2023-07-01,2023-07-31,464,South East,E54000086,49,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+164,2023-07-01,2023-07-31,748,North West,E54000000,107,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,F,F,T,T,T,T,T,F
+176,2023-07-01,2023-07-31,298,Yorkshire and The Humber,E54000098,53,male,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+235,2023-07-01,2023-07-31,360,East,E54000078,74,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+253,2023-07-01,2023-07-31,506,South West,E54000090,68,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,F,T,T,T,F,T,T,T,T,T,F
+299,2023-07-01,2023-07-31,703,West Midlands,E54000040,99,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+305,2023-07-01,2023-07-31,86,Missing,E54000014,23,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,F,T,T,F,T,T,T,T,F
+315,2023-07-01,2023-07-31,284,Yorkshire and The Humber,E54000029,50,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+323,2023-07-01,2023-07-31,656,South West,E54000021,94,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+365,2023-07-01,2023-07-31,18,North East,E54000034,72,male,White and Asian,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+385,2023-07-01,2023-07-31,344,London,E54000084,5,intersex,White Irish,Missing,T,F,T,T,F,T,F,T,2,0,0,1,1,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+430,2023-07-01,2023-07-31,193,West Midlands,E54000093,0,female,White British,3,F,F,F,F,F,F,F,F,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+450,2023-07-01,2023-07-31,156,Yorkshire and The Humber,E54000030,7,intersex,All other ethnic groups,2,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+467,2023-07-01,2023-07-31,993,Missing,E54000008,98,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+2,2023-08-01,2023-08-31,566,North East,E54000027,55,female,Other South Asian,3,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+11,2023-08-01,2023-08-31,573,West Midlands,E54000076,49,female,Other Black,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+13,2023-08-01,2023-08-31,511,West Midlands,E54000042,112,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,F,T,T,F,F,T,T,T,T,T,F
+16,2023-08-01,2023-08-31,10,Missing,E54000080,14,male,All other ethnic groups,Missing,T,T,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+18,2023-08-01,2023-08-31,483,North West,E54000063,117,intersex,White Irish,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,F,F,T,T,T,T,T,F
+48,2023-08-01,2023-08-31,383,Missing,E54000033,9,male,African,Missing,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+49,2023-08-01,2023-08-31,230,South West,E54000044,24,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+63,2023-08-01,2023-08-31,163,Missing,E54000006,24,female,Bangladeshi,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+126,2023-08-01,2023-08-31,611,East,E54000022,83,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+168,2023-08-01,2023-08-31,501,South West,E54000037,18,female,Missing,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+217,2023-08-01,2023-08-31,424,East,E54000023,5,male,Other White,1 (Most Deprived),T,F,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,F,T,T,F,T,T,T,T,F
+225,2023-08-01,2023-08-31,920,North East,E54000064,79,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+326,2023-08-01,2023-08-31,96,London,E54000094,88,intersex,Indian,4,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+329,2023-08-01,2023-08-31,438,North West,E54000014,15,male,All other ethnic groups,4,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+333,2023-08-01,2023-08-31,725,North West,E54000028,74,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,T,T,T,T,T,T,F
+346,2023-08-01,2023-08-31,405,North West,E54000083,4,female,Missing,Missing,T,F,F,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+387,2023-08-01,2023-08-31,489,Missing,E54000046,56,male,Chinese,Missing,F,T,T,T,T,T,F,T,2,1,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+392,2023-08-01,2023-08-31,847,North East,E54000061,60,intersex,White and Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+402,2023-08-01,2023-08-31,148,London,E54000023,53,female,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+408,2023-08-01,2023-08-31,854,Missing,E54000085,104,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+474,2023-08-01,2023-08-31,997,Missing,E54000039,99,male,Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,F,T,T,T,T,T,F
+500,2023-08-01,2023-08-31,509,West Midlands,E54000098,94,female,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+4,2023-09-01,2023-09-30,701,North West,E54000054,28,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+45,2023-09-01,2023-09-30,432,Yorkshire and The Humber,E54000057,119,male,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+148,2023-09-01,2023-09-30,330,Missing,E54000038,22,female,Other Black,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+183,2023-09-01,2023-09-30,719,West Midlands,E54000028,67,female,African,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+185,2023-09-01,2023-09-30,561,Missing,E54000059,79,female,African,4,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+210,2023-09-01,2023-09-30,558,Missing,E54000049,68,female,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+211,2023-09-01,2023-09-30,82,South East,E54000095,82,intersex,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+253,2023-09-01,2023-09-30,506,South West,E54000090,68,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+278,2023-09-01,2023-09-30,595,Yorkshire and The Humber,E54000012,82,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+288,2023-09-01,2023-09-30,55,Yorkshire and The Humber,E54000096,91,male,Other White,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+431,2023-09-01,2023-09-30,560,North West,E54000061,113,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+495,2023-09-01,2023-09-30,721,Missing,E54000028,29,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+503,2023-09-01,2023-09-30,974,North East,E54000000,18,female,Other Mixed,Missing,F,T,T,T,T,T,T,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+23,2023-10-01,2023-10-31,400,East Midlands,E54000082,57,male,Other Black,3,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,F,F,T,T,T,T,F
+38,2023-10-01,2023-10-31,804,Missing,E54000074,70,female,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+50,2023-10-01,2023-10-31,895,South East,E54000074,24,male,White and African,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+79,2023-10-01,2023-10-31,588,South West,E54000033,2,female,Caribbean,Missing,T,F,F,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,F,F,T,F,F
+91,2023-10-01,2023-10-31,518,Yorkshire and The Humber,E54000057,99,male,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+144,2023-10-01,2023-10-31,549,North East,E54000074,61,intersex,Other White,3,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,T,T,T,T,T,T,F
+249,2023-10-01,2023-10-31,679,North East,E54000073,98,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+262,2023-10-01,2023-10-31,910,South West,E54000061,83,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+358,2023-10-01,2023-10-31,804,Missing,E54000094,36,intersex,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,F,T,T,T,T,T,F
+363,2023-10-01,2023-10-31,685,East,E54000090,80,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+6,2023-11-01,2023-11-30,299,South East,E54000063,88,male,Missing,3,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+19,2023-11-01,2023-11-30,233,Yorkshire and The Humber,E54000041,48,unknown,Pakistani,1 (Most Deprived),F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+62,2023-11-01,2023-11-30,385,Yorkshire and The Humber,E54000047,35,male,Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+101,2023-11-01,2023-11-30,365,North West,E54000087,41,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+126,2023-11-01,2023-11-30,611,East,E54000022,84,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+145,2023-11-01,2023-11-30,941,Missing,E54000038,29,male,African,2,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,F,T,F,T,T,T,T,F
+164,2023-11-01,2023-11-30,748,North West,E54000000,107,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,F,T,T,T,T,T,T,T,T,T,T,F
+190,2023-11-01,2023-11-30,535,Missing,E54000082,103,female,Missing,4,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+251,2023-11-01,2023-11-30,203,Missing,E54000039,105,female,Pakistani,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+262,2023-11-01,2023-11-30,910,South West,E54000061,83,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,2,0,0,1,1,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+263,2023-11-01,2023-11-30,117,East Midlands,E54000023,39,female,White and Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+273,2023-11-01,2023-11-30,877,East,E54000026,3,female,White Irish,1 (Most Deprived),T,F,F,T,F,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+338,2023-11-01,2023-11-30,445,South East,E54000013,27,male,Missing,5 (Least Deprived),F,T,T,T,T,T,F,T,2,0,0,1,0,1,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+357,2023-11-01,2023-11-30,344,London,E54000058,37,intersex,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+364,2023-11-01,2023-11-30,460,Yorkshire and The Humber,E54000072,118,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+395,2023-11-01,2023-11-30,887,Missing,E54000000,66,female,Pakistani,2,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+410,2023-11-01,2023-11-30,683,East,E54000034,43,intersex,Other Black,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,T,T,F,F,T,F,F
+427,2023-11-01,2023-11-30,256,East,E54000089,33,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+439,2023-11-01,2023-11-30,402,West Midlands,E54000054,9,male,Other White,Missing,T,F,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+459,2023-11-01,2023-11-30,701,East,E54000068,25,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,F,T,T,T,T,F,T,T,T,T,F
+494,2023-11-01,2023-11-30,967,Missing,E54000059,24,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+511,2023-11-01,2023-11-30,424,Missing,E54000055,79,female,White British,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+1,2023-12-01,2023-12-31,681,London,E54000002,91,female,White and African,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+6,2023-12-01,2023-12-31,299,South East,E54000063,89,male,Missing,3,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,F,T,T,T,T,T,F
+48,2023-12-01,2023-12-31,383,Missing,E54000033,9,male,African,Missing,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+51,2023-12-01,2023-12-31,904,South West,E54000037,30,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+130,2023-12-01,2023-12-31,694,Missing,E54000078,14,female,Caribbean,Missing,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+137,2023-12-01,2023-12-31,355,West Midlands,E54000021,26,unknown,Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,F,T,T,T,T,T,F
+144,2023-12-01,2023-12-31,549,North East,E54000074,61,intersex,Other White,3,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+145,2023-12-01,2023-12-31,941,Missing,E54000038,29,male,African,2,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+237,2023-12-01,2023-12-31,182,South East,E54000063,55,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+249,2023-12-01,2023-12-31,679,North East,E54000073,98,intersex,Other Black,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+282,2023-12-01,2023-12-31,863,London,E54000089,114,unknown,Missing,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+286,2023-12-01,2023-12-31,533,Missing,E54000096,90,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+305,2023-12-01,2023-12-31,86,Missing,E54000014,24,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+330,2023-12-01,2023-12-31,465,North East,E54000006,67,male,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,F,F,F,T,T,T,T,F
+338,2023-12-01,2023-12-31,445,South East,E54000013,27,male,Missing,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+386,2023-12-01,2023-12-31,137,East Midlands,E54000036,44,male,Other White,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+395,2023-12-01,2023-12-31,887,Missing,E54000000,66,female,Pakistani,2,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+478,2023-12-01,2023-12-31,120,London,E54000056,15,intersex,All other ethnic groups,5 (Least Deprived),T,T,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,F,T,T,T,T,T,F
+483,2023-12-01,2023-12-31,908,Yorkshire and The Humber,E54000085,0,unknown,African,1 (Most Deprived),F,F,F,F,F,F,F,F,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+505,2023-12-01,2023-12-31,529,West Midlands,E54000074,65,male,Other White,4,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+61,2024-01-01,2024-01-31,23,East,E54000019,9,unknown,African,4,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+79,2024-01-01,2024-01-31,588,South West,E54000033,2,female,Caribbean,Missing,T,F,F,T,F,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+221,2024-01-01,2024-01-31,908,London,E54000066,35,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+225,2024-01-01,2024-01-31,920,North East,E54000064,80,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+338,2024-01-01,2024-01-31,445,South East,E54000013,27,male,Missing,5 (Least Deprived),F,T,T,T,T,T,F,T,2,0,1,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+367,2024-01-01,2024-01-31,478,Missing,E54000092,52,female,African,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+375,2024-01-01,2024-01-31,323,Missing,E54000023,94,female,All other ethnic groups,5 (Least Deprived),F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,F,F,T,F,F
+420,2024-01-01,2024-01-31,6,South East,E54000055,8,unknown,African,2,T,F,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+426,2024-01-01,2024-01-31,78,West Midlands,E54000039,111,male,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+447,2024-01-01,2024-01-31,614,South East,E54000078,110,male,Missing,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+479,2024-01-01,2024-01-31,55,Yorkshire and The Humber,E54000085,80,intersex,Bangladeshi,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+50,2024-02-01,2024-02-29,895,South East,E54000074,25,male,White and African,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,F,T,T,T,F,F,T,T,T,T,T,F
+55,2024-02-01,2024-02-29,430,North East,E54000042,75,intersex,White Irish,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+56,2024-02-01,2024-02-29,328,East,E54000043,66,intersex,White and Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+81,2024-02-01,2024-02-29,95,North East,E54000012,50,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+107,2024-02-01,2024-02-29,211,North East,E54000069,12,male,African,Missing,T,T,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+151,2024-02-01,2024-02-29,742,Missing,E54000074,13,unknown,Other White,3,T,T,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+205,2024-02-01,2024-02-29,804,West Midlands,E54000043,69,unknown,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+254,2024-02-01,2024-02-29,986,West Midlands,E54000010,33,female,Other White,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+305,2024-02-01,2024-02-29,86,Missing,E54000014,24,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+329,2024-02-01,2024-02-29,438,North West,E54000014,16,male,All other ethnic groups,4,T,T,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+336,2024-02-01,2024-02-29,265,Yorkshire and The Humber,E54000024,112,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+360,2024-02-01,2024-02-29,922,East,E54000065,2,female,Pakistani,2,T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+364,2024-02-01,2024-02-29,460,Yorkshire and The Humber,E54000072,119,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+388,2024-02-01,2024-02-29,887,Missing,E54000008,106,male,White Irish,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+428,2024-02-01,2024-02-29,376,East,E54000098,63,female,African,Missing,F,T,T,T,T,T,T,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+469,2024-02-01,2024-02-29,745,West Midlands,E54000067,29,female,All other ethnic groups,3,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+67,2024-03-01,2024-03-31,348,North East,E54000033,9,female,Other White,3,T,F,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+91,2024-03-01,2024-03-31,518,Yorkshire and The Humber,E54000057,100,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,F,F,T,F,F
+101,2024-03-01,2024-03-31,365,North West,E54000087,41,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+137,2024-03-01,2024-03-31,355,West Midlands,E54000021,27,unknown,Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+156,2024-03-01,2024-03-31,466,Missing,E54000066,105,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+253,2024-03-01,2024-03-31,506,South West,E54000090,69,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+280,2024-03-01,2024-03-31,436,Missing,E54000015,47,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+302,2024-03-01,2024-03-31,174,North West,E54000034,113,male,African,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,F,F,F,T,T,T,T,F
+307,2024-03-01,2024-03-31,926,West Midlands,E54000006,11,unknown,All other ethnic groups,Missing,T,F,T,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+335,2024-03-01,2024-03-31,707,Yorkshire and The Humber,E54000068,115,unknown,Missing,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+387,2024-03-01,2024-03-31,489,Missing,E54000046,57,male,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+394,2024-03-01,2024-03-31,898,South West,E54000020,110,male,Missing,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+411,2024-03-01,2024-03-31,619,Missing,E54000074,119,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+428,2024-03-01,2024-03-31,376,East,E54000098,63,female,African,Missing,F,T,T,T,T,T,T,T,3,0,0,1,1,1,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+434,2024-03-01,2024-03-31,703,Missing,E54000053,24,intersex,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+458,2024-03-01,2024-03-31,212,South West,E54000092,107,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,F,T,T,T,T,T,F
+485,2024-03-01,2024-03-31,114,Missing,E54000075,6,unknown,Other Mixed,Missing,T,F,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+489,2024-03-01,2024-03-31,104,Missing,E54000060,57,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+507,2024-03-01,2024-03-31,804,North West,E54000036,60,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+510,2024-03-01,2024-03-31,483,North West,E54000078,38,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+6,2024-04-01,2024-04-30,299,South East,E54000063,89,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+13,2024-04-01,2024-04-30,511,West Midlands,E54000042,112,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+41,2024-04-01,2024-04-30,146,Yorkshire and The Humber,E54000082,49,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+51,2024-04-01,2024-04-30,904,South West,E54000037,30,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+88,2024-04-01,2024-04-30,961,Yorkshire and The Humber,E54000065,73,male,Other White,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+106,2024-04-01,2024-04-30,198,Missing,E54000042,28,female,Other Mixed,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+151,2024-04-01,2024-04-30,742,Missing,E54000074,13,unknown,Other White,3,T,T,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+160,2024-04-01,2024-04-30,464,South East,E54000086,49,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+166,2024-04-01,2024-04-30,38,Yorkshire and The Humber,E54000028,116,intersex,African,3,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+197,2024-04-01,2024-04-30,227,Yorkshire and The Humber,E54000056,85,male,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+210,2024-04-01,2024-04-30,558,Missing,E54000049,69,female,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+211,2024-04-01,2024-04-30,82,South East,E54000095,82,intersex,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+243,2024-04-01,2024-04-30,451,South West,E54000089,50,male,White British,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+266,2024-04-01,2024-04-30,557,East Midlands,E54000096,69,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+305,2024-04-01,2024-04-30,86,Missing,E54000014,24,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+364,2024-04-01,2024-04-30,460,Yorkshire and The Humber,E54000072,119,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+385,2024-04-01,2024-04-30,344,London,E54000084,6,intersex,White Irish,Missing,T,F,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+428,2024-04-01,2024-04-30,376,East,E54000098,63,female,African,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+476,2024-04-01,2024-04-30,402,South West,E54000084,50,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+509,2024-04-01,2024-04-30,783,London,E54000071,63,female,White and African,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+41,2024-05-01,2024-05-31,146,Yorkshire and The Humber,E54000082,49,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,F,T,T,T,F,F,T,T,T,T,F
+61,2024-05-01,2024-05-31,23,East,E54000019,9,unknown,African,Missing,T,F,T,T,F,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+62,2024-05-01,2024-05-31,385,Yorkshire and The Humber,E54000047,35,male,Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+104,2024-05-01,2024-05-31,807,Yorkshire and The Humber,E54000001,66,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+105,2024-05-01,2024-05-31,597,Missing,E54000020,78,female,Bangladeshi,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,F,T,F,T,T,T,T,T,F
+109,2024-05-01,2024-05-31,301,Yorkshire and The Humber,E54000038,32,male,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+124,2024-05-01,2024-05-31,858,South West,E54000026,87,male,Other White,4,F,T,T,T,T,T,F,T,2,0,1,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+126,2024-05-01,2024-05-31,611,East,E54000022,84,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+139,2024-05-01,2024-05-31,725,Missing,E54000025,73,unknown,White British,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+280,2024-05-01,2024-05-31,436,Missing,E54000015,47,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+285,2024-05-01,2024-05-31,859,Missing,E54000031,77,unknown,White British,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+310,2024-05-01,2024-05-31,287,Missing,E54000052,100,female,Other Black,Missing,F,T,T,T,T,T,F,T,2,1,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,F,T,F,T,T,T,T,F
+338,2024-05-01,2024-05-31,445,South East,E54000013,28,male,Missing,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+358,2024-05-01,2024-05-31,804,Missing,E54000094,36,intersex,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+363,2024-05-01,2024-05-31,685,East,E54000090,80,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+364,2024-05-01,2024-05-31,460,Yorkshire and The Humber,E54000072,119,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+413,2024-05-01,2024-05-31,937,North West,E54000065,54,unknown,Other White,2,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+506,2024-05-01,2024-05-31,261,South West,E54000060,94,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,F,F,T,F,F
+511,2024-05-01,2024-05-31,424,Missing,E54000055,79,female,White British,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+1,2024-06-01,2024-06-30,681,London,E54000002,91,female,White and African,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+4,2024-06-01,2024-06-30,701,North West,E54000054,28,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+40,2024-06-01,2024-06-30,273,Missing,E54000023,54,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+41,2024-06-01,2024-06-30,146,Yorkshire and The Humber,E54000082,49,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,F,T,T,T,T,T,F
+91,2024-06-01,2024-06-30,518,Yorkshire and The Humber,E54000057,100,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,2,0,0,1,0,1,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+104,2024-06-01,2024-06-30,807,Yorkshire and The Humber,E54000001,66,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+204,2024-06-01,2024-06-30,192,East,E54000087,75,male,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+228,2024-06-01,2024-06-30,675,Missing,E54000048,76,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+262,2024-06-01,2024-06-30,910,South West,E54000061,84,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+263,2024-06-01,2024-06-30,117,East Midlands,E54000023,39,female,White and Asian,Missing,F,T,T,T,T,T,T,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,T,F,T,T,T,T,F
+279,2024-06-01,2024-06-30,46,Missing,E54000008,120,female,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+305,2024-06-01,2024-06-30,86,Missing,E54000014,24,intersex,White Irish,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+310,2024-06-01,2024-06-30,287,Missing,E54000052,100,female,Other Black,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+336,2024-06-01,2024-06-30,265,Yorkshire and The Humber,E54000024,112,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+387,2024-06-01,2024-06-30,489,Missing,E54000046,57,male,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+428,2024-06-01,2024-06-30,376,East,E54000098,63,female,African,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+465,2024-06-01,2024-06-30,664,Missing,E54000015,91,unknown,Bangladeshi,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+467,2024-06-01,2024-06-30,993,Missing,E54000008,99,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+475,2024-06-01,2024-06-30,639,Yorkshire and The Humber,E54000067,114,unknown,White British,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,F,F,T,T,T,T,F
+476,2024-06-01,2024-06-30,402,South West,E54000084,50,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+479,2024-06-01,2024-06-30,55,Yorkshire and The Humber,E54000085,80,intersex,Bangladeshi,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+506,2024-06-01,2024-06-30,261,South West,E54000060,94,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+511,2024-06-01,2024-06-30,424,Missing,E54000055,79,female,White British,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+11,2024-07-01,2024-07-31,573,West Midlands,E54000076,50,female,Other Black,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+20,2024-07-01,2024-07-31,218,Missing,E54000019,120,intersex,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+37,2024-07-01,2024-07-31,566,Missing,E54000097,110,female,Pakistani,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+73,2024-07-01,2024-07-31,291,North East,E54000067,46,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+79,2024-07-01,2024-07-31,588,South West,E54000033,2,female,All other ethnic groups,Missing,T,F,F,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+104,2024-07-01,2024-07-31,807,Yorkshire and The Humber,E54000001,66,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,F,T,T,T,F,F,T,T,T,T,F
+137,2024-07-01,2024-07-31,355,West Midlands,E54000021,27,unknown,Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+225,2024-07-01,2024-07-31,920,North East,E54000064,80,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+244,2024-07-01,2024-07-31,70,Missing,E54000074,56,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,F,T,T,T,F,F,T,T,T,T,F
+248,2024-07-01,2024-07-31,76,West Midlands,E54000061,31,male,African,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+261,2024-07-01,2024-07-31,83,South East,E54000079,36,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+279,2024-07-01,2024-07-31,46,Missing,E54000008,120,female,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+292,2024-07-01,2024-07-31,280,East,E54000035,66,unknown,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+307,2024-07-01,2024-07-31,926,West Midlands,E54000006,11,unknown,All other ethnic groups,Missing,T,F,T,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+364,2024-07-01,2024-07-31,460,Yorkshire and The Humber,E54000072,119,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+379,2024-07-01,2024-07-31,162,South East,E54000041,107,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+412,2024-07-01,2024-07-31,553,East,E54000065,60,female,African,Missing,F,T,T,T,T,T,T,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+426,2024-07-01,2024-07-31,78,West Midlands,E54000039,112,male,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+428,2024-07-01,2024-07-31,376,East,E54000098,63,female,African,Missing,F,T,T,T,T,T,T,T,2,0,0,1,1,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+458,2024-07-01,2024-07-31,212,South West,E54000092,107,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,F,F,T,F,F
+483,2024-07-01,2024-07-31,908,Yorkshire and The Humber,E54000085,0,unknown,Other South Asian,5 (Least Deprived),F,F,F,F,F,F,F,F,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+34,2024-08-01,2024-08-31,580,Missing,E54000001,72,male,Missing,3,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+36,2024-08-01,2024-08-31,647,North West,E54000073,4,male,Other White,3,T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+78,2024-08-01,2024-08-31,740,East,E54000077,6,female,All other ethnic groups,Missing,T,F,T,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+85,2024-08-01,2024-08-31,287,Yorkshire and The Humber,E54000024,105,male,Pakistani,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+91,2024-08-01,2024-08-31,518,Yorkshire and The Humber,E54000057,100,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+106,2024-08-01,2024-08-31,198,Missing,E54000042,28,female,Caribbean,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+182,2024-08-01,2024-08-31,26,East,E54000039,36,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+191,2024-08-01,2024-08-31,498,Yorkshire and The Humber,E54000077,65,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+210,2024-08-01,2024-08-31,558,Missing,E54000049,69,female,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+267,2024-08-01,2024-08-31,647,South West,E54000006,82,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+283,2024-08-01,2024-08-31,464,South West,E54000081,36,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+298,2024-08-01,2024-08-31,276,North East,E54000033,82,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+303,2024-08-01,2024-08-31,357,South East,E54000013,54,male,White Irish,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+324,2024-08-01,2024-08-31,698,London,E54000069,112,intersex,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+346,2024-08-01,2024-08-31,405,North West,E54000083,5,female,Other White,Missing,T,F,T,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+360,2024-08-01,2024-08-31,922,East,E54000065,2,female,White and Asian,2,T,F,F,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+364,2024-08-01,2024-08-31,460,Yorkshire and The Humber,E54000072,119,intersex,Missing,Missing,F,T,T,T,T,T,F,T,2,0,0,2,0,0,0,0,2,2,0,2,0,T,T,T,T,T,T,T,T,T,T,T,F
+373,2024-08-01,2024-08-31,252,North West,E54000040,80,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+382,2024-08-01,2024-08-31,103,Missing,E54000069,96,female,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+391,2024-08-01,2024-08-31,728,South West,E54000053,31,female,Other White,Missing,F,T,T,T,T,T,T,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+423,2024-08-01,2024-08-31,643,Yorkshire and The Humber,E54000099,72,female,All other ethnic groups,2,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+446,2024-08-01,2024-08-31,155,North East,E54000009,41,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+457,2024-08-01,2024-08-31,711,London,E54000099,109,female,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+467,2024-08-01,2024-08-31,993,Missing,E54000008,99,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+483,2024-08-01,2024-08-31,908,Yorkshire and The Humber,E54000085,0,unknown,Other South Asian,5 (Least Deprived),F,F,F,F,F,F,F,F,2,0,0,1,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+511,2024-08-01,2024-08-31,424,Missing,E54000055,79,female,White British,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,F,T,T,T,T,T,F,T,T,T,T,F
+23,2024-09-01,2024-09-30,400,East Midlands,E54000082,58,male,Other Black,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+61,2024-09-01,2024-09-30,23,East,E54000019,9,unknown,African,Missing,T,F,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+70,2024-09-01,2024-09-30,993,Yorkshire and The Humber,E54000017,86,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+92,2024-09-01,2024-09-30,947,North East,E54000069,20,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+120,2024-09-01,2024-09-30,444,North East,E54000035,97,unknown,Other South Asian,3,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+207,2024-09-01,2024-09-30,690,Yorkshire and The Humber,E54000039,98,female,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+242,2024-09-01,2024-09-30,686,North West,E54000050,64,male,Other Black,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+261,2024-09-01,2024-09-30,83,South East,E54000079,37,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+306,2024-09-01,2024-09-30,303,West Midlands,E54000032,2,male,Other Black,Missing,T,F,F,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+320,2024-09-01,2024-09-30,947,East,E54000052,24,male,White British,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+326,2024-09-01,2024-09-30,96,London,E54000094,89,intersex,Indian,2,F,T,T,T,T,T,F,T,2,1,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+374,2024-09-01,2024-09-30,518,Missing,E54000019,19,unknown,White Irish,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,F,F,T,F,F
+432,2024-09-01,2024-09-30,31,Missing,E54000038,97,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+467,2024-09-01,2024-09-30,993,Missing,E54000008,99,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,F,T,T,T,T,T,T,T,F
+501,2024-09-01,2024-09-30,563,East Midlands,E54000042,90,intersex,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+6,2024-10-01,2024-10-31,299,South East,E54000063,89,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,F,F,T,F,F
+93,2024-10-01,2024-10-31,316,London,E54000002,82,intersex,Other Mixed,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+187,2024-10-01,2024-10-31,998,South West,E54000078,39,intersex,White Irish,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+217,2024-10-01,2024-10-31,424,East,E54000023,6,male,Other White,1 (Most Deprived),T,F,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+221,2024-10-01,2024-10-31,908,London,E54000066,36,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+263,2024-10-01,2024-10-31,117,East Midlands,E54000023,40,female,White and Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+306,2024-10-01,2024-10-31,303,West Midlands,E54000032,2,male,Other Black,Missing,T,F,F,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+309,2024-10-01,2024-10-31,543,South West,E54000015,84,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+326,2024-10-01,2024-10-31,96,London,E54000094,89,intersex,Indian,2,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+330,2024-10-01,2024-10-31,465,North East,E54000006,68,male,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+335,2024-10-01,2024-10-31,707,Yorkshire and The Humber,E54000068,115,unknown,Missing,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+350,2024-10-01,2024-10-31,265,London,E54000008,90,female,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+360,2024-10-01,2024-10-31,922,East,E54000065,3,female,White and Asian,2,T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,T,F,T,T,T,T,F
+380,2024-10-01,2024-10-31,560,West Midlands,E54000040,43,unknown,African,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+387,2024-10-01,2024-10-31,489,Missing,E54000046,57,male,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+419,2024-10-01,2024-10-31,498,North West,E54000081,119,female,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+420,2024-10-01,2024-10-31,6,South East,E54000055,9,unknown,African,2,T,F,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+423,2024-10-01,2024-10-31,643,Yorkshire and The Humber,E54000099,72,female,All other ethnic groups,2,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+428,2024-10-01,2024-10-31,376,East,E54000098,64,female,African,Missing,F,T,T,T,T,T,T,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+434,2024-10-01,2024-10-31,703,Missing,E54000053,25,intersex,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+460,2024-10-01,2024-10-31,353,East,E54000005,64,female,Other Mixed,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,F,T,T,T,T,T,F
+6,2024-11-01,2024-11-30,299,South East,E54000063,89,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+60,2024-11-01,2024-11-30,14,Missing,E54000054,104,unknown,White Irish,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,F,T,T,T,T,T,T,F,F,T,F,F
+79,2024-11-01,2024-11-30,588,South West,E54000033,3,female,All other ethnic groups,Missing,T,F,F,T,F,T,F,T,2,1,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+106,2024-11-01,2024-11-30,198,Missing,E54000042,29,female,Other White,Missing,F,T,T,T,T,T,T,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+109,2024-11-01,2024-11-30,301,Yorkshire and The Humber,E54000038,33,male,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+124,2024-11-01,2024-11-30,858,South West,E54000026,88,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+129,2024-11-01,2024-11-30,230,West Midlands,E54000098,1,unknown,Missing,1 (Most Deprived),T,F,F,T,F,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+138,2024-11-01,2024-11-30,335,Yorkshire and The Humber,E54000096,88,female,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,F,T,T,T,T,T,T,T,T,T,T,F
+145,2024-11-01,2024-11-30,941,Missing,E54000038,30,male,African,2,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+210,2024-11-01,2024-11-30,558,Missing,E54000049,69,female,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+218,2024-11-01,2024-11-30,655,North East,E54000002,41,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+225,2024-11-01,2024-11-30,920,North East,E54000064,81,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,F,T,F,T,T,T,T,F
+310,2024-11-01,2024-11-30,287,Missing,E54000052,101,female,Other Black,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+326,2024-11-01,2024-11-30,96,London,E54000094,89,intersex,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,T,T,T,T,T,T,F
+338,2024-11-01,2024-11-30,445,South East,E54000013,28,male,Missing,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+344,2024-11-01,2024-11-30,971,Missing,E54000015,102,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+359,2024-11-01,2024-11-30,688,Missing,E54000073,12,male,Chinese,Missing,T,T,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+417,2024-11-01,2024-11-30,583,North West,E54000059,116,unknown,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+420,2024-11-01,2024-11-30,6,South East,E54000055,9,unknown,African,2,T,F,T,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+436,2024-11-01,2024-11-30,378,Missing,E54000055,14,male,All other ethnic groups,Missing,T,T,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+463,2024-11-01,2024-11-30,477,Missing,E54000013,7,male,White British,4,T,F,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+473,2024-11-01,2024-11-30,247,South East,E54000047,65,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,F,F,T,T,T,T,T,F
+494,2024-11-01,2024-11-30,967,Missing,E54000059,25,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+509,2024-11-01,2024-11-30,783,London,E54000071,64,female,White and African,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+23,2024-12-01,2024-12-31,400,East Midlands,E54000082,58,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+49,2024-12-01,2024-12-31,230,South West,E54000044,25,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+98,2024-12-01,2024-12-31,535,North West,E54000082,16,intersex,Missing,Missing,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+129,2024-12-01,2024-12-31,230,West Midlands,E54000098,1,unknown,Missing,1 (Most Deprived),T,F,F,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+140,2024-12-01,2024-12-31,247,South West,E54000087,118,unknown,Chinese,Missing,F,T,T,T,T,T,F,T,2,0,1,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+201,2024-12-01,2024-12-31,106,Missing,E54000019,118,female,White Irish,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+226,2024-12-01,2024-12-31,167,Yorkshire and The Humber,E54000026,108,intersex,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+240,2024-12-01,2024-12-31,893,Missing,E54000072,62,unknown,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+255,2024-12-01,2024-12-31,763,Missing,E54000075,112,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+312,2024-12-01,2024-12-31,530,London,E54000067,46,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+330,2024-12-01,2024-12-31,465,North East,E54000006,68,male,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+346,2024-12-01,2024-12-31,405,North West,E54000083,6,female,Other White,Missing,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,F,T,T,T,T,F,T,T,T,T,F
+359,2024-12-01,2024-12-31,688,Missing,E54000073,12,male,Chinese,Missing,T,T,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+423,2024-12-01,2024-12-31,643,Yorkshire and The Humber,E54000099,72,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+425,2024-12-01,2024-12-31,28,West Midlands,E54000042,43,intersex,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+467,2024-12-01,2024-12-31,993,Missing,E54000008,99,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+494,2024-12-01,2024-12-31,967,Missing,E54000059,25,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+11,2025-01-01,2025-01-31,573,West Midlands,E54000076,51,female,Other Black,Missing,F,T,T,T,T,T,T,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+41,2025-01-01,2025-01-31,146,Yorkshire and The Humber,E54000082,50,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+48,2025-01-01,2025-01-31,383,Missing,E54000033,10,male,African,Missing,T,F,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,F,T,T,T,F
+113,2025-01-01,2025-01-31,150,Yorkshire and The Humber,E54000014,88,unknown,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+117,2025-01-01,2025-01-31,672,South West,E54000048,120,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+150,2025-01-01,2025-01-31,217,North West,E54000076,96,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+155,2025-01-01,2025-01-31,481,Yorkshire and The Humber,E54000029,37,intersex,Other Black,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+181,2025-01-01,2025-01-31,708,West Midlands,E54000064,3,male,White and Caribbean,Missing,T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+229,2025-01-01,2025-01-31,777,South West,E54000027,66,unknown,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+243,2025-01-01,2025-01-31,451,South West,E54000089,51,male,White British,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,F,T,T,T,T,F,F,F,T,F,F
+263,2025-01-01,2025-01-31,117,East Midlands,E54000023,40,female,White and Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,F,T,T,T,T,T,T,T,F
+273,2025-01-01,2025-01-31,877,East,E54000026,4,female,White Irish,1 (Most Deprived),T,F,F,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+338,2025-01-01,2025-01-31,445,South East,E54000013,28,male,Missing,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+373,2025-01-01,2025-01-31,252,North West,E54000040,81,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+404,2025-01-01,2025-01-31,163,Missing,E54000068,20,unknown,White British,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+431,2025-01-01,2025-01-31,560,North West,E54000061,114,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,T,T,T,T,T,T,F
+433,2025-01-01,2025-01-31,550,North East,E54000031,100,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,F,T,T,T,T,T,T,T,T,T,T,F
+462,2025-01-01,2025-01-31,543,West Midlands,E54000077,71,female,All other ethnic groups,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+483,2025-01-01,2025-01-31,908,Yorkshire and The Humber,E54000085,1,unknown,White and Asian,4,T,F,F,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+7,2025-02-01,2025-02-28,546,West Midlands,E54000037,45,female,White and Caribbean,5 (Least Deprived),F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+101,2025-02-01,2025-02-28,365,North West,E54000087,42,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+176,2025-02-01,2025-02-28,298,Yorkshire and The Humber,E54000098,55,male,Chinese,Missing,F,T,T,T,T,T,F,T,2,0,2,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+181,2025-02-01,2025-02-28,708,West Midlands,E54000064,3,male,White and Caribbean,Missing,T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+213,2025-02-01,2025-02-28,896,Yorkshire and The Humber,E54000079,7,female,Other White,2,T,F,T,T,F,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+295,2025-02-01,2025-02-28,446,West Midlands,E54000006,9,unknown,Other South Asian,Missing,T,F,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+301,2025-02-01,2025-02-28,773,Missing,E54000018,29,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+326,2025-02-01,2025-02-28,96,London,E54000094,89,intersex,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+330,2025-02-01,2025-02-28,465,North East,E54000006,68,male,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,F,F,T,F,F
+341,2025-02-01,2025-02-28,221,East,E54000079,101,intersex,Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+358,2025-02-01,2025-02-28,804,Missing,E54000094,37,intersex,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,0,0,0,F,T,T,T,T,T,T,T,T,T,T,F
+395,2025-02-01,2025-02-28,887,Missing,E54000000,67,female,Pakistani,Missing,F,T,T,T,T,T,F,T,2,0,0,2,0,0,0,0,0,0,2,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+428,2025-02-01,2025-02-28,376,East,E54000098,64,female,African,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+446,2025-02-01,2025-02-28,155,North East,E54000009,41,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+464,2025-02-01,2025-02-28,792,South West,E54000089,73,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+494,2025-02-01,2025-02-28,967,Missing,E54000059,25,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+501,2025-02-01,2025-02-28,563,East Midlands,E54000042,90,intersex,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+507,2025-02-01,2025-02-28,804,North West,E54000036,61,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+28,2025-03-01,2025-03-31,68,Missing,E54000088,57,unknown,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+37,2025-03-01,2025-03-31,566,Missing,E54000097,111,female,Pakistani,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+91,2025-03-01,2025-03-31,518,Yorkshire and The Humber,E54000057,101,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+101,2025-03-01,2025-03-31,365,North West,E54000087,42,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+155,2025-03-01,2025-03-31,481,Yorkshire and The Humber,E54000029,37,intersex,Other Black,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+165,2025-03-01,2025-03-31,362,South East,E54000033,21,intersex,Other South Asian,2,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+251,2025-03-01,2025-03-31,203,Missing,E54000039,106,female,Pakistani,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+277,2025-03-01,2025-03-31,294,London,E54000097,43,male,Chinese,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+299,2025-03-01,2025-03-31,703,West Midlands,E54000040,100,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+307,2025-03-01,2025-03-31,926,West Midlands,E54000006,12,unknown,All other ethnic groups,Missing,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+318,2025-03-01,2025-03-31,815,South East,E54000029,58,male,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+347,2025-03-01,2025-03-31,662,North East,E54000040,103,unknown,African,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,F,F,T,F,F
+393,2025-03-01,2025-03-31,939,London,E54000073,81,female,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+413,2025-03-01,2025-03-31,937,North West,E54000065,55,unknown,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+436,2025-03-01,2025-03-31,378,Missing,E54000055,14,male,All other ethnic groups,Missing,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+476,2025-03-01,2025-03-31,402,South West,E54000084,51,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,F,T,T,T,T,F
+493,2025-03-01,2025-03-31,893,North East,E54000050,42,female,Other White,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,F,T,F,T,T,T,T,T,F
+28,2025-04-01,2025-04-30,68,Missing,E54000088,57,unknown,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+38,2025-04-01,2025-04-30,804,Missing,E54000074,72,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+46,2025-04-01,2025-04-30,476,Missing,E54000041,27,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+49,2025-04-01,2025-04-30,230,South West,E54000044,26,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+50,2025-04-01,2025-04-30,895,South East,E54000074,26,male,White and African,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+57,2025-04-01,2025-04-30,588,North West,E54000051,76,female,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+58,2025-04-01,2025-04-30,339,Missing,E54000088,63,intersex,Other Black,3,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,F,T,T,T,T,F,T,T,T,T,F
+127,2025-04-01,2025-04-30,11,East,E54000042,26,female,Missing,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+262,2025-04-01,2025-04-30,910,South West,E54000061,85,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+273,2025-04-01,2025-04-30,877,East,E54000026,4,female,White Irish,1 (Most Deprived),T,F,F,T,F,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+307,2025-04-01,2025-04-30,926,West Midlands,E54000006,12,unknown,Other South Asian,Missing,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+326,2025-04-01,2025-04-30,96,London,E54000094,90,intersex,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+378,2025-04-01,2025-04-30,328,Yorkshire and The Humber,E54000044,62,female,Other White,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+386,2025-04-01,2025-04-30,137,East Midlands,E54000036,46,male,Other White,3,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+458,2025-04-01,2025-04-30,212,South West,E54000092,108,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+483,2025-04-01,2025-04-30,908,Yorkshire and The Humber,E54000085,1,unknown,All other ethnic groups,1 (Most Deprived),T,F,F,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+500,2025-04-01,2025-04-30,509,West Midlands,E54000098,96,female,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+79,2025-05-01,2025-05-31,588,South West,E54000033,3,female,Other White,Missing,T,F,F,T,F,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+98,2025-05-01,2025-05-31,535,North West,E54000082,17,intersex,Missing,Missing,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+104,2025-05-01,2025-05-31,807,Yorkshire and The Humber,E54000001,67,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+129,2025-05-01,2025-05-31,230,West Midlands,E54000098,1,unknown,Missing,1 (Most Deprived),T,F,F,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+146,2025-05-01,2025-05-31,92,Yorkshire and The Humber,E54000018,110,intersex,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+151,2025-05-01,2025-05-31,742,Missing,E54000074,14,unknown,Other White,3,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+210,2025-05-01,2025-05-31,558,Missing,E54000049,70,female,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+219,2025-05-01,2025-05-31,40,South West,E54000090,57,unknown,African,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+233,2025-05-01,2025-05-31,684,South East,E54000011,95,intersex,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+243,2025-05-01,2025-05-31,451,South West,E54000089,51,male,White British,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+307,2025-05-01,2025-05-31,926,West Midlands,E54000006,12,unknown,Other South Asian,Missing,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+317,2025-05-01,2025-05-31,609,Yorkshire and The Humber,E54000035,25,intersex,African,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+402,2025-05-01,2025-05-31,148,London,E54000023,55,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+467,2025-05-01,2025-05-31,993,Missing,E54000008,100,male,Missing,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+10,2025-06-01,2025-06-30,895,East,E54000064,62,female,White British,Missing,F,T,T,T,T,T,T,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+11,2025-06-01,2025-06-30,573,West Midlands,E54000076,51,female,Other Black,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,T,T,T,T,T,T,F
+18,2025-06-01,2025-06-30,483,North West,E54000063,119,intersex,White British,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+24,2025-06-01,2025-06-30,762,East,E54000018,80,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+57,2025-06-01,2025-06-30,588,North West,E54000051,77,female,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+91,2025-06-01,2025-06-30,518,Yorkshire and The Humber,E54000057,101,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+120,2025-06-01,2025-06-30,444,North East,E54000035,98,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,F,T,T,F,T,T,T,T,F
+129,2025-06-01,2025-06-30,230,West Midlands,E54000098,1,unknown,Missing,1 (Most Deprived),T,F,F,T,F,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+145,2025-06-01,2025-06-30,941,Missing,E54000038,31,male,African,4,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+152,2025-06-01,2025-06-30,241,East,E54000023,24,female,Other Black,Missing,F,T,T,T,T,T,T,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+221,2025-06-01,2025-06-30,908,London,E54000066,36,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+241,2025-06-01,2025-06-30,212,North West,E54000047,117,intersex,White British,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,T,F,T,T,T,T,F
+305,2025-06-01,2025-06-30,86,Missing,E54000014,25,intersex,White Irish,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+310,2025-06-01,2025-06-30,287,Missing,E54000052,101,female,Other Black,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+312,2025-06-01,2025-06-30,530,London,E54000067,46,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,T,T,T,T,T,T,F
+329,2025-06-01,2025-06-30,438,North West,E54000014,17,male,All other ethnic groups,4,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+359,2025-06-01,2025-06-30,688,Missing,E54000073,12,male,Chinese,Missing,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+367,2025-06-01,2025-06-30,478,Missing,E54000092,53,female,African,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,F,T,F,T,T,T,T,F
+436,2025-06-01,2025-06-30,378,Missing,E54000055,14,male,Caribbean,Missing,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+439,2025-06-01,2025-06-30,402,West Midlands,E54000054,11,male,Other White,Missing,T,F,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,F,T,T,T,T,T,T,T,T,T,T,F
+467,2025-06-01,2025-06-30,993,Missing,E54000008,100,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+480,2025-06-01,2025-06-30,690,Missing,E54000000,28,intersex,Pakistani,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+486,2025-06-01,2025-06-30,70,North East,E54000073,8,unknown,Other White,5 (Least Deprived),T,F,T,T,F,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+497,2025-06-01,2025-06-30,409,South East,E54000022,15,male,Other White,Missing,T,T,T,T,F,T,F,T,4,1,0,1,0,1,0,1,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+502,2025-06-01,2025-06-30,916,West Midlands,E54000053,54,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,F,F,T,F,F
+25,2025-07-01,2025-07-31,753,Missing,E54000097,16,unknown,Other South Asian,Missing,T,T,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+91,2025-07-01,2025-07-31,518,Yorkshire and The Humber,E54000057,101,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+104,2025-07-01,2025-07-31,807,Yorkshire and The Humber,E54000001,67,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+107,2025-07-01,2025-07-31,211,North East,E54000069,14,male,African,Missing,T,T,T,T,F,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+122,2025-07-01,2025-07-31,203,Yorkshire and The Humber,E54000001,92,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+142,2025-07-01,2025-07-31,523,East,E54000002,23,male,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+143,2025-07-01,2025-07-31,207,Missing,E54000033,99,male,Bangladeshi,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+151,2025-07-01,2025-07-31,742,Missing,E54000074,14,unknown,Other White,3,T,T,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+163,2025-07-01,2025-07-31,800,Missing,E54000076,36,intersex,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,F,F,T,T,T,T,F
+305,2025-07-01,2025-07-31,86,Missing,E54000014,25,intersex,White Irish,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+310,2025-07-01,2025-07-31,287,Missing,E54000052,102,female,Other Black,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+317,2025-07-01,2025-07-31,609,Yorkshire and The Humber,E54000035,25,intersex,African,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+338,2025-07-01,2025-07-31,445,South East,E54000013,29,male,Missing,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+362,2025-07-01,2025-07-31,16,West Midlands,E54000074,7,intersex,White and African,Missing,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+414,2025-07-01,2025-07-31,57,Missing,E54000089,52,intersex,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,F,T,T,T,F,T,T,T,T,T,F
+433,2025-07-01,2025-07-31,550,North East,E54000031,101,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+435,2025-07-01,2025-07-31,396,Yorkshire and The Humber,E54000030,16,unknown,Other South Asian,Missing,T,T,T,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+458,2025-07-01,2025-07-31,212,South West,E54000092,108,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+467,2025-07-01,2025-07-31,993,Missing,E54000008,100,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+483,2025-07-01,2025-07-31,908,Yorkshire and The Humber,E54000085,1,unknown,Other Mixed,5 (Least Deprived),T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,F,T,T,T,T,T,F
+498,2025-07-01,2025-07-31,961,London,E54000035,76,intersex,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+510,2025-07-01,2025-07-31,483,North West,E54000078,40,male,African,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+511,2025-07-01,2025-07-31,424,Missing,E54000055,80,female,White British,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,F,T,T,T,T,F,T,T,T,T,T,F
+4,2025-08-01,2025-08-31,701,North West,E54000054,29,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+193,2025-08-01,2025-08-31,335,East,E54000067,12,female,Other South Asian,Missing,T,T,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+210,2025-08-01,2025-08-31,558,Missing,E54000049,70,female,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+240,2025-08-01,2025-08-31,893,Missing,E54000072,62,unknown,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+288,2025-08-01,2025-08-31,55,Yorkshire and The Humber,E54000096,93,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+290,2025-08-01,2025-08-31,718,Missing,E54000089,16,unknown,Other White,Missing,T,T,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+291,2025-08-01,2025-08-31,696,East Midlands,E54000019,34,unknown,Other Black,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+305,2025-08-01,2025-08-31,86,Missing,E54000014,25,intersex,White Irish,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+307,2025-08-01,2025-08-31,926,West Midlands,E54000006,12,unknown,Other South Asian,Missing,T,T,T,T,F,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+326,2025-08-01,2025-08-31,96,London,E54000094,90,intersex,Indian,Missing,F,T,T,T,T,T,F,T,2,1,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+338,2025-08-01,2025-08-31,445,South East,E54000013,29,male,Missing,5 (Least Deprived),F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+343,2025-08-01,2025-08-31,123,Yorkshire and The Humber,E54000084,81,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+352,2025-08-01,2025-08-31,628,Missing,E54000010,95,male,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,F,T,T,T,T,T,F
+357,2025-08-01,2025-08-31,344,London,E54000058,39,intersex,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+362,2025-08-01,2025-08-31,16,West Midlands,E54000074,7,intersex,White and African,Missing,T,F,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+413,2025-08-01,2025-08-31,937,North West,E54000065,55,unknown,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+455,2025-08-01,2025-08-31,258,East,E54000008,40,female,African,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+501,2025-08-01,2025-08-31,563,East Midlands,E54000042,90,intersex,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,F,T,T,T,T,F
+506,2025-08-01,2025-08-31,261,South West,E54000060,95,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,F,T,T,T,T,T,F,T,T,T,T,F
+509,2025-08-01,2025-08-31,783,London,E54000071,65,female,White and African,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+6,2025-09-01,2025-09-30,299,South East,E54000063,90,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+7,2025-09-01,2025-09-30,546,West Midlands,E54000037,45,female,White and Caribbean,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+10,2025-09-01,2025-09-30,895,East,E54000064,62,female,White British,Missing,F,T,T,T,T,T,T,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+104,2025-09-01,2025-09-30,807,Yorkshire and The Humber,E54000001,67,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+122,2025-09-01,2025-09-30,203,Yorkshire and The Humber,E54000001,92,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,F,T,T,T,T,T,F
+123,2025-09-01,2025-09-30,293,South West,E54000030,35,unknown,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+129,2025-09-01,2025-09-30,230,West Midlands,E54000098,2,unknown,Missing,1 (Most Deprived),T,F,F,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+241,2025-09-01,2025-09-30,212,North West,E54000047,118,intersex,White British,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+283,2025-09-01,2025-09-30,464,South West,E54000081,37,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+292,2025-09-01,2025-09-30,280,East,E54000035,68,unknown,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+349,2025-09-01,2025-09-30,449,South East,E54000013,45,male,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,F,F,T,F,F
+387,2025-09-01,2025-09-30,489,Missing,E54000046,58,male,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+388,2025-09-01,2025-09-30,887,Missing,E54000008,107,male,White Irish,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+408,2025-09-01,2025-09-30,854,Missing,E54000085,106,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+429,2025-09-01,2025-09-30,434,South West,E54000045,28,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+483,2025-09-01,2025-09-30,908,Yorkshire and The Humber,E54000085,2,unknown,Other Mixed,5 (Least Deprived),T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+2,2025-10-01,2025-10-31,566,North East,E54000027,57,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+7,2025-10-01,2025-10-31,546,West Midlands,E54000037,45,female,White and Caribbean,Missing,F,T,T,T,T,T,T,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+23,2025-10-01,2025-10-31,400,East Midlands,E54000082,59,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+61,2025-10-01,2025-10-31,23,East,E54000019,10,unknown,African,Missing,T,F,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,T,T,F,T,T,T,T,F
+93,2025-10-01,2025-10-31,316,London,E54000002,83,intersex,Other Mixed,1 (Most Deprived),F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,F,T,T,T,T,T,F
+162,2025-10-01,2025-10-31,354,North West,E54000016,81,unknown,Indian,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+181,2025-10-01,2025-10-31,708,West Midlands,E54000064,4,male,Other South Asian,Missing,T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+217,2025-10-01,2025-10-31,424,East,E54000023,7,male,Other White,1 (Most Deprived),T,F,T,T,F,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+226,2025-10-01,2025-10-31,167,Yorkshire and The Humber,E54000026,109,intersex,White and Caribbean,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+243,2025-10-01,2025-10-31,451,South West,E54000089,52,male,White British,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+273,2025-10-01,2025-10-31,877,East,E54000026,5,female,White Irish,1 (Most Deprived),T,F,T,T,F,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+326,2025-10-01,2025-10-31,96,London,E54000094,90,intersex,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,F,T,F,T,T,T,T,F
+338,2025-10-01,2025-10-31,445,South East,E54000013,29,male,Missing,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+347,2025-10-01,2025-10-31,662,North East,E54000040,104,unknown,African,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,F,T,T,T,T,F
+395,2025-10-01,2025-10-31,887,Missing,E54000000,68,female,Pakistani,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+473,2025-10-01,2025-10-31,247,South East,E54000047,66,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+483,2025-10-01,2025-10-31,908,Yorkshire and The Humber,E54000085,2,unknown,Other Mixed,5 (Least Deprived),T,F,F,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+6,2025-11-01,2025-11-30,299,South East,E54000063,90,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+79,2025-11-01,2025-11-30,588,South West,E54000033,4,female,Other White,Missing,T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+97,2025-11-01,2025-11-30,439,Yorkshire and The Humber,E54000042,54,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,F,T,T,T,T,T,T,T,T,T,T,F
+125,2025-11-01,2025-11-30,539,South East,E54000015,14,female,Other Mixed,Missing,T,T,T,T,F,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+139,2025-11-01,2025-11-30,725,Missing,E54000025,74,unknown,White British,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+148,2025-11-01,2025-11-30,330,Missing,E54000038,24,female,Other Black,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,F,T,T,T,F,T,T,T,T,T,F
+174,2025-11-01,2025-11-30,148,London,E54000028,12,female,Missing,4,T,T,T,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+204,2025-11-01,2025-11-30,192,East,E54000087,76,male,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,F,T,T,F,T,F,T,T,T,T,F
+233,2025-11-01,2025-11-30,684,South East,E54000011,96,intersex,Other Mixed,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+262,2025-11-01,2025-11-30,910,South West,E54000061,85,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+272,2025-11-01,2025-11-30,117,East Midlands,E54000032,17,male,Indian,Missing,T,T,T,T,F,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+310,2025-11-01,2025-11-30,287,Missing,E54000052,102,female,Other Black,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+344,2025-11-01,2025-11-30,971,Missing,E54000015,103,male,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+397,2025-11-01,2025-11-30,937,Missing,E54000051,4,female,Other White,2,T,F,F,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+435,2025-11-01,2025-11-30,396,Yorkshire and The Humber,E54000030,17,unknown,Other South Asian,Missing,T,T,T,T,F,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+465,2025-11-01,2025-11-30,664,Missing,E54000015,93,unknown,Bangladeshi,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,F,T,T,T,T,T,F
+469,2025-11-01,2025-11-30,745,West Midlands,E54000067,31,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+23,2025-12-01,2025-12-31,400,East Midlands,E54000082,59,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+38,2025-12-01,2025-12-31,804,Missing,E54000074,73,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,F,T,T,T,T,T,T,T,T,T,T,F
+43,2025-12-01,2025-12-31,88,Yorkshire and The Humber,E54000072,24,intersex,Other Black,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+113,2025-12-01,2025-12-31,150,Yorkshire and The Humber,E54000014,89,unknown,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+130,2025-12-01,2025-12-31,694,Missing,E54000078,16,female,Caribbean,Missing,T,T,T,T,F,T,T,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+151,2025-12-01,2025-12-31,742,Missing,E54000074,15,unknown,Other White,3,T,T,T,T,F,T,F,T,2,1,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+162,2025-12-01,2025-12-31,354,North West,E54000016,81,unknown,Indian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+188,2025-12-01,2025-12-31,160,East,E54000039,13,male,White and Asian,Missing,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+375,2025-12-01,2025-12-31,323,Missing,E54000023,96,female,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,1,0,0,0,0,0,0,0,T,T,T,T,T,T,F,F,F,T,F,F
+386,2025-12-01,2025-12-31,137,East Midlands,E54000036,46,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+406,2025-12-01,2025-12-31,222,North West,E54000000,27,unknown,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+436,2025-12-01,2025-12-31,378,Missing,E54000055,15,male,Caribbean,Missing,T,T,T,T,F,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+483,2025-12-01,2025-12-31,908,Yorkshire and The Humber,E54000085,2,unknown,Other Mixed,5 (Least Deprived),T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+41,2026-01-01,2026-01-31,146,Yorkshire and The Humber,E54000082,51,intersex,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,F,T,T,T,T,T,T,T,T,T,F
+50,2026-01-01,2026-01-31,895,South East,E54000074,27,male,White and African,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+60,2026-01-01,2026-01-31,14,Missing,E54000054,105,unknown,White Irish,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+151,2026-01-01,2026-01-31,742,Missing,E54000074,15,unknown,Other White,3,T,T,T,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+181,2026-01-01,2026-01-31,708,West Midlands,E54000064,4,male,Other South Asian,Missing,T,F,F,T,F,T,F,T,1,0,0,1,0,0,0,0,1,1,0,1,0,T,T,T,T,T,T,T,T,T,T,T,F
+206,2026-01-01,2026-01-31,683,East Midlands,E54000055,72,female,Other Black,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+216,2026-01-01,2026-01-31,816,Yorkshire and The Humber,E54000063,59,intersex,Missing,Missing,F,T,T,T,T,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+220,2026-01-01,2026-01-31,278,Missing,E54000034,118,female,Indian,Missing,F,T,T,T,T,T,F,T,1,0,1,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+255,2026-01-01,2026-01-31,763,Missing,E54000075,113,male,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+282,2026-01-01,2026-01-31,863,London,E54000089,116,unknown,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,1,0,0,0,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+307,2026-01-01,2026-01-31,926,West Midlands,E54000006,13,unknown,Other White,Missing,T,T,T,T,F,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,T,T,T,T,T,T,F
+329,2026-01-01,2026-01-31,438,North West,E54000014,18,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
+338,2026-01-01,2026-01-31,445,South East,E54000013,29,male,Missing,Missing,F,T,T,T,T,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+340,2026-01-01,2026-01-31,906,East,E54000091,66,unknown,Other White,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+360,2026-01-01,2026-01-31,922,East,E54000065,4,female,Other Mixed,Missing,T,F,F,T,F,T,F,T,1,1,0,0,0,0,0,0,0,0,0,0,0,T,T,T,T,T,F,F,T,T,T,T,F
+387,2026-01-01,2026-01-31,489,Missing,E54000046,58,male,Chinese,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,1,0,0,0,0,0,0,T,T,T,T,F,T,T,T,T,T,T,F
+428,2026-01-01,2026-01-31,376,East,E54000098,65,female,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,T,T,T,T,T,F,T,T,T,T,T,F
+481,2026-01-01,2026-01-31,679,South West,E54000033,119,unknown,Other South Asian,Missing,F,T,T,T,T,T,F,T,1,0,0,1,0,0,0,0,0,0,1,0,0,F,T,T,T,T,T,T,T,T,T,T,F
+483,2026-01-01,2026-01-31,908,Yorkshire and The Humber,E54000085,2,unknown,Other Mixed,5 (Least Deprived),T,F,F,T,F,T,F,T,1,0,0,0,1,0,0,0,0,0,0,0,0,T,T,T,T,T,T,F,T,T,T,T,F
