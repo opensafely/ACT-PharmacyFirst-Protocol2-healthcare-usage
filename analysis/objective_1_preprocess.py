@@ -1,5 +1,9 @@
 import pandas as pd
 
+"""
+This script preprocesses patient-month level data by removing rows where 
+PF consultation variables are zero, reducing the file size.
+"""
 
 INPUT_FILE = "output/dataset_patients_combined.csv"
 OUTPUT_FILE = "output/dataset_patients_combined_obj1.csv"
