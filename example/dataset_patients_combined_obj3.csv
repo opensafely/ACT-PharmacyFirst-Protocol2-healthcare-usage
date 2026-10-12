@@ -1,0 +1,17 @@
+pt_id,start_date,index_date,practice,region,stp,age,sex,ethnicity,imd,inc_pt_otitis_media,inc_pt_sinusitis,inc_pt_sore_throat,inc_pt_insect_bites,inc_pt_shingles,inc_pt_impetigo,inc_pt_uuti,inc_pt_all_eligible,num_gp_cons_uti,num_gp_cons_sinusitis,num_gp_cons_ibite,num_gp_cons_otitismedia,num_gp_cons_sorethroat,num_gp_cons_shingles,num_gp_cons_impetigo,num_gp_cons_ibite_strict,num_gp_cons_ibite_all,num_gp_cons_cellulitis_only,num_gp_cons_ibite_strict_or_all,num_gp_cons_ibite_all_plus_cellulitis,num_gp_cons_ibite_strict_or_all_plus_cellulitis,num_gp_cons_lbp
+7,2023-04-01,2023-04-30,546,West Midlands,E54000037,43,female,White and Caribbean,5 (Least Deprived),F,T,T,T,T,T,T,T,0,0,0,0,0,0,2,0,0,0,0,0,0,0
+10,2023-04-01,2023-04-30,895,East,E54000064,60,female,White British,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,2023-06-01,2023-06-30,546,West Midlands,E54000037,43,female,White and Caribbean,5 (Least Deprived),F,T,T,T,T,T,T,T,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+10,2023-08-01,2023-08-31,895,East,E54000064,60,female,White British,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+10,2023-11-01,2023-11-30,895,East,E54000064,61,female,White British,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,2024-02-01,2024-02-29,681,London,E54000002,91,female,White and African,Missing,F,T,T,T,T,T,F,T,0,0,0,0,2,0,1,0,0,0,0,0,0,0
+10,2024-02-01,2024-02-29,895,East,E54000064,61,female,White British,Missing,F,T,T,T,T,T,F,T,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+1,2025-06-01,2025-06-30,681,London,E54000002,92,female,White and African,Missing,F,T,T,T,T,T,F,T,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+4,2025-06-01,2025-06-30,701,North West,E54000054,29,male,All other ethnic groups,Missing,F,T,T,T,T,T,F,T,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+3,2025-07-01,2025-07-31,196,South West,E54000040,64,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,2025-08-01,2025-08-31,196,South West,E54000040,64,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,2025-09-01,2025-09-30,681,London,E54000002,93,female,White and African,Missing,F,T,T,T,T,T,F,T,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,2025-09-01,2025-09-30,566,North East,E54000027,57,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,2025-09-01,2025-09-30,196,South West,E54000040,64,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,2025-10-01,2025-10-31,566,North East,E54000027,57,female,Other South Asian,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,2025-10-01,2025-10-31,196,South West,E54000040,64,female,All other ethnic groups,Missing,F,T,T,T,T,T,T,T,1,0,0,0,0,0,0,0,0,0,0,0,0,0
