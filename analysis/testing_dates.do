@@ -43,6 +43,6 @@ gen num_pf_cons_all=num_pf_cons_uti +num_pf_cons_sinusitis +num_pf_cons_ibite +n
 gen index_date2 = index_date_stata
 format index_date2 %tdmon_yy
 
-keep index_date
+
 export delimited using "output/oneway_test_date.csv",replace
 */
