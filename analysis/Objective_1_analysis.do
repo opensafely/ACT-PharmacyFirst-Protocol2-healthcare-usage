@@ -42,9 +42,9 @@ restore
 
 
 *Consultations are counted by identifying events with these codes and calculating the number of distinct consultation IDs. Multiple condition-specific PF codes recorded within the same consultation are counted as a single consultation.
-tostring index_date, replace
 
-generate index_date_stata = daily(index_date, "YMD")
+tostring index_date, replace
+generate index_date_stata = date(index_date, "YMD")
 **generate index_date_stata = daily(index_date, "DMY")
 
 *generate index_date_stata = date(index_date, "YMD")
