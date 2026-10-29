@@ -864,7 +864,7 @@ actions:
   
   testing_dates:
     run: stata-mp:v1 analysis/testing_dates.do 
-    needs: [decompress_combined_patient_dataset]
+    needs: [preprocess_objective_1_data]
     outputs:
       highly_sensitive:
         table1: output/oneway_test_date.csv
