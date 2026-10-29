@@ -1,9 +1,9 @@
 condition,sum
-all,2
+all,10
 ibite,0
-impetigo,0
+impetigo,1
 otitismedia,0
-shingles,0
-sinusitis,1
-sorethroat,0
-uti,1
+shingles,1
+sinusitis,0
+sorethroat,4
+uti,4

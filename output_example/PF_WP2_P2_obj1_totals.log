@@ -1,0 +1,825 @@
+-------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /workspace/output/PF_WP2_P2_obj1_totals.log
+  log type:  text
+ opened on:  29 Oct 2026, 13:38:34
+
+. 
+. 
+. *Load data for obj1 analysis, and save a copy dta
+. cd "$projectdir"
+/workspace
+
+. import delimited "output/dataset_patients_combined_obj1.csv", clear
+(26 vars, 8 obs)
+
+. *import delimited "output/dataset_patients_combined.csv", clear
+. save "output/PF WP2 P2 dummy patient raw data updates Aug26.dta", replace
+(note: file output/PF WP2 P2 dummy patient raw data updates Aug26.dta not found
+> )
+file output/PF WP2 P2 dummy patient raw data updates Aug26.dta saved
+
+. 
+. 
+. 
+. preserve
+
+. 
+. contract pf_cons_general, freq(count) percent(percentage) nomiss
+
+. export delimited using "output/pf_cons_general.csv", replace
+(note: file output/pf_cons_general.csv not found)
+file output/pf_cons_general.csv saved
+
+. 
+. restore
+
+. 
+. 
+. *Consultations are counted by identifying events with these codes and calcula
+> ting the number of distinct consultation IDs. Multiple condition-specific PF 
+> codes recorded within the same consultation are counted as a single consultat
+> ion.
+. 
+. tostring index_date, replace
+index_date already string; no replace
+
+. generate index_date_stata = date(index_date, "YMD")
+
+. **generate index_date_stata = daily(index_date, "DMY")
+. 
+. *generate index_date_stata = date(index_date, "YMD")
+. format index_date_stata %td
+
+. *create variable for all PF conditions added together (consultation level)
+. gen num_pf_cons_all=num_pf_cons_uti +num_pf_cons_sinusitis +num_pf_cons_ibite
+>  +num_pf_cons_otitismedia +num_pf_cons_sorethroat +num_pf_cons_shingles +num_
+> pf_cons_impetigo
+
+. 
+. gen index_date2 = index_date_stata
+
+. format index_date2 %tdmon_yy
+
+. 
+. gen age_group=""
+(8 missing values generated)
+
+. replace age_group= "0_to_19" if age>=0 & age<=19 
+variable age_group was str1 now str7
+(1 real change made)
+
+. replace age_group= "20_to_39" if age>=20 & age<=39 
+variable age_group was str7 now str8
+(1 real change made)
+
+. replace age_group= "40_to_59" if age>=40 & age<=59 
+(3 real changes made)
+
+. replace age_group= "60_to_79" if age>=60 & age<=79 
+(2 real changes made)
+
+. replace age_group= "80_and_over" if age>=80
+variable age_group was str8 now str11
+(1 real change made)
+
+. 
+. set linesize 255
+
+. 
+. 
+. replace inc_pt_otitis_media="1" if inc_pt_otitis_media=="T"
+(1 real change made)
+
+. replace inc_pt_otitis_media="0" if inc_pt_otitis_media=="F"
+(7 real changes made)
+
+. 
+. replace inc_pt_sinusitis="1" if inc_pt_sinusitis =="T"
+(7 real changes made)
+
+. replace inc_pt_sinusitis="0" if inc_pt_sinusitis =="F"
+(1 real change made)
+
+. 
+. replace inc_pt_sore_throat="1" if inc_pt_sore_throat =="T"
+(7 real changes made)
+
+. replace inc_pt_sore_throat="0" if inc_pt_sore_throat =="F"
+(1 real change made)
+
+. 
+. replace inc_pt_insect_bites="1" if inc_pt_insect_bites =="T"
+(8 real changes made)
+
+. replace inc_pt_insect_bites="0" if inc_pt_insect_bites =="F"
+(0 real changes made)
+
+. 
+. replace inc_pt_shingles="1" if inc_pt_shingles =="T"
+(7 real changes made)
+
+. replace inc_pt_shingles="0" if inc_pt_shingles =="F"
+(1 real change made)
+
+. 
+. replace inc_pt_impetigo="1" if inc_pt_impetigo =="T"
+(8 real changes made)
+
+. replace inc_pt_impetigo="0" if inc_pt_impetigo =="F"
+(0 real changes made)
+
+. 
+. replace inc_pt_uuti="1" if inc_pt_uuti =="T"
+(2 real changes made)
+
+. replace inc_pt_uuti="0" if inc_pt_uuti =="F"
+(6 real changes made)
+
+. 
+. replace inc_pt_all_eligible="1" if inc_pt_all_eligible =="T"
+(8 real changes made)
+
+. replace inc_pt_all_eligible="0" if inc_pt_all_eligible =="F"
+(0 real changes made)
+
+. 
+. destring inc_pt_otitis_media inc_pt_sinusitis inc_pt_sore_throat inc_pt_insect_bites inc_pt_shingles inc_pt_impetigo inc_pt_uuti inc_pt_all_eligible, replace    
+inc_pt_otitis_media: all characters numeric; replaced as byte
+inc_pt_sinusitis: all characters numeric; replaced as byte
+inc_pt_sore_throat: all characters numeric; replaced as byte
+inc_pt_insect_bites: all characters numeric; replaced as byte
+inc_pt_shingles: all characters numeric; replaced as byte
+inc_pt_impetigo: all characters numeric; replaced as byte
+inc_pt_uuti: all characters numeric; replaced as byte
+inc_pt_all_eligible: all characters numeric; replaced as byte
+
+. 
+. 
+. set more off
+
+. 
+. 
+. *log using "output/PF_WP2_P2_obj1_totals.log", text replace
+. 
+. **********************************************************
+. ***One-way comparison: total PF consultations by...
+. **********************************************************
+. *------------------------------------------------------------
+. * PF consultations by condition
+. *------------------------------------------------------------
+. preserve
+
+. 
+. * Exclude the overall total variable from reshape
+. rename pf_cons_general total_pf_cons
+
+. gen long row_id = _n
+
+. 
+. *condition (row)
+. * Convert condition-specific variables from wide to long
+. reshape long num_pf_cons_, i(row_id) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               wide   ->   long
+-----------------------------------------------------------------------------
+Number of obs.                        8   ->      64
+Number of variables                  31   ->      25
+j variable (8 values)                     ->   condition
+xij variables:
+num_pf_cons_all num_pf_cons_ibite ... num_pf_cons_uti->num_pf_cons_
+-----------------------------------------------------------------------------
+
+. rename num_pf_cons_ num_pf_cons
+
+. 
+. statsby sum=r(sum), by(condition) clear: summarize num_pf_cons
+(running summarize on estimation sample)
+
+      command:  summarize num_pf_cons
+          sum:  r(sum)
+           by:  condition
+
+Statsby groups
+----+--- 1 ---+--- 2 ---+--- 3 ---+--- 4 ---+--- 5 
+........
+
+. *collapse (sum) sum=num_pf_cons_all, by(condition)
+. export delimited using "output/oneway_date_condition.csv",replace
+(note: file output/oneway_date_condition.csv not found)
+file output/oneway_date_condition.csv saved
+
+. 
+. restore
+
+. 
+. 
+. *------------------------------------------------------------
+. * Total PF consultations by date
+. *------------------------------------------------------------
+. preserve
+
+. 
+. *statsby sum=r(sum), by(index_date_stata) clear: summarize num_pf_cons_all
+. collapse (sum) sum=num_pf_cons_all, by(index_date_stata)
+
+. *format index_date_stata %tdDD/NN/CCYY
+. format index_date_stata %tdCCYY/NN/DD
+
+. gen date = string(index_date_stata, "%tdCCYY/NN/DD")
+
+. *gen date = string(index_date_stata, "%tdDD/NN/CCYY")
+. order date
+
+. export delimited using "output/oneway_date.csv", replace
+(note: file output/oneway_date.csv not found)
+file output/oneway_date.csv saved
+
+. 
+. restore
+
+. 
+. 
+. *------------------------------------------------------------
+. * Total PF consultations by region
+. *------------------------------------------------------------
+. preserve
+
+. 
+. *statsby sum=r(sum), by(region) clear: summarize num_pf_cons_all
+. collapse (sum) sum=num_pf_cons_all, by(region)
+
+. export delimited using "output/oneway_region.csv", replace
+(note: file output/oneway_region.csv not found)
+file output/oneway_region.csv saved
+
+. 
+. restore
+
+. 
+. 
+. *------------------------------------------------------------
+. * Total PF consultations by STP
+. *------------------------------------------------------------
+. preserve
+
+. 
+. *statsby sum=r(sum), by(stp) clear: summarize num_pf_cons_all
+. collapse (sum) sum=num_pf_cons_all, by(stp)
+
+. export delimited using "output/oneway_stp.csv", replace
+(note: file output/oneway_stp.csv not found)
+file output/oneway_stp.csv saved
+
+. 
+. restore
+
+. 
+. 
+. *------------------------------------------------------------
+. * Total PF consultations by age group
+. *------------------------------------------------------------
+. preserve
+
+. 
+. *statsby sum=r(sum), by(age_group) clear: summarize num_pf_cons_all
+. collapse (sum) sum=num_pf_cons_all, by(age_group)
+
+. export delimited using "output/oneway_age_group.csv", replace
+(note: file output/oneway_age_group.csv not found)
+file output/oneway_age_group.csv saved
+
+. 
+. restore
+
+. 
+. 
+. *------------------------------------------------------------
+. * Total PF consultations by sex
+. *------------------------------------------------------------
+. preserve
+
+. 
+. *statsby sum=r(sum), by(sex) clear: summarize num_pf_cons_all
+. collapse (sum) sum=num_pf_cons_all, by(sex)
+
+. export delimited using "output/oneway_sex.csv", replace
+(note: file output/oneway_sex.csv not found)
+file output/oneway_sex.csv saved
+
+. 
+. restore
+
+. 
+. 
+. *------------------------------------------------------------
+. * Total PF consultations by ethnicity
+. *------------------------------------------------------------
+. preserve
+
+. 
+. *statsby sum=r(sum), by(ethnicity) clear: summarize num_pf_cons_all
+. collapse (sum) sum=num_pf_cons_all, by(ethnicity)
+
+. export delimited using "output/oneway_ethnicity.csv", replace
+(note: file output/oneway_ethnicity.csv not found)
+file output/oneway_ethnicity.csv saved
+
+. 
+. restore
+
+. 
+. 
+. *------------------------------------------------------------
+. * Total PF consultations by IMD
+. *------------------------------------------------------------
+. preserve
+
+. 
+. *statsby sum=r(sum), by(imd) clear: summarize num_pf_cons_all
+. collapse (sum) sum=num_pf_cons_all, by(imd)
+
+. export delimited using "output/oneway_imd.csv", replace
+(note: file output/oneway_imd.csv not found)
+file output/oneway_imd.csv saved
+
+. 
+. restore
+
+. 
+. 
+. 
+. **********************************************************
+. ***Two way comparisons : number of PF consultations by condition and by...
+. **********************************************************
+. preserve
+
+. 
+. gen long row_id = _n
+
+. 
+. * Includes num_pf_cons_all as condition = "all"
+. reshape long num_pf_cons_, i(row_id) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               wide   ->   long
+-----------------------------------------------------------------------------
+Number of obs.                        8   ->      64
+Number of variables                  31   ->      25
+j variable (8 values)                     ->   condition
+xij variables:
+num_pf_cons_all num_pf_cons_ibite ... num_pf_cons_uti->num_pf_cons_
+-----------------------------------------------------------------------------
+
+. rename num_pf_cons_ num_pf_cons
+
+. 
+. * Save reshaped data temporarily
+. tempfile reshaped
+
+. save `reshaped'
+file /tmp/St00012.00000b saved
+
+. 
+. restore
+
+. 
+. 
+. *------------------------------------------------------------
+. * Date × condition
+. *------------------------------------------------------------
+. use `reshaped', clear
+
+. collapse (sum) sum=num_pf_cons, by(index_date_stata condition)
+
+. *statsby sum=r(sum), by(index_date_stata condition) clear: summarize num_pf_cons
+. reshape wide sum, i(index_date_stata) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                       24   ->       3
+Number of variables                   3   ->       9
+j variable (8 values)         condition   ->   (dropped)
+xij variables:
+                                    sum   ->   sumall sumibite ... sumuti
+-----------------------------------------------------------------------------
+
+. *format index_date_stata %tdDD/NN/CCYY
+. format index_date_stata %tdCCYY-NN-DD
+
+. gen date = string(index_date_stata, "%tdCCYY/NN/DD")
+
+. *gen date = string(index_date_stata, "%tdDD/NN/CCYY")
+. order date
+
+. export delimited using "output/twoway_date_condition.csv", replace
+(note: file output/twoway_date_condition.csv not found)
+file output/twoway_date_condition.csv saved
+
+. 
+. 
+. *------------------------------------------------------------
+. * Region × condition
+. *------------------------------------------------------------
+. use `reshaped', clear
+
+. collapse (sum) sum=num_pf_cons, by(region condition)
+
+. *statsby sum=r(sum), by(region condition) clear: summarize num_pf_cons
+. reshape wide sum, i(region) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                       56   ->       7
+Number of variables                   3   ->       9
+j variable (8 values)         condition   ->   (dropped)
+xij variables:
+                                    sum   ->   sumall sumibite ... sumuti
+-----------------------------------------------------------------------------
+
+. export delimited using "output/twoway_region_condition.csv", replace
+(note: file output/twoway_region_condition.csv not found)
+file output/twoway_region_condition.csv saved
+
+. 
+. 
+. *------------------------------------------------------------
+. * STP × condition
+. *------------------------------------------------------------
+. use `reshaped', clear
+
+. collapse (sum) sum=num_pf_cons, by(stp condition)
+
+. *statsby sum=r(sum), by(stp condition) clear: summarize num_pf_cons
+. reshape wide sum, i(stp) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                       64   ->       8
+Number of variables                   3   ->       9
+j variable (8 values)         condition   ->   (dropped)
+xij variables:
+                                    sum   ->   sumall sumibite ... sumuti
+-----------------------------------------------------------------------------
+
+. export delimited using "output/twoway_stp_condition.csv", replace
+(note: file output/twoway_stp_condition.csv not found)
+file output/twoway_stp_condition.csv saved
+
+. 
+. 
+. *------------------------------------------------------------
+. * Age group × condition
+. *------------------------------------------------------------
+. use `reshaped', clear
+
+. collapse (sum) sum=num_pf_cons, by(age_group condition)
+
+. *statsby sum=r(sum), by(age_group condition) clear: summarize num_pf_cons
+. reshape wide sum, i(age_group) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                       40   ->       5
+Number of variables                   3   ->       9
+j variable (8 values)         condition   ->   (dropped)
+xij variables:
+                                    sum   ->   sumall sumibite ... sumuti
+-----------------------------------------------------------------------------
+
+. export delimited using "output/twoway_age_group_condition.csv", replace
+(note: file output/twoway_age_group_condition.csv not found)
+file output/twoway_age_group_condition.csv saved
+
+. 
+. 
+. *------------------------------------------------------------
+. * Sex × condition
+. *------------------------------------------------------------
+. use `reshaped', clear
+
+. collapse (sum) sum=num_pf_cons, by(sex condition)
+
+. *statsby sum=r(sum), by(sex condition) clear: summarize num_pf_cons
+. reshape wide sum, i(sex) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                       16   ->       2
+Number of variables                   3   ->       9
+j variable (8 values)         condition   ->   (dropped)
+xij variables:
+                                    sum   ->   sumall sumibite ... sumuti
+-----------------------------------------------------------------------------
+
+. 
+. export delimited using "output/twoway_sex_condition.csv", replace
+(note: file output/twoway_sex_condition.csv not found)
+file output/twoway_sex_condition.csv saved
+
+. 
+. 
+. *------------------------------------------------------------
+. * Ethnicity × condition
+. *------------------------------------------------------------
+. use `reshaped', clear
+
+. collapse (sum) sum=num_pf_cons, by(ethnicity condition)
+
+. *statsby sum=r(sum), by(ethnicity condition) clear: summarize num_pf_cons
+. reshape wide sum, i(ethnicity) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                       48   ->       6
+Number of variables                   3   ->       9
+j variable (8 values)         condition   ->   (dropped)
+xij variables:
+                                    sum   ->   sumall sumibite ... sumuti
+-----------------------------------------------------------------------------
+
+. 
+. export delimited using "output/twoway_ethnicity_condition.csv", replace
+(note: file output/twoway_ethnicity_condition.csv not found)
+file output/twoway_ethnicity_condition.csv saved
+
+. 
+. 
+. *------------------------------------------------------------
+. * IMD × condition
+. *------------------------------------------------------------
+. use `reshaped', clear
+
+. collapse (sum) sum=num_pf_cons, by(imd condition)
+
+. *statsby sum=r(sum), by(imd condition) clear: summarize num_pf_cons
+. reshape wide sum, i(imd) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                       16   ->       2
+Number of variables                   3   ->       9
+j variable (8 values)         condition   ->   (dropped)
+xij variables:
+                                    sum   ->   sumall sumibite ... sumuti
+-----------------------------------------------------------------------------
+
+. 
+. export delimited using "output/twoway_imd_condition.csv", replace
+(note: file output/twoway_imd_condition.csv not found)
+file output/twoway_imd_condition.csv saved
+
+. 
+. 
+. **********************************************************
+. *** Three-way comparisons:Consultation counts by condition, date and subgroup
+. **********************************************************
+. 
+. *------------------------------------------------------------
+. * Condition × date × region
+. *------------------------------------------------------------
+. use `reshaped', clear
+
+. 
+. *statsby sum=r(sum), by(condition index_date_stata region) clear: summarize num_pf_cons
+. collapse (sum) sum=num_pf_cons, by(condition index_date_stata region)
+
+. format index_date_stata %tdCCYY-NN-DD
+
+. 
+. replace region="North_East" if region=="North East"
+(8 real changes made)
+
+. replace region="North_West" if region=="North West"
+(8 real changes made)
+
+. replace region="South _East" if region=="South East"
+(8 real changes made)
+
+. replace region="South _West" if region=="South West"
+(8 real changes made)
+
+. replace region="West_Midlands" if region=="West Midlands"
+(0 real changes made)
+
+. replace region="Yorkshire_and_The_Humber" if region=="Yorkshire and The Humber"
+(8 real changes made)
+
+. encode region, generate(region_num)
+
+. drop region
+
+. reshape wide sum, i(index_date_stata region_num) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                       64   ->       8
+Number of variables                   4   ->      10
+j variable (8 values)         condition   ->   (dropped)
+xij variables:
+                                    sum   ->   sumall sumibite ... sumuti
+-----------------------------------------------------------------------------
+
+. gen date = string(index_date_stata, "%tdCCYY/NN/DD")
+
+. *gen date = string(index_date_stata, "%tdDD/NN/CCYY")
+. order date
+
+. export delimited using "output/threeway_condition_date_region.csv", replace
+(note: file output/threeway_condition_date_region.csv not found)
+file output/threeway_condition_date_region.csv saved
+
+. 
+. 
+. *------------------------------------------------------------
+. * Condition × date × STP
+. *------------------------------------------------------------
+. use `reshaped', clear
+
+. 
+. *statsby sum=r(sum), by(condition index_date_stata stp) clear: summarize num_pf_cons
+. collapse (sum) sum=num_pf_cons, by(condition index_date_stata stp)
+
+. format index_date_stata %tdCCYY-NN-DD
+
+. reshape wide sum, i(stp index_date_stata) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                       64   ->       8
+Number of variables                   4   ->      10
+j variable (8 values)         condition   ->   (dropped)
+xij variables:
+                                    sum   ->   sumall sumibite ... sumuti
+-----------------------------------------------------------------------------
+
+. gen date = string(index_date_stata, "%tdCCYY/NN/DD")
+
+. *gen date = string(index_date_stata, "%tdDD/NN/CCYY")
+. order date
+
+. export delimited using "output/threeway_condition_date_stp.csv", replace
+(note: file output/threeway_condition_date_stp.csv not found)
+file output/threeway_condition_date_stp.csv saved
+
+. 
+. 
+. *------------------------------------------------------------
+. * Condition × date × age group
+. *------------------------------------------------------------
+. use `reshaped', clear
+
+. 
+. *statsby sum=r(sum), by(condition index_date_stata age_group) clear: summarize num_pf_cons
+. collapse (sum) sum=num_pf_cons, by(condition index_date_stata age_group)
+
+. format index_date_stata %tdCCYY-NN-DD
+
+. *encode age_group, generate(age_group_num)
+. *drop age_group
+. reshape wide sum, i(age_group index_date_stata) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                       64   ->       8
+Number of variables                   4   ->      10
+j variable (8 values)         condition   ->   (dropped)
+xij variables:
+                                    sum   ->   sumall sumibite ... sumuti
+-----------------------------------------------------------------------------
+
+. gen date = string(index_date_stata, "%tdCCYY/NN/DD")
+
+. *gen date = string(index_date_stata, "%tdDD/NN/CCYY")
+. order date
+
+. export delimited using "output/threeway_condition_date_age_group.csv", replace
+(note: file output/threeway_condition_date_age_group.csv not found)
+file output/threeway_condition_date_age_group.csv saved
+
+. 
+. *------------------------------------------------------------
+. * Condition × date × sex
+. *------------------------------------------------------------
+. use `reshaped', clear
+
+. 
+. *statsby sum=r(sum), by(condition index_date_stata sex) clear: summarize num_pf_cons
+. collapse (sum) sum=num_pf_cons, by(condition index_date_stata sex)
+
+. format index_date_stata %tdCCYY-NN-DD
+
+. reshape wide sum, i(sex index_date_stata) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                       40   ->       5
+Number of variables                   4   ->      10
+j variable (8 values)         condition   ->   (dropped)
+xij variables:
+                                    sum   ->   sumall sumibite ... sumuti
+-----------------------------------------------------------------------------
+
+. gen date = string(index_date_stata, "%tdCCYY/NN/DD")
+
+. *gen date = string(index_date_stata, "%tdDD/NN/CCYY")
+. order date
+
+. export delimited using "output/threeway_condition_date_sex.csv", replace
+(note: file output/threeway_condition_date_sex.csv not found)
+file output/threeway_condition_date_sex.csv saved
+
+. 
+. 
+. *------------------------------------------------------------
+. * Condition × date × ethnicity
+. *------------------------------------------------------------
+. use `reshaped', clear
+
+. 
+. *statsby sum=r(sum), by(condition index_date_stata ethnicity) clear: summarize num_pf_cons
+. collapse (sum) sum=num_pf_cons, by(condition index_date_stata ethnicity)
+
+. format index_date_stata %tdCCYY-NN-DD
+
+. replace ethnicity = subinstr(ethnicity, " ", "_", .)
+(48 real changes made)
+
+. reshape wide sum, i(ethnicity index_date_stata) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                       56   ->       7
+Number of variables                   4   ->      10
+j variable (8 values)         condition   ->   (dropped)
+xij variables:
+                                    sum   ->   sumall sumibite ... sumuti
+-----------------------------------------------------------------------------
+
+. gen date = string(index_date_stata, "%tdCCYY/NN/DD")
+
+. *gen date = string(index_date_stata, "%tdDD/NN/CCYY")
+. order date
+
+. export delimited using "output/threeway_condition_date_ethnicity.csv", replace
+(note: file output/threeway_condition_date_ethnicity.csv not found)
+file output/threeway_condition_date_ethnicity.csv saved
+
+. 
+. 
+. *------------------------------------------------------------
+. * Condition × date × IMD
+. *------------------------------------------------------------
+. use `reshaped', clear
+
+. 
+. *statsby sum=r(sum), by(condition index_date_stata imd) clear: summarize num_pf_cons
+. collapse (sum) sum=num_pf_cons, by(condition index_date_stata imd)
+
+. format index_date_stata %tdCCYY-NN-DD
+
+. replace imd="5" if imd== "5 (Least Deprived)"
+(0 real changes made)
+
+. reshape wide sum, i(imd index_date_stata) j(condition) string
+(note: j = all ibite impetigo otitismedia shingles sinusitis sorethroat uti)
+
+Data                               long   ->   wide
+-----------------------------------------------------------------------------
+Number of obs.                       32   ->       4
+Number of variables                   4   ->      10
+j variable (8 values)         condition   ->   (dropped)
+xij variables:
+                                    sum   ->   sumall sumibite ... sumuti
+-----------------------------------------------------------------------------
+
+. gen date = string(index_date_stata, "%tdCCYY/NN/DD")
+
+. *gen date = string(index_date_stata, "%tdDD/NN/CCYY")
+. order date
+
+. export delimited using "output/threeway_condition_date_imd.csv", replace
+(note: file output/threeway_condition_date_imd.csv not found)
+file output/threeway_condition_date_imd.csv saved
+
+. 
+. 
+. log close
+      name:  <unnamed>
+       log:  /workspace/output/PF_WP2_P2_obj1_totals.log
+  log type:  text
+ closed on:  29 Oct 2026, 13:38:36
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

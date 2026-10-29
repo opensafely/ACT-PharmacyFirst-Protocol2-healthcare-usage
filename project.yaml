@@ -929,3 +929,20 @@ actions:
         oneway: output/oneway_*_release.csv
         twoway: output/twoway_*_release.csv
         threeway: output/threeway_*_release.csv
+
+  run_objective_2_analysis:
+    run: python:v2 python analysis/objective_2_analysis.py
+    needs: [decompress_combined_patient_dataset]
+    outputs:
+      highly_sensitive:
+        dataset1: output/appointment_practice_month.csv
+      moderately_sensitive:
+        dataset2: output/appointment_monthly_overall.csv
+  
+  run_objective_2_plot:
+    run: python:v2 python analysis/objective_2_plot.py
+    needs: [run_objective_2_analysis]
+    outputs:
+      moderately_sensitive:
+        counts_plot: output/appointment_monthly_counts_trend.png
+        rates_plot: output/appointment_monthly_rates_trend.png

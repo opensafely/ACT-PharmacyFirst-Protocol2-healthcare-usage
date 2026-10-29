@@ -1,11 +1,9 @@
-index_date_stata,region_num,sumall,sumibite,sumimpetigo,sumotitismedia,sumshingles,sumsinusitis,sumsorethroat,sumuti
-,East,0,0,0,0,0,0,0,0
-,East Midlands,0,0,0,0,0,0,0,0
-,London,0,0,0,0,0,0,0,0
-,Missing,0,0,0,0,0,0,0,0
-,North_East,1,0,0,0,0,1,0,0
-,North_West,0,0,0,0,0,0,0,0
-,South _East,1,0,0,0,0,0,0,1
-,South _West,0,0,0,0,0,0,0,0
-,West_Midlands,0,0,0,0,0,0,0,0
-,Yorkshire_and_The_Humber,0,0,0,0,0,0,0,0
+date,index_date_stata,region_num,sumall,sumibite,sumimpetigo,sumotitismedia,sumshingles,sumsinusitis,sumsorethroat,sumuti
+2024/02/29,2024-02-29,Missing,1,0,0,0,0,0,1,0
+2024/02/29,2024-02-29,South _East,2,0,0,0,0,0,2,0
+2024/02/29,2024-02-29,Yorkshire_and_The_Humber,2,0,0,0,1,0,1,0
+2024/05/31,2024-05-31,Missing,0,0,0,0,0,0,0,0
+2025/10/31,2025-10-31,London,2,0,0,0,0,0,0,2
+2025/10/31,2025-10-31,North_East,1,0,0,0,0,0,0,1
+2025/10/31,2025-10-31,North_West,1,0,1,0,0,0,0,0
+2025/10/31,2025-10-31,South _West,1,0,0,0,0,0,0,1

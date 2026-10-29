@@ -1,6 +1,5 @@
-imd,index_date_stata,sumall,sumibite,sumimpetigo,sumotitismedia,sumshingles,sumsinusitis,sumsorethroat,sumuti
-2,,0,0,0,0,0,0,0,0
-3,,1,0,0,0,0,1,0,0
-4,,0,0,0,0,0,0,0,0
-5,,0,0,0,0,0,0,0,0
-Missing,,1,0,0,0,0,0,0,1
+date,imd,index_date_stata,sumall,sumibite,sumimpetigo,sumotitismedia,sumshingles,sumsinusitis,sumsorethroat,sumuti
+2024/02/29,3,2024-02-29,1,0,0,0,0,0,1,0
+2024/02/29,Missing,2024-02-29,4,0,0,0,1,0,3,0
+2024/05/31,Missing,2024-05-31,0,0,0,0,0,0,0,0
+2025/10/31,Missing,2025-10-31,5,0,1,0,0,0,0,4
