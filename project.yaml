@@ -896,6 +896,7 @@ actions:
     outputs:
       moderately_sensitive:
         log1: output/PF_WP2_P2_obj1_totals.log
+        table0: output/pf_cons_general.csv
         table1: output/oneway_date_condition.csv
         table2: output/oneway_date.csv
         table3: output/oneway_region.csv

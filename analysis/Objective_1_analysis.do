@@ -8,7 +8,7 @@ OUTPUT: 		    	logfiles, printed to folder $Logdir
 					
 ==============================================================================*/
 
-*Set filepaths
+*Set and display filepaths
 global projectdir `c(pwd)'
 di "$projectdir"
 
@@ -18,18 +18,20 @@ capture mkdir "$projectdir/output/tables"
 capture mkdir "$projectdir/output/figures"
 */
 
+*Set and display log filepaths - logdir is set but not used
 global logdir "$projectdir/logs"
 di "$logdir"
 
-*Open a log file
+*Close any log file
 cap log close
+*Open a log file
 log using "output/PF_WP2_P2_obj1_totals.log", replace
 
 
-
+*Load data for obj1 analysis, and save a copy dta
 cd "$projectdir"
-*import delimited "output/dataset_patients_combined_obj1.csv", clear
-import delimited "output/dataset_patients_combined.csv", clear
+import delimited "output/dataset_patients_combined_obj1.csv", clear
+*import delimited "output/dataset_patients_combined.csv", clear
 save "output/PF WP2 P2 dummy patient raw data updates Aug26.dta", replace
 
 
@@ -37,7 +39,7 @@ save "output/PF WP2 P2 dummy patient raw data updates Aug26.dta", replace
 preserve
 
 contract pf_cons_general, freq(count) percent(percentage) nomiss
-export delimited using "pf_cons_general", replace
+export delimited using "output/pf_cons_general.csv", replace
 
 restore
 
@@ -134,7 +136,7 @@ format index_date_stata %tdCCYY/NN/DD
 gen date = string(index_date_stata, "%tdCCYY/NN/DD")
 *gen date = string(index_date_stata, "%tdDD/NN/CCYY")
 order date
-export delimited using "oneway_date.csv", replace
+export delimited using "output/oneway_date.csv", replace
 
 restore
 
