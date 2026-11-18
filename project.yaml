@@ -935,7 +935,7 @@ actions:
 
 
   run_objective_1_analysis_denom:
-    run: stata-mp:v1 analysis/objective_1_analysis_denom.do --output output/PF_WP2_P2_obj1_totals.log
+    run: stata-mp:v1 analysis/Objective_1_analysis_denom.do --output output/PF_WP2_P2_obj1_totals.log
     needs: [preprocess_objective_1_denom_data]
     outputs:
       moderately_sensitive:
@@ -993,7 +993,7 @@ actions:
         table21: output/threeway_condition_date_imd_obj3.csv
   
   run_objective_4_analysis:
-    run: stata-mp:v1 analysis/objective_4_analysis.do --output output/PF_WP2_P2_obj4_totals.log
+    run: stata-mp:v1 analysis/Objective_4_analysis.do --output output/PF_WP2_P2_obj4_totals.log
     needs: [preprocess_objective_3_data]
     outputs:
       moderately_sensitive:
