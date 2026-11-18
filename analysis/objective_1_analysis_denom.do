@@ -30,7 +30,7 @@ cap log close
 
 *Load data for obj1 analysis, and save a copy dta
 cd "$projectdir"
-import delimited "output/dataset_patients_combined_denom_obj1.dta.csv", clear
+import delimited "output/dataset_patients_combined_denom_obj1.csv", clear
 
 save "output/PF WP2 P2 dummy patient raw data updates denom_Nov26.dta", replace
 
@@ -38,8 +38,8 @@ save "output/PF WP2 P2 dummy patient raw data updates denom_Nov26.dta", replace
 
 preserve
 
-contract pf_cons_general, freq(count) percent(percentage) nomiss
-export delimited using "output/pf_cons_general.csv", replace
+contract inc_pt_all_eligible, freq(count) percent(percentage) nomiss
+export delimited using "output/pf_cons_general_denom.csv", replace
 
 restore
 
