@@ -855,6 +855,13 @@ actions:
       moderately_sensitive:
         summary_table: output/pf_consultations_by_month.csv
 
+  test_analysis_suppress:
+    run: python:v2 analysis/test_analysis_suppress.py --output output/pf_consultations_by_month_release.csv
+    needs: [test_analysis]
+    outputs:
+      moderately_sensitive:
+        summary_table: output/pf_consultations_by_month_release.csv
+
   preprocess_objective_1_data:
     run: python:v2 python analysis/objective_1_preprocess.py
     needs: [decompress_combined_patient_dataset]
