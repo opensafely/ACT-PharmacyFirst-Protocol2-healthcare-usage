@@ -862,6 +862,13 @@ actions:
       highly_sensitive:
         dataset: output/dataset_patients_combined_obj1.csv
   
+    preprocess_objective_1_denom_data:
+    run: python:v2 python analysis/objective_1_denom_preprocess.py
+    needs: [decompress_combined_patient_dataset]
+    outputs:
+      highly_sensitive:
+        dataset: output/dataset_patients_combined_denom_obj1.csv
+
   testing_dates:
     run: stata-mp:v1 analysis/testing_dates.do 
     needs: [preprocess_objective_1_data]
