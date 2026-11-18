@@ -994,7 +994,7 @@ actions:
   
   run_objective_4_analysis:
     run: stata-mp:v1 analysis/Objective_4_analysis.do --output output/PF_WP2_P2_obj4_totals.log
-    needs: [preprocess_objective_3_data]
+    needs: [preprocess_objective_4_data]
     outputs:
       moderately_sensitive:
         log1: output/PF_WP2_P2_obj4_totals.log
