@@ -963,7 +963,80 @@ actions:
         table20: output/threeway_condition_date_ethnicity_denom.csv
         table21: output/threeway_condition_date_imd_denom.csv
 
+  run_objective_3_analysis:
+    run: stata-mp:v1 analysis/Objective_3_analysis.do --output output/PF_WP2_P2_obj3_totals.log
+    needs: [preprocess_objective_3_data]
+    outputs:
+      moderately_sensitive:
+        log1: output/PF_WP2_P2_obj3_totals.log
+        table0: output/pf_GP_cons_general obj3.csv
+        table1: output/oneway_date_condition_obj3.csv
+        table2: output/oneway_date_obj3.csv
+        table3: output/oneway_region_obj3.csv
+        table4: output/oneway_stp_obj3.csv
+        table5: output/oneway_age_group_obj3.csv
+        table6: output/oneway_sex_obj3.csv
+        table7: output/oneway_ethnicity_obj3.csv
+        table8: output/oneway_imd_obj3.csv
+        table9: output/twoway_date_condition_obj3.csv
+        table10: output/twoway_region_condition_obj3.csv
+        table11: output/twoway_stp_condition_obj3.csv
+        table12: output/twoway_age_group_condition_obj3.csv
+        table13: output/twoway_sex_condition_obj3.csv
+        table14: output/twoway_ethnicity_condition_obj3.csv
+        table15: output/twoway_imd_condition_obj3.csv
+        table16: output/threeway_condition_date_region_obj3.csv
+        table17: output/threeway_condition_date_stp_obj3.csv
+        table18: output/threeway_condition_date_age_group_obj3.csv
+        table19: output/threeway_condition_date_sex_obj3.csv
+        table20: output/threeway_condition_date_ethnicity_obj3.csv
+        table21: output/threeway_condition_date_imd_obj3.csv
   
+  run_objective_4_analysis:
+    run: stata-mp:v1 analysis/objective_4_analysis.do --output output/PF_WP2_P2_obj4_totals.log
+    needs: [preprocess_objective_3_data]
+    outputs:
+      moderately_sensitive:
+        log1: output/PF_WP2_P2_obj4_totals.log
+        table0: output/ae_primary_cons_general obj4.csv
+        table1: output/ae_non_primary_cons_general obj4.csv
+        table2: output/oneway_date_condition_obj4.csv.csv
+        table3: output/oneway_date_primary_obj4.csv
+        table4: output/oneway_primary_region_obj4.csv
+        table5: output/oneway_primary_stp.csv_obj4.csv
+        table6: output/oneway_primary_age_group_obj4.csv
+        table7: output/oneway_primary_sex_obj4.csv
+        table8: output/oneway_primary_ethnicity_obj4.csv
+        table9: output/oneway_primary_imd_obj4.csv
+        table10: output/oneway_date_non_primary_obj4.csv
+        table11: output/oneway_non_primary_region_obj4.csv
+        table12: output/oneway_non_primary_stp.csv_obj4.csv
+        table13: output/oneway_non_primary_age_group_obj4.csv
+        table14: output/oneway_non_primary_sex_obj4.csv
+        table15: output/oneway_non_primary_ethnicity_obj4.csv
+        table16: output/output/oneway_non_primary_imd_obj4.csv
+        table17: output/twoway_date_primary_condition_obj4.csv
+        table18: output/twoway_date_non_primary_condition_obj4.csv
+        table19: output/twoway_region_non_primary_condition_obj4.csv
+        table20: output/twoway_stp_non_primary_condition_obj4.csv
+        table21: output/twoway_age_group_non_primary_condition_obj4.csv
+        table22: output/twoway_sex_non_primary_condition_obj4.csv
+        table23: output/twoway_ethnicity_non_primary_condition_obj4.csv
+        table24: output/twoway_imd_non_primary_condition_obj4.csv
+        table25: output/threeway_condition_date_region_primary_obj4.csv
+        table26: output/threeway_condition_date_region_non_primary_obj4.csv
+        table27: output/threeway_condition_date_stp_primary_obj4.csv
+        table28: output/threeway_condition_date_stp_non_primary_obj4.csv
+        table29: output/threeway_condition_date_age_group_primary_obj4.csv
+        table30: output/threeway_condition_date_age_group_non_primary_obj4.csv
+        table31: output/threeway_condition_date_sex_primary_obj4.csv
+        table32: output/threeway_condition_date_sex_non_primary_obj4.csv
+        table33: output/threeway_condition_date_ethnicity_primary_obj4.csv
+        table34: output/threeway_condition_date_ethnicity_non_primary_obj4.csv
+        table35: output/threeway_condition_date_imd_primary_obj4.csv
+        table36: output/threeway_condition_date_imd_non_primary_obj4.csv
+
+
   surppress_objective_1_outputs:
     run: python:v2 analysis/objective_1_surppress.py
     needs: [run_objective_1_analysis]

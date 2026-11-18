@@ -32,7 +32,7 @@ cap log close
 cd "$projectdir"
 import delimited "output/dataset_patients_combined_denom_obj1.csv", clear
 
-save "output/PF WP2 P2 dummy patient raw data updates denom_Nov26.dta", replace
+save "output/PF WP2 P2 obj1 dummy patient raw data updates denom_Nov26.dta", replace
 
 
 
