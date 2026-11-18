@@ -869,7 +869,7 @@ actions:
       highly_sensitive:
         dataset: output/dataset_patients_combined_obj1.csv
   
-    preprocess_objective_1_denom_data:
+  preprocess_objective_1_denom_data:
     run: python:v2 python analysis/objective_1_denom_preprocess.py
     needs: [decompress_combined_patient_dataset]
     outputs:
@@ -933,7 +933,36 @@ actions:
         table20: output/threeway_condition_date_ethnicity.csv
         table21: output/threeway_condition_date_imd.csv
 
-#       log2: "output/PF_WP2_P2_obj1_rates.log"
+
+  run_objective_1_analysis_denom:
+    run: stata-mp:v1 analysis/Objective_1_analysis_denom.do --output output/PF_WP2_P2_obj1_totals.log
+    needs: [preprocess_objective_1_denom_data]
+    outputs:
+      moderately_sensitive:
+        log1: output/PF_WP2_P2_obj1_totals_denom.log
+        table0: output/pf_cons_general_denom.csv
+        table1: output/oneway_date_condition_denom.csv
+        table2: output/oneway_date_denom.csv
+        table3: output/oneway_region_denom.csv
+        table4: output/oneway_stp_denom.csv
+        table5: output/oneway_age_group_denom.csv
+        table6: output/oneway_sex_denom.csv
+        table7: output/oneway_ethnicity_denom.csv
+        table8: output/oneway_imd_denom.csv
+        table9: output/twoway_date_condition_denom.csv
+        table10: output/twoway_region_condition_denom.csv
+        table11: output/twoway_stp_condition_denom.csv
+        table12: output/twoway_age_group_condition_denom.csv
+        table13: output/twoway_sex_condition_denom.csv
+        table14: output/twoway_ethnicity_condition_denom.csv
+        table15: output/twoway_imd_condition_denom.csv
+        table16: output/threeway_condition_date_region_denom.csv
+        table17: output/threeway_condition_date_stp_denom.csv
+        table18: output/threeway_condition_date_age_group_denom.csv
+        table19: output/threeway_condition_date_sex_denom.csv
+        table20: output/threeway_condition_date_ethnicity_denom.csv
+        table21: output/threeway_condition_date_imd_denom.csv
+
   
   surppress_objective_1_outputs:
     run: python:v2 analysis/objective_1_surppress.py

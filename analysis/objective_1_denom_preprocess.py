@@ -6,7 +6,7 @@ PF consultation variables are zero, reducing the file size.
 """
 
 INPUT_FILE = "output/dataset_patients_combined.csv"
-OUTPUT_FILE = "output/dataset_patients_combined_obj1.csv"
+OUTPUT_FILE = "output/dataset_patients_combined_denom_obj1.csv"
 
 COLUMNS_TO_KEEP = [
     "pt_id",
