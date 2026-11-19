@@ -932,36 +932,56 @@ actions:
         table19: output/threeway_condition_date_sex.csv
         table20: output/threeway_condition_date_ethnicity.csv
         table21: output/threeway_condition_date_imd.csv
-
-
-  run_objective_1_analysis_denom:
-    run: stata-mp:v1 analysis/Objective_1_analysis_denom.do --output output/PF_WP2_P2_obj1_totals.log
-    needs: [preprocess_objective_1_denom_data]
+  
+  surppress_objective_1_outputs:
+    run: python:v2 analysis/objective_1_surppress.py
+    needs: [run_objective_1_analysis]
     outputs:
       moderately_sensitive:
-        log1: output/PF_WP2_P2_obj1_totals_denom.log
-        table0: output/pf_cons_general_denom.csv
-        table1: output/oneway_date_condition_denom.csv
-        table2: output/oneway_date_denom.csv
-        table3: output/oneway_region_denom.csv
-        table4: output/oneway_stp_denom.csv
-        table5: output/oneway_age_group_denom.csv
-        table6: output/oneway_sex_denom.csv
-        table7: output/oneway_ethnicity_denom.csv
-        table8: output/oneway_imd_denom.csv
-        table9: output/twoway_date_condition_denom.csv
-        table10: output/twoway_region_condition_denom.csv
-        table11: output/twoway_stp_condition_denom.csv
-        table12: output/twoway_age_group_condition_denom.csv
-        table13: output/twoway_sex_condition_denom.csv
-        table14: output/twoway_ethnicity_condition_denom.csv
-        table15: output/twoway_imd_condition_denom.csv
-        table16: output/threeway_condition_date_region_denom.csv
-        table17: output/threeway_condition_date_stp_denom.csv
-        table18: output/threeway_condition_date_age_group_denom.csv
-        table19: output/threeway_condition_date_sex_denom.csv
-        table20: output/threeway_condition_date_ethnicity_denom.csv
-        table21: output/threeway_condition_date_imd_denom.csv
+        oneway: output/oneway_*_release.csv
+        twoway: output/twoway_*_release.csv
+        threeway: output/threeway_*_release.csv
+
+  run_objective_1_denominator:
+    run: python:v2 analysis/objective_1_denom.py
+    needs: [combine_monthly_patient_gz]
+    outputs:
+      moderately_sensitive:
+        oneway: output/oneway_*_denom.csv
+        twoway: output/twoway_*_denom.csv
+        threeway: output/threeway_*_denom.csv
+  
+  # surppress_objective_1_denominator:
+
+
+  # run_objective_1_analysis_denom:
+  #   run: stata-mp:v1 analysis/Objective_1_analysis_denom.do --output output/PF_WP2_P2_obj1_totals.log
+  #   needs: [preprocess_objective_1_denom_data]
+  #   outputs:
+  #     moderately_sensitive:
+  #       log1: output/PF_WP2_P2_obj1_totals_denom.log
+  #       table0: output/pf_cons_general_denom.csv
+  #       table1: output/oneway_date_condition_denom.csv
+  #       table2: output/oneway_date_denom.csv
+  #       table3: output/oneway_region_denom.csv
+  #       table4: output/oneway_stp_denom.csv
+  #       table5: output/oneway_age_group_denom.csv
+  #       table6: output/oneway_sex_denom.csv
+  #       table7: output/oneway_ethnicity_denom.csv
+  #       table8: output/oneway_imd_denom.csv
+  #       table9: output/twoway_date_condition_denom.csv
+  #       table10: output/twoway_region_condition_denom.csv
+  #       table11: output/twoway_stp_condition_denom.csv
+  #       table12: output/twoway_age_group_condition_denom.csv
+  #       table13: output/twoway_sex_condition_denom.csv
+  #       table14: output/twoway_ethnicity_condition_denom.csv
+  #       table15: output/twoway_imd_condition_denom.csv
+  #       table16: output/threeway_condition_date_region_denom.csv
+  #       table17: output/threeway_condition_date_stp_denom.csv
+  #       table18: output/threeway_condition_date_age_group_denom.csv
+  #       table19: output/threeway_condition_date_sex_denom.csv
+  #       table20: output/threeway_condition_date_ethnicity_denom.csv
+  #       table21: output/threeway_condition_date_imd_denom.csv
 
   run_objective_3_analysis:
     run: stata-mp:v1 analysis/Objective_3_analysis.do --output output/PF_WP2_P2_obj3_totals.log
@@ -1035,16 +1055,6 @@ actions:
         table34: output/threeway_condition_date_ethnicity_non_primary_obj4.csv
         table35: output/threeway_condition_date_imd_primary_obj4.csv
         table36: output/threeway_condition_date_imd_non_primary_obj4.csv
-
-
-  surppress_objective_1_outputs:
-    run: python:v2 analysis/objective_1_surppress.py
-    needs: [run_objective_1_analysis]
-    outputs:
-      moderately_sensitive:
-        oneway: output/oneway_*_release.csv
-        twoway: output/twoway_*_release.csv
-        threeway: output/threeway_*_release.csv
 
   run_objective_2_analysis:
     run: python:v2 python analysis/objective_2_analysis.py
