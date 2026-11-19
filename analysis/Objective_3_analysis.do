@@ -32,7 +32,7 @@ log using "output/PF_WP2_P2_obj3_totals.log", replace
 cd "$projectdir"
 import delimited "output/dataset_patients_combined_obj3.csv", clear
 *import delimited "output/dataset_patients_combined.csv", clear
-save "output/PF WP2 P2 Obj3 dummy patient raw data updates Nov26.dta", replace
+*save "output/PF WP2 P2 Obj3 dummy patient raw data updates Nov26.dta", replace
 
 *generate index_date_stata = date(index_date, "YMD")
 generate index_date_stata = date(index_date, "DMY")
