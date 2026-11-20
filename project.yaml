@@ -964,12 +964,12 @@ actions:
         counts_plot: output/appointment_monthly_counts_trend.png
         rates_plot: output/appointment_monthly_rates_trend.png
   
-  # preprocess_objective_3_data:
-  #   run: python:v2 python analysis/objective_3_preprocess.py
-  #   needs: [decompress_combined_patient_dataset]
-  #   outputs:
-  #     highly_sensitive:
-  #       dataset: output/dataset_patients_combined_obj3.csv
+  preprocess_objective_3_data:
+    run: python:v2 python analysis/objective_3_preprocess.py
+    needs: [combine_monthly_patient_gz]
+    outputs:
+      highly_sensitive:
+        dataset: output/dataset_patients_obj3_numerator.csv
 
   # run_objective_3_analysis:
   #   run: stata-mp:v1 analysis/Objective_3_analysis.do --output output/PF_WP2_P2_obj3_totals.log
@@ -1000,12 +1000,12 @@ actions:
   #       table20: output/threeway_condition_date_ethnicity_obj3.csv
   #       table21: output/threeway_condition_date_imd_obj3.csv
   
-  # preprocess_objective_4_data:
-  #   run: python:v2 python analysis/objective_4_preprocess.py
-  #   needs: [decompress_combined_patient_dataset]
-  #   outputs:
-  #     highly_sensitive:
-  #       dataset: output/dataset_patients_combined_obj4.csv
+  preprocess_objective_4_data:
+    run: python:v2 python analysis/objective_4_preprocess.py
+    needs: [combine_monthly_patient_gz]
+    outputs:
+      highly_sensitive:
+        dataset: output/dataset_patients_obj4_numerator.csv
 
   # run_objective_4_analysis:
   #   run: stata-mp:v1 analysis/Objective_4_analysis.do --output output/PF_WP2_P2_obj4_totals.log
