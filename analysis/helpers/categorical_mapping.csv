@@ -1,0 +1,140 @@
+variable,original_value,encoded_value
+region,Missing,-1
+region,North East,1
+region,North West,2
+region,Yorkshire and The Humber,3
+region,East Midlands,4
+region,West Midlands,5
+region,East,6
+region,London,7
+region,South East,8
+region,South West,9
+sex,Missing,-1
+sex,female,1
+sex,male,2
+sex,intersex,3
+sex,unknown,4
+ethnicity,Missing,-1
+ethnicity,African,1
+ethnicity,All other ethnic groups,2
+ethnicity,Bangladeshi,3
+ethnicity,Caribbean,4
+ethnicity,Chinese,5
+ethnicity,Indian,6
+ethnicity,Other Black,7
+ethnicity,Other Mixed,8
+ethnicity,Other South Asian,9
+ethnicity,Other White,10
+ethnicity,Pakistani,11
+ethnicity,White British,12
+ethnicity,White Irish,13
+ethnicity,White and African,14
+ethnicity,White and Asian,15
+ethnicity,White and Caribbean,16
+imd,Missing,-1
+imd,1 (Most Deprived),1
+imd,2,2
+imd,3,3
+imd,4,4
+imd,5 (Least Deprived),5
+stp,Missing,-1
+stp,E54000000,0
+stp,E54000001,1
+stp,E54000002,2
+stp,E54000003,3
+stp,E54000004,4
+stp,E54000005,5
+stp,E54000006,6
+stp,E54000007,7
+stp,E54000008,8
+stp,E54000009,9
+stp,E54000010,10
+stp,E54000011,11
+stp,E54000012,12
+stp,E54000013,13
+stp,E54000014,14
+stp,E54000015,15
+stp,E54000016,16
+stp,E54000017,17
+stp,E54000018,18
+stp,E54000019,19
+stp,E54000020,20
+stp,E54000021,21
+stp,E54000022,22
+stp,E54000023,23
+stp,E54000024,24
+stp,E54000025,25
+stp,E54000026,26
+stp,E54000027,27
+stp,E54000028,28
+stp,E54000029,29
+stp,E54000030,30
+stp,E54000031,31
+stp,E54000032,32
+stp,E54000033,33
+stp,E54000034,34
+stp,E54000035,35
+stp,E54000036,36
+stp,E54000037,37
+stp,E54000038,38
+stp,E54000039,39
+stp,E54000040,40
+stp,E54000041,41
+stp,E54000042,42
+stp,E54000043,43
+stp,E54000044,44
+stp,E54000045,45
+stp,E54000046,46
+stp,E54000047,47
+stp,E54000048,48
+stp,E54000049,49
+stp,E54000050,50
+stp,E54000051,51
+stp,E54000052,52
+stp,E54000053,53
+stp,E54000054,54
+stp,E54000055,55
+stp,E54000056,56
+stp,E54000057,57
+stp,E54000058,58
+stp,E54000059,59
+stp,E54000060,60
+stp,E54000061,61
+stp,E54000062,62
+stp,E54000063,63
+stp,E54000064,64
+stp,E54000065,65
+stp,E54000066,66
+stp,E54000067,67
+stp,E54000068,68
+stp,E54000069,69
+stp,E54000070,70
+stp,E54000071,71
+stp,E54000072,72
+stp,E54000073,73
+stp,E54000074,74
+stp,E54000075,75
+stp,E54000076,76
+stp,E54000077,77
+stp,E54000078,78
+stp,E54000079,79
+stp,E54000080,80
+stp,E54000081,81
+stp,E54000082,82
+stp,E54000083,83
+stp,E54000084,84
+stp,E54000085,85
+stp,E54000086,86
+stp,E54000087,87
+stp,E54000088,88
+stp,E54000089,89
+stp,E54000090,90
+stp,E54000091,91
+stp,E54000092,92
+stp,E54000093,93
+stp,E54000094,94
+stp,E54000095,95
+stp,E54000096,96
+stp,E54000097,97
+stp,E54000098,98
+stp,E54000099,99

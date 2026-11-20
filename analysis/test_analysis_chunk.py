@@ -27,16 +27,6 @@ OUTPUT_FILE = "./output/pf_consultations_by_month.csv"
 MONTH_COLUMN = "start_date"
 CHUNKSIZE = 100_000
 
-# CONSULTATION_COLUMNS = [
-#     "numerator_pf_consultation_uti",
-#     "numerator_pf_consultation_sinusitis",
-#     "numerator_pf_consultation_insectbite",
-#     "numerator_pf_consultation_otitismedia",
-#     "numerator_pf_consultation_sorethroat",
-#     "numerator_pf_consultation_shingles",
-#     "numerator_pf_consultation_impetigo",
-# ]
-
 CONSULTATION_COLUMNS = [
     "num_pf_cons_uti",
     "num_pf_cons_sinusitis",
