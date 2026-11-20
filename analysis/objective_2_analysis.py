@@ -8,7 +8,7 @@ from pathlib import Path
 import pandas as pd
 
 # Input and output file path
-INPUT_FILE = "output/dataset_patients_combined.csv" # Input: patient X month
+INPUT_FILE = "output/dataset_patients_combined.csv.gz" # Input: patient X month
 PRACTICE_OUTPUT_FILE = "output/appointment_practice_month.csv" # practice X month
 MONTHLY_OUTPUT_FILE = "output/appointment_monthly_overall.csv" # monthly overall - small practices (patient count < 500) are excluded from all counts
 
